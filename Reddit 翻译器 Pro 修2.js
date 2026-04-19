@@ -17,7 +17,10 @@
 // @namespace    https://github.com/Dylan-ZQL
 // @homepageURL  https://github.com/Dylan-ZQL/reddit-translator-anto
 // @supportURL   https://github.com/Dylan-ZQL/reddit-translator-anto/issues
-// @version      1.0.1
+// @version      1.0.2
+// @description:zh-CN   🏷️业余Reddit翻译器 — glassmorphism，100多种语言，TTS，历史记录，转换器，彩蛋，IntersectionObserver
+// @description:zh-HK   🏷️業餘Reddit翻譯器 — glassmorphism，100多種語言，TTS，歷史記錄，轉換器，彩蛋，IntersectionObserver
+// @description:zh-TW   🏷️業餘Reddit翻譯器 — glassmorphism，100多種語言，TTS，歷史記錄，轉換器，彩蛋，IntersectionObserver
 // @description:ru      🏷️Любительский переводчик Reddit — glassmorphism, 100+ языков, TTS, история, конвертеры, пасхалки, IntersectionObserver
 // @description:uk      🏷️Любительський перекладач Reddit — glassmorphism, 100+ мов, TTS, історія, конвертери, пасхалки, IntersectionObserver
 // @description:en      🏷️Amateur Reddit translator — glassmorphism, 100+ languages, TTS, history, converters, easter eggs, IntersectionObserver
@@ -30,9 +33,6 @@
 // @description:tr      🏷️Amatör Reddit çevirmeni — glassmorphism, 100+ dil, TTS, geçmiş, dönüştürücüler, sürprizler, IntersectionObserver
 // @description:vi      🏷️Trình dịch Reddit nghiệp dư — glassmorphism, 100+ ngôn ngữ, TTS, lịch sử, bộ chuyển đổi, easter egg, IntersectionObserver
 // @description:ja      🏷️アマチュアReddit翻訳者 — glassmorphism、100以上の言語、TTS、履歴、コンバーター、イースターエッグ、IntersectionObserver
-// @description:zh-CN   🏷️业余Reddit翻译器 — glassmorphism，100多种语言，TTS，历史记录，转换器，彩蛋，IntersectionObserver
-// @description:zh-HK   🏷️業餘Reddit翻譯器 — glassmorphism，100多種語言，TTS，歷史記錄，轉換器，彩蛋，IntersectionObserver
-// @description:zh-TW   🏷️業餘Reddit翻譯器 — glassmorphism，100多種語言，TTS，歷史記錄，轉換器，彩蛋，IntersectionObserver
 // @icon         data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cmVjdCB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgcng9IjI4IiBmaWxsPSIjZmY0NTAwIi8+CiAgPHRleHQgeD0iNjQiIHk9IjkwIiBmb250LXNpemU9IjcyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUkgRW1vamksQXBwbGUgQ29sb3IgRW1vamksc2Fucy1zZXJpZiI+8J+MkDwvdGV4dD4KPC9zdmc+
 // @author       ebayybe
 // @license      MIT
@@ -72,7 +72,7 @@
     hotkeyPanel: 'F2',
     hotkeyAll: 'Ctrl+Shift+T',
     customColors: null,
-    autoTranslateOnScroll: true,
+    autoTranslateOnScroll: false,
     deeplApiKeys: '',
   };
 
@@ -916,6 +916,46 @@
     return '';
   }
 
+  function escapeHtml(text) {
+    return String(text || '').replace(/[&<>]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[ch]));
+  }
+
+  function parseJsonSafe(text, fallback = null) {
+    try { return JSON.parse(text); } catch { return fallback; }
+  }
+
+  function gmRequest({ method = 'GET', url, headers, data, parse, fallback = null }) {
+    return new Promise(resolve => GM_xmlhttpRequest({
+      method,
+      url,
+      headers,
+      data,
+      onload: (r) => {
+        const parsed = parse ? parse(r) : r.responseText;
+        resolve({
+          ok: r.status >= 200 && r.status < 300,
+          status: r.status,
+          data: parsed ?? fallback,
+          raw: r,
+        });
+      },
+      onerror: () => resolve({
+        ok: false,
+        status: 0,
+        data: fallback,
+        raw: null,
+      }),
+    }));
+  }
+
+  function getEngineScope() {
+    return cfg.engine === 'deepl' ? `${cfg.engine}|${cfg.deeplApiKeys || ''}` : cfg.engine;
+  }
+
+  function getTranslationCacheKey(text) {
+    return `${getEngineScope()}|${cfg.targetLang}|${cfg.tone}|${text}`;
+  }
+
   function parseDeepLKeys(raw = cfg.deeplApiKeys) {
     return String(raw || '')
       .split(',')
@@ -939,27 +979,13 @@
 
   async function requestDeepLUsage(apiKey) {
     const endpoint = getDeepLEndpoint(apiKey);
-    return new Promise(res => GM_xmlhttpRequest({
-      method: 'GET',
+    return gmRequest({
       url: `${endpoint}/v2/usage`,
       headers: {
         Authorization: `DeepL-Auth-Key ${apiKey}`,
       },
-      onload: r => {
-        let parsed = null;
-        try { parsed = JSON.parse(r.responseText); } catch { }
-        res({
-          ok: r.status >= 200 && r.status < 300,
-          status: r.status,
-          data: parsed,
-        });
-      },
-      onerror: () => res({
-        ok: false,
-        status: 0,
-        data: null,
-      }),
-    }));
+      parse: r => parseJsonSafe(r.responseText),
+    });
   }
 
   async function testDeepLApi(raw = cfg.deeplApiKeys) {
@@ -1027,6 +1053,49 @@
   }
 
   let deeplKeyCursor = 0;
+
+  // 检测文本语言
+  async function detectLanguage(text) {
+    try {
+      const q = toneHint() + text;
+      const result = await gmRequest({
+        url: `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=${encodeURIComponent(q)}`,
+        parse: r => parseJsonSafe(r.responseText, []),
+      });
+      return result.data?.[2] || null;
+    } catch {
+      return null;
+    }
+  }
+
+  function normalizeLangCode(code) {
+    return String(code || '')
+      .trim()
+      .toLowerCase()
+      .replace('_', '-')
+      .split('-')[0];
+  }
+
+  function getElementSourceText(el) {
+    return expandSlang((el?.dataset?.orig || el?.innerText || '').trim());
+  }
+
+  async function getDetectedLang(el, text) {
+    if (!el) return normalizeLangCode(await detectLanguage(text));
+    const cached = normalizeLangCode(el.dataset.rtpLang);
+    if (cached) return cached;
+    const detected = normalizeLangCode(await detectLanguage(text));
+    if (detected) el.dataset.rtpLang = detected;
+    return detected;
+  }
+
+  function shouldSkipDetectedLang(detectedLang) {
+    if (!detectedLang) return false;
+    const detected = normalizeLangCode(detectedLang);
+    return detected === normalizeLangCode(cfg.targetLang) ||
+      detected === normalizeLangCode(cfg.uiLang);
+  }
+
   async function doTranslateDeepL(text) {
     const keys = parseDeepLKeys();
     if (!keys.length) {
@@ -1048,7 +1117,7 @@
       const apiKey = keys[idx];
       const endpoint = getDeepLEndpoint(apiKey);
 
-      const translated = await new Promise(res => GM_xmlhttpRequest({
+      const result = await gmRequest({
         method: 'POST',
         url: `${endpoint}/v2/translate`,
         headers: {
@@ -1059,17 +1128,9 @@
           text: [q],
           target_lang: targetLang,
         }),
-        onload: r => {
-          try {
-            if (r.status < 200 || r.status >= 300) return res(null);
-            const parsed = JSON.parse(r.responseText);
-            res(parsed?.translations?.[0]?.text || null);
-          } catch {
-            res(null);
-          }
-        },
-        onerror: () => res(null),
-      }));
+        parse: r => parseJsonSafe(r.responseText),
+      });
+      const translated = result.ok ? result.data?.translations?.[0]?.text || null : null;
 
       if (translated) {
         deeplKeyCursor = idx + 1;
@@ -1081,31 +1142,29 @@
   }
 
   async function doTranslate(text) {
-    const engineScope = cfg.engine === 'deepl' ? `${cfg.engine}|${cfg.deeplApiKeys || ''}` : cfg.engine;
-    const key = `${engineScope}|${cfg.targetLang}|${cfg.tone}|${text}`;
+    const key = getTranslationCacheKey(text);
     if (cache[key]) { cache[key].ts = Date.now(); return cache[key].val; }
 
     let result = text;
+    const q = toneHint() + text;
 
     try {
       if (cfg.engine === 'deepl') {
         result = await doTranslateDeepL(text);
       } else if (cfg.engine === 'mymemory') {
-        const q = toneHint() + text;
-        result = await new Promise(res => GM_xmlhttpRequest({
-          method: 'GET',
+        const response = await gmRequest({
           url: `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=auto|${cfg.targetLang}`,
-          onload: r => { try { res(JSON.parse(r.responseText).responseData.translatedText); } catch { res(text); } },
-          onerror: () => res(text),
-        }));
+          parse: r => parseJsonSafe(r.responseText),
+          fallback: { responseData: { translatedText: text } },
+        });
+        result = response.data?.responseData?.translatedText || text;
       } else {
-        const q = toneHint() + text;
-        result = await new Promise(res => GM_xmlhttpRequest({
-          method: 'GET',
+        const response = await gmRequest({
           url: `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${cfg.targetLang}&dt=t&q=${encodeURIComponent(q)}`,
-          onload: r => { try { res(JSON.parse(r.responseText)[0].map(i => i[0]).join('')); } catch { res(text); } },
-          onerror: () => res(text),
-        }));
+          parse: r => parseJsonSafe(r.responseText, []),
+          fallback: [],
+        });
+        result = response.data?.[0]?.map(i => i[0]).join('') || text;
       }
     } catch { }
 
@@ -1160,6 +1219,85 @@
     for (const [id, v] of Object.entries(map)) { const el = document.getElementById(id); if (el) el.textContent = v; }
   }
 
+  function resetTranslationView(btn, el) {
+    if (btn._bi) { btn._bi.remove(); btn._bi = null; }
+    else if (el.dataset.orig) { el.innerText = el.dataset.orig; }
+    if (btn._tb) { btn._tb.remove(); btn._tb = null; }
+    btn.innerHTML = `🌐 ${cfg.targetLang.toUpperCase()}`;
+    btn.classList.remove('done', 'busy');
+    btn.dataset.st = 'orig';
+    btn.dataset.skip = '';
+  }
+
+  function renderTranslationResult(btn, el, text) {
+    btn.classList.remove('busy');
+    btn.classList.add('done');
+    btn.innerHTML = `✓ ${S('btnOrig')}`;
+    btn.dataset.st = 'done';
+
+    if (cfg.bilingualMode) {
+      const bi = document.createElement('div');
+      bi.className = 'rtp-bi rtp-fi';
+      bi.innerText = text;
+      btn._bi = bi;
+      el.after(bi);
+      if (btnsHidden) bi.style.display = 'none';
+      return;
+    }
+
+    el.classList.add('rtp-fi');
+    el.innerText = text;
+    setTimeout(() => el.classList.remove('rtp-fi'), 450);
+  }
+
+  function buildTranslationToolbar(btn, el, src, res) {
+    const tb = document.createElement('div');
+    tb.className = 'rtp-tb';
+    const addAction = (label, fn) => {
+      const t = document.createElement('span');
+      t.className = 'rtp-t';
+      t.textContent = label;
+      t.onclick = fn;
+      tb.appendChild(t);
+    };
+
+    addAction(S('btnCopy'), () => navigator.clipboard.writeText(res).then(() => toast(S('copied'))));
+    addAction(S('btnSpeak'), () => speak(res));
+    addAction(S('btnRetry'), async () => {
+      delete cache[getTranslationCacheKey(src)];
+      flushCache();
+      resetTranslationView(btn, el);
+      tb.remove();
+      btn._tb = null;
+      await new Promise(r => setTimeout(r, 50));
+      btn.click();
+    });
+
+    btn._tb = tb;
+    btn.after(tb);
+    if (btnsHidden) tb.style.display = 'none';
+  }
+
+  function getCustomColors() {
+    try {
+      return cfg.customColors
+        ? (typeof cfg.customColors === 'string' ? JSON.parse(cfg.customColors) : cfg.customColors)
+        : {};
+    } catch {
+      return {};
+    }
+  }
+
+  function setExclusivePills(panel, attr, onSelect) {
+    panel.querySelectorAll(`[${attr}]`).forEach(pill => {
+      pill.onclick = () => {
+        panel.querySelectorAll(`[${attr}]`).forEach(x => x.classList.remove('on'));
+        pill.classList.add('on');
+        onSelect(pill.dataset[attr.slice(5)]);
+      };
+    });
+  }
+
   // ═══════════════════════════════════════════════════════════════════════════
   // § ИНЖЕКТ КНОПОК
   // ═══════════════════════════════════════════════════════════════════════════
@@ -1168,80 +1306,43 @@
     'div[shreddit-comment-content]', '.md:not(.rtp-done)',
   ].join(',');
 
-  function attachBtn(el) {
+  function attachBtn(el, opts = {}) {
+    const { autoStart = false } = opts;
     if (!el || el.dataset.rtpDone) return;
     const txt = (el.innerText || '').trim();
     if (txt.length < 5) return;
     el.dataset.rtpDone = '1'; el.classList.add('rtp-done');
+    el.dataset.rtpLang = ''; // 用于缓存检测到的语言
 
     const btn = document.createElement('button');
     btn.className = 'rtp-btn';
     btn.innerHTML = `🌐 ${cfg.targetLang.toUpperCase()}`;
     btn.dataset.st = 'orig';
+    btn.dataset.skip = ''; // 初始化跳过标记为空
 
     btn.onclick = async (e) => {
       e.preventDefault(); e.stopPropagation();
 
-      // ── Откат к оригиналу ──
       if (btn.dataset.st === 'done') {
-        if (btn._bi) { btn._bi.remove(); btn._bi = null; }
-        else { el.innerText = el.dataset.orig; }
-        btn.innerHTML = `🌐 ${cfg.targetLang.toUpperCase()}`;
-        btn.classList.remove('done');
-        btn.dataset.st = 'orig';
-        if (btn._tb) { btn._tb.remove(); btn._tb = null; }
+        resetTranslationView(btn, el);
         return;
       }
 
       if (!el.dataset.orig) el.dataset.orig = el.innerText.trim();
+      const src = getElementSourceText(el);
+      const detectedLang = await getDetectedLang(el, src);
+      if (shouldSkipDetectedLang(detectedLang)) {
+        btn.dataset.skip = '1';
+        return;
+      }
       btn.innerHTML = '<span class="sp"></span>';
       btn.classList.add('busy');
 
-      const src = expandSlang(el.dataset.orig);
       const res = await enqueue(() => doTranslate(src));
-
-      btn.classList.remove('busy'); btn.classList.add('done');
-      btn.innerHTML = `✓ ${S('btnOrig')}`; btn.dataset.st = 'done';
-
-      if (cfg.bilingualMode) {
-        const bi = document.createElement('div');
-        bi.className = 'rtp-bi rtp-fi'; bi.innerText = res;
-        btn._bi = bi; el.after(bi);
-        if (btnsHidden) bi.style.display = 'none';
-      } else {
-        el.classList.add('rtp-fi');
-        el.innerText = res;
-        setTimeout(() => el.classList.remove('rtp-fi'), 450);
-      }
+      renderTranslationResult(btn, el, res);
 
       if (cfg.autoScroll && !cfg.autoTranslateOnScroll) btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-      // Тулбар
-      const tb = document.createElement('div'); tb.className = 'rtp-tb';
-      const mk = (label, fn) => {
-        const t = document.createElement('span'); t.className = 'rtp-t';
-        t.textContent = label; t.onclick = fn; return t;
-      };
-      tb.append(
-        mk(S('btnCopy'), () => navigator.clipboard.writeText(res).then(() => toast(S('copied')))),
-        mk(S('btnSpeak'), () => speak(res)),
-        mk(S('btnRetry'), async () => {
-          // Очищаем кэш этой записи и делаем чистый повтор
-          const engineScope = cfg.engine === 'deepl' ? `${cfg.engine}|${cfg.deeplApiKeys || ''}` : cfg.engine;
-          const k = `${engineScope}|${cfg.targetLang}|${cfg.tone}|${src}`;
-          delete cache[k]; flushCache();
-          // Откатываем состояние
-          if (btn._bi) { btn._bi.remove(); btn._bi = null; }
-          else if (el.dataset.orig) { el.innerText = el.dataset.orig; }
-          btn.classList.remove('done'); btn.dataset.st = 'orig';
-          tb.remove(); btn._tb = null;
-          // Запускаем перевод заново
-          await new Promise(r => setTimeout(r, 50));
-          btn.click();
-        }),
-      );
-      btn._tb = tb; btn.after(tb);
-      if (btnsHidden) tb.style.display = 'none';
+      buildTranslationToolbar(btn, el, src, res);
 
       cfg.totalCount++;
       cfg.totalChars += (el.dataset.orig || '').length;
@@ -1254,11 +1355,17 @@
     if (btnsHidden) btn.style.display = 'none';
 
     // 如果启用滚动时自动翻译，自动触发翻译
-    if (cfg.autoTranslateOnScroll) {
-      // 使用 requestAnimationFrame 确保按钮已附加，然后立即触发翻译
-      requestAnimationFrame(() => {
-        // 确保按钮仍然存在且未被翻译过
-        if (btn && btn.dataset.st === 'orig') {
+    if (cfg.autoTranslateOnScroll && autoStart) {
+      requestAnimationFrame(async () => {
+        if (btn && btn.dataset.st === 'orig' && !btn.dataset.skip) {
+          const src = getElementSourceText(el);
+          if (src.length >= 5) {
+            const detectedLang = await getDetectedLang(el, src);
+            if (shouldSkipDetectedLang(detectedLang)) {
+              btn.dataset.skip = '1';
+              return;
+            }
+          }
           btn.click();
         }
       });
@@ -1268,7 +1375,7 @@
   // IntersectionObserver — переводим сначала видимые
   const ioQueue = new Set();
   const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { attachBtn(e.target); ioQueue.delete(e.target); io.unobserve(e.target); } });
+    entries.forEach(e => { if (e.isIntersecting) { attachBtn(e.target, { autoStart: true }); ioQueue.delete(e.target); io.unobserve(e.target); } });
   }, { rootMargin: '200px' });
 
   function injectButtons() {
@@ -1283,8 +1390,8 @@
         rect.right >= -200
       );
       if (inViewport) {
-        // 如果在视口内，直接附加并翻译（如果启用自动翻译）
-        attachBtn(el);
+        // 如果在视口内，先只附加按钮，避免页面初始加载时整页闪动
+        attachBtn(el, { autoStart: false });
         // 如果之前在队列中，移除并取消观察
         if (ioQueue.has(el)) {
           ioQueue.delete(el);
@@ -1435,7 +1542,7 @@
 
             <div>
                 <span class="lbl">${S('secDeepLApi')}</span>
-                <textarea class="api-box" id="deepl-api-keys" placeholder="${S('deeplApiPlaceholder')}">${String(cfg.deeplApiKeys || '').replace(/[&<>]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[ch]))}</textarea>
+                <textarea class="api-box" id="deepl-api-keys" placeholder="${S('deeplApiPlaceholder')}">${escapeHtml(cfg.deeplApiKeys || '')}</textarea>
                 <div class="api-help">${S('deeplApiHelp')}</div>
                 <div class="g2" style="margin-top:8px;">
                     <button class="btn-p ghost" id="btn-save-deepl" style="height:40px;font-size:11px;">${S('saveDeepLApi')}</button>
@@ -1613,25 +1720,18 @@
     };
 
     // ── Пилюли: движок ────────────────────────────────────────────────
-    panel.querySelectorAll('[data-eng]').forEach(p => p.onclick = () => {
-      panel.querySelectorAll('[data-eng]').forEach(x => x.classList.remove('on'));
-      p.classList.add('on');
-      save('engine', p.dataset.eng);
-      if (p.dataset.eng === 'deepl' && !parseDeepLKeys().length) {
+    setExclusivePills(panel, 'data-eng', (engine) => {
+      save('engine', engine);
+      if (engine === 'deepl' && !parseDeepLKeys().length) {
         toast(S('toastDeepLKeysMissing'));
       }
     });
 
-    // ── Пилюли: тон ───────────────────────────────────────────────────
-    panel.querySelectorAll('[data-tone]').forEach(p => p.onclick = () => {
-      panel.querySelectorAll('[data-tone]').forEach(x => x.classList.remove('on'));
-      p.classList.add('on'); save('tone', p.dataset.tone);
-    });
+    setExclusivePills(panel, 'data-tone', (tone) => save('tone', tone));
 
-    // ── Пилюли: тема (мгновенно) ──────────────────────────────────────
-    panel.querySelectorAll('[data-th]').forEach(p => p.onclick = () => {
-      panel.querySelectorAll('[data-th]').forEach(x => x.classList.remove('on'));
-      p.classList.add('on'); save('theme', p.dataset.th); applyTheme(p.dataset.th);
+    setExclusivePills(panel, 'data-th', (theme) => {
+      save('theme', theme);
+      applyTheme(theme);
     });
 
     // ── Тогглы ────────────────────────────────────────────────────────
@@ -1699,8 +1799,7 @@
     // ── Цвета темы ────────────────────────────────────────────────────
     (function initColorPickers() {
       const base = THEMES[cfg.theme] || THEMES.dark;
-      const cc = (() => { try { return cfg.customColors ? (typeof cfg.customColors === 'string' ? JSON.parse(cfg.customColors) : cfg.customColors) : {}; } catch { return {}; } })();
-      const merged = Object.assign({}, base, cc);
+      const merged = Object.assign({}, base, getCustomColors());
 
       const map = [
         { id: 'clr-acc', key: 'acc' },
@@ -1714,7 +1813,7 @@
         if (!inp) return;
         inp.value = colorToHex(merged[key] || '#888888');
         inp.oninput = () => {
-          const newCC = (() => { try { return cfg.customColors ? (typeof cfg.customColors === 'string' ? JSON.parse(cfg.customColors) : cfg.customColors) : {}; } catch { return {}; } })();
+          const newCC = getCustomColors();
           newCC[key] = inp.value;
           // Для bg/surf — также обновляем прозрачность surf на основе bg
           if (key === 'bg') {
