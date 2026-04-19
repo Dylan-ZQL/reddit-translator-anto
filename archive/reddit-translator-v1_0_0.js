@@ -17,7 +17,7 @@
 // @namespace    https://github.com/Dylan-ZQL
 // @homepageURL  https://github.com/Dylan-ZQL/reddit-translator-anto
 // @supportURL   https://github.com/Dylan-ZQL/reddit-translator-anto/issues
-// @version      1.0.1
+// @version      1.0.0
 // @description:ru      🏷️Любительский переводчик Reddit — glassmorphism, 100+ языков, TTS, Google, MyMemory, DeepL, история, конвертеры, пасхалки, IntersectionObserver
 // @description:uk      🏷️Любительський перекладач Reddit — glassmorphism, 100+ мов, TTS, Google, MyMemory, DeepL, історія, конвертери, пасхалки, IntersectionObserver
 // @description:en      🏷️Amateur Reddit translator — glassmorphism, 100+ languages, TTS, Google, MyMemory, DeepL, history, converters, easter eggs, IntersectionObserver

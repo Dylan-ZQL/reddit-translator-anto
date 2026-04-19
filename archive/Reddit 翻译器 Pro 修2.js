@@ -17,7 +17,7 @@
 // @namespace    https://github.com/ebayybe
 // @homepageURL  https://github.com/ebayybe/reddit-translator
 // @supportURL   https://github.com/ebayybe/reddit-translator/issues
-// @version      1.0.0
+// @version      1.0.2
 // @description:ru      🏷️Любительский переводчик Reddit — glassmorphism, 100+ языков, TTS, история, конвертеры, пасхалки, IntersectionObserver
 // @description:uk      🏷️Любительський перекладач Reddit — glassmorphism, 100+ мов, TTS, історія, конвертери, пасхалки, IntersectionObserver
 // @description:en      🏷️Amateur Reddit translator — glassmorphism, 100+ languages, TTS, history, converters, easter eggs, IntersectionObserver

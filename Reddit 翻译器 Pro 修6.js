@@ -18,7 +18,7 @@
 // @namespace    https://github.com/Dylan-ZQL
 // @homepageURL  https://github.com/Dylan-ZQL/reddit-translator-anto
 // @supportURL   https://github.com/Dylan-ZQL/reddit-translator-anto/issues
-// @version      1.0.7
+// @version      1.0.8
 // @description      🏷️业余 Reddit 翻译器 — glassmorphism、100+ 语言、TTS、Google、MyMemory、DeepL、历史记录、转换器、彩蛋、IntersectionObserver
 // @description:zh-CN   🏷️业余Reddit翻译器 — glassmorphism、100多种语言、TTS、Google、MyMemory、DeepL、历史记录、转换器、彩蛋、IntersectionObserver
 // @description:zh-HK   🏷️業餘Reddit翻譯器 — glassmorphism、100多種語言、TTS、Google、MyMemory、DeepL、歷史記錄、轉換器、彩蛋、IntersectionObserver
@@ -55,7 +55,7 @@
   'use strict';
 
   // Unique prefix for this script to avoid conflicts with other scripts
-  const PREFIX = '_x5_';
+  const PREFIX = '_x8_';
 
   // ═══════════════════════════════════════════════════════════════════════════
   // § КОНФИГУРАЦИЯ
@@ -65,24 +65,23 @@
     uiLang: 'zh',
     engine: 'google',
     tone: 'normal',
-    theme: 'dark',
-    bilingualMode: false,
+    theme: 'light',
+    bilingualMode: true,
     ttsEnabled: true,
     autoConvert: true,
     autoScroll: false,
     incognito: false,
-    requestDelay: 120,
+    requestDelay: 50,
     totalChars: 0,
     totalCount: 0,
     hotkeyPanel: 'F2',
-    hotkeyAll: 'Ctrl+Shift+T',
     customColors: null,
-    autoTranslateOnScroll: false,
+    autoTranslateOnScroll: true,
     deeplApiKeys: '',
-    maxRequestsPerSecond: 3,
+    maxRequestsPerSecond: 20,
     maxTextLengthPerRequest: 1800,
     maxParagraphsPerRequest: 6,
-    maxConcurrentRequests: 3,
+    maxConcurrentRequests: 5,
   };
 
   // Загружаем конфиг
@@ -164,7 +163,6 @@
     ru: {
       title: 'Reddit Переводчик', ver: 'v1.0.0',
       tabSettings: '⚙️ Настройки', tabHistory: '📖 История', tabExtras: '✨ Дополнения',
-      translateAll: 'ПЕРЕВЕСТИ ВСЁ',
       secUiLang: 'Язык интерфейса', applyUi: '✨ ПРИМЕНИТЬ ИНТЕРФЕЙС',
       secTargetLang: 'Язык перевода', saveLang: '💾 СОХРАНИТЬ ЯЗЫК',
       secEngine: 'Движок', secTone: 'Стиль перевода', secTheme: 'Тема',
@@ -185,14 +183,13 @@
       searchLang: 'Поиск языка…',
       btnOrig: '↩ Оригинал', btnCopy: '📋 Копировать', btnSpeak: '🔊', btnRetry: '↺ Ещё раз',
       copied: '✅ Скопировано!', cacheCleared: '🧹 Кэш очищен',
-      toastAll: '✅ Переведено', toastApply: '✅ Интерфейс обновлён',
+      toastApply: '✅ Интерфейс обновлён',
       toastSave: '💾 Сохранено — перезагрузка…', toastSurprise: '🎲 Язык:',
       toastPirateOn: '🏴‍☠️ Arrr! Пиратский режим!', toastPirateOff: '🏴‍☠️ Режим выключен',
       toastYodaOn: '🧙 Включён режим, хммм.', toastYodaOff: '🧙 Выключен он.',
       toastAutoScrollOn: '✅ Автоперевод при прокрутке включён', toastAutoScrollOff: '⭕ Автоперевод при прокрутке выключен',
-      shortcutHint: 'F2 = панель · Ctrl+Shift+T = всё',
-      btnCancel: '⛔ Отмена', toastCancelled: '⛔ Перевод отменён',
-      secHotkeys: 'Горячие клавиши', hotkeyPanel: 'Открыть панель', hotkeyAll: 'Перевести всё',
+      shortcutHint: 'F2 = панель',
+      secHotkeys: 'Горячие клавиши', hotkeyPanel: 'Открыть панель',
       hotkeyPress: 'Нажмите клавишу…', hotkeyReset: '↺ Сброс',
       secColors: 'Цвета темы', colorAcc: 'Акцент', colorTxt: 'Текст', colorBg: 'Фон', colorOk: 'Успех',
       btnResetColors: '↺ Сброс цветов',
@@ -200,7 +197,6 @@
     uk: {
       title: 'Reddit Перекладач', ver: 'v1.0.0',
       tabSettings: '⚙️ Налаштування', tabHistory: '📖 Історія', tabExtras: '✨ Додатково',
-      translateAll: 'ПЕРЕКЛАСТИ ВСЕ',
       secUiLang: 'Мова інтерфейсу', applyUi: '✨ ЗАСТОСУВАТИ ІНТЕРФЕЙС',
       secTargetLang: 'Мова перекладу', saveLang: '💾 ЗБЕРЕГТИ МОВУ',
       secEngine: 'Рушій', secTone: 'Стиль', secTheme: 'Тема',
@@ -221,14 +217,13 @@
       searchLang: 'Пошук мови…',
       btnOrig: '↩ Оригінал', btnCopy: '📋 Копіювати', btnSpeak: '🔊', btnRetry: '↺ Ще раз',
       copied: '✅ Скопійовано!', cacheCleared: '🧹 Кеш очищено',
-      toastAll: '✅ Перекладено', toastApply: '✅ Інтерфейс оновлено',
+      toastApply: '✅ Інтерфейс оновлено',
       toastSave: '💾 Збережено — перезавантаження…', toastSurprise: '🎲 Мова:',
       toastPirateOn: '🏴‍☠️ Arrr! Піратський режим!', toastPirateOff: '🏴‍☠️ Вимкнено',
       toastYodaOn: '🧙 Увімкнено режим, хммм.', toastYodaOff: '🧙 Вимкнено.',
       toastAutoScrollOn: '✅ Автопереклад при прокручуванні увімкнено', toastAutoScrollOff: '⭕ Автопереклад при прокручуванні вимкнено',
-      shortcutHint: 'F2 = панель · Ctrl+Shift+T = все',
-      btnCancel: '⛔ Скасувати', toastCancelled: '⛔ Переклад скасовано',
-      secHotkeys: 'Гарячі клавіші', hotkeyPanel: 'Відкрити панель', hotkeyAll: 'Перекласти все',
+      shortcutHint: 'F2 = панель',
+      secHotkeys: 'Гарячі клавіші', hotkeyPanel: 'Відкрити панель',
       hotkeyPress: 'Натисніть клавішу…', hotkeyReset: '↺ Скинути',
       secColors: 'Кольори теми', colorAcc: 'Акцент', colorTxt: 'Текст', colorBg: 'Фон', colorOk: 'Успіх',
       btnResetColors: '↺ Скинути кольори',
@@ -236,13 +231,14 @@
     en: {
       title: 'Reddit Translator', ver: 'v1.0.0',
       tabSettings: '⚙️ Settings', tabHistory: '📖 History', tabExtras: '✨ Extras',
-      translateAll: 'TRANSLATE ALL',
       secUiLang: 'UI Language', applyUi: '✨ APPLY INTERFACE',
       secTargetLang: 'Target language', saveLang: '💾 SAVE LANGUAGE',
       secEngine: 'Engine', secTone: 'Translation tone', secTheme: 'Theme',
       engGoogle: 'Google', engMymemory: 'MyMemory', engDeepL: 'DeepL',
       secDeepLApi: 'DeepL API keys', saveDeepLApi: '🔑 SAVE DEEPL KEYS',
       btnTestDeepL: '🧪 TEST DEEPL',
+      btnToggleSecretsShow: '👁',
+      btnToggleSecretsHide: '🙈',
       deeplApiPlaceholder: 'Paste one or more DeepL API keys, separated by commas',
       deeplApiHelp: 'Supports both Pro and Free keys. Keys ending with :fx use api-free.deepl.com automatically.',
       toastDeepLKeysSaved: '🔑 DeepL keys saved',
@@ -267,14 +263,13 @@
       searchLang: 'Search language…',
       btnOrig: '↩ Original', btnCopy: '📋 Copy', btnSpeak: '🔊', btnRetry: '↺ Retry',
       copied: '✅ Copied!', cacheCleared: '🧹 Cache cleared',
-      toastAll: '✅ Translated', toastApply: '✅ Interface updated',
+      toastApply: '✅ Interface updated',
       toastSave: '💾 Saved — reloading…', toastSurprise: '🎲 Language:',
       toastPirateOn: '🏴‍☠️ Arrr! Pirate mode on!', toastPirateOff: '🏴‍☠️ Pirate mode off',
       toastYodaOn: '🧙 Yoda mode on, hmm.', toastYodaOff: '🧙 Yoda mode off.',
       toastAutoScrollOn: '✅ Auto-translate on scroll enabled', toastAutoScrollOff: '⭕ Auto-translate on scroll disabled',
-      shortcutHint: 'F2 = panel · Ctrl+Shift+T = all',
-      btnCancel: '⛔ Cancel', toastCancelled: '⛔ Translation cancelled',
-      secHotkeys: 'Hotkeys', hotkeyPanel: 'Open panel', hotkeyAll: 'Translate all',
+      shortcutHint: 'F2 = panel',
+      secHotkeys: 'Hotkeys', hotkeyPanel: 'Open panel',
       hotkeyPress: 'Press a key…', hotkeyReset: '↺ Reset',
       secColors: 'Theme colors', colorAcc: 'Accent', colorTxt: 'Text', colorBg: 'Background', colorOk: 'Success',
       btnResetColors: '↺ Reset colors',
@@ -291,7 +286,6 @@
     de: {
       title: 'Reddit Übersetzer', ver: 'v1.0.0',
       tabSettings: '⚙️ Einstellungen', tabHistory: '📖 Verlauf', tabExtras: '✨ Extras',
-      translateAll: 'ALLES ÜBERSETZEN',
       secUiLang: 'UI-Sprache', applyUi: '✨ INTERFACE ANWENDEN',
       secTargetLang: 'Zielsprache', saveLang: '💾 SPRACHE SPEICHERN',
       secEngine: 'Motor', secTone: 'Übersetzungsstil', secTheme: 'Thema',
@@ -312,14 +306,13 @@
       searchLang: 'Sprache suchen…',
       btnOrig: '↩ Original', btnCopy: '📋 Kopieren', btnSpeak: '🔊', btnRetry: '↺ Nochmal',
       copied: '✅ Kopiert!', cacheCleared: '🧹 Cache geleert',
-      toastAll: '✅ Übersetzt', toastApply: '✅ Interface aktualisiert',
+      toastApply: '✅ Interface aktualisiert',
       toastSave: '💾 Gespeichert — neu laden…', toastSurprise: '🎲 Sprache:',
       toastPirateOn: '🏴‍☠️ Arrr! Piraten-Modus!', toastPirateOff: '🏴‍☠️ Modus aus',
       toastYodaOn: '🧙 Yoda-Modus an, hmm.', toastYodaOff: '🧙 Modus aus.',
       toastAutoScrollOn: '✅ Automatisches Übersetzen beim Scrollen aktiviert', toastAutoScrollOff: '⭕ Automatisches Übersetzen beim Scrollen deaktiviert',
-      shortcutHint: 'F2 = Panel · Ctrl+Shift+T = alles',
-      btnCancel: '⛔ Abbrechen', toastCancelled: '⛔ Übersetzung abgebrochen',
-      secHotkeys: 'Tastenkürzel', hotkeyPanel: 'Panel öffnen', hotkeyAll: 'Alles übersetzen',
+      shortcutHint: 'F2 = Panel',
+      secHotkeys: 'Tastenkürzel', hotkeyPanel: 'Panel öffnen',
       hotkeyPress: 'Taste drücken…', hotkeyReset: '↺ Zurücksetzen',
       secColors: 'Themenfarben', colorAcc: 'Akzent', colorTxt: 'Text', colorBg: 'Hintergrund', colorOk: 'Erfolg',
       btnResetColors: '↺ Farben zurücksetzen',
@@ -327,7 +320,6 @@
     fr: {
       title: 'Traducteur Reddit', ver: 'v1.0.0',
       tabSettings: '⚙️ Paramètres', tabHistory: '📖 Historique', tabExtras: '✨ Extras',
-      translateAll: 'TOUT TRADUIRE',
       secUiLang: 'Langue UI', applyUi: '✨ APPLIQUER INTERFACE',
       secTargetLang: 'Langue cible', saveLang: '💾 ENREGISTRER',
       secEngine: 'Moteur', secTone: 'Style', secTheme: 'Thème',
@@ -348,14 +340,13 @@
       searchLang: 'Chercher langue…',
       btnOrig: '↩ Original', btnCopy: '📋 Copier', btnSpeak: '🔊', btnRetry: '↺ Réessayer',
       copied: '✅ Copié!', cacheCleared: '🧹 Cache vidé',
-      toastAll: '✅ Traduit', toastApply: '✅ Interface mise à jour',
+      toastApply: '✅ Interface mise à jour',
       toastSave: '💾 Sauvegardé — rechargement…', toastSurprise: '🎲 Langue:',
       toastPirateOn: '🏴‍☠️ Arrr! Mode Pirate!', toastPirateOff: '🏴‍☠️ Mode désactivé',
       toastYodaOn: '🧙 Mode Yoda activé, hmm.', toastYodaOff: '🧙 Mode Yoda désactivé.',
       toastAutoScrollOn: '✅ Traduction automatique au défilement activée', toastAutoScrollOff: '⭕ Traduction automatique au défilement désactivée',
-      shortcutHint: 'F2 = panneau · Ctrl+Shift+T = tout',
-      btnCancel: '⛔ Annuler', toastCancelled: '⛔ Traduction annulée',
-      secHotkeys: 'Raccourcis', hotkeyPanel: 'Ouvrir panneau', hotkeyAll: 'Tout traduire',
+      shortcutHint: 'F2 = panneau',
+      secHotkeys: 'Raccourcis', hotkeyPanel: 'Ouvrir panneau',
       hotkeyPress: 'Appuyez sur une touche…', hotkeyReset: '↺ Réinitialiser',
       secColors: 'Couleurs du thème', colorAcc: 'Accent', colorTxt: 'Texte', colorBg: 'Fond', colorOk: 'Succès',
       btnResetColors: '↺ Réinitialiser couleurs',
@@ -363,7 +354,6 @@
     es: {
       title: 'Traductor Reddit', ver: 'v1.0.0',
       tabSettings: '⚙️ Config', tabHistory: '📖 Historial', tabExtras: '✨ Extras',
-      translateAll: 'TRADUCIR TODO',
       secUiLang: 'Idioma UI', applyUi: '✨ APLICAR INTERFAZ',
       secTargetLang: 'Idioma destino', saveLang: '💾 GUARDAR IDIOMA',
       secEngine: 'Motor', secTone: 'Estilo', secTheme: 'Tema',
@@ -384,14 +374,13 @@
       searchLang: 'Buscar idioma…',
       btnOrig: '↩ Original', btnCopy: '📋 Copiar', btnSpeak: '🔊', btnRetry: '↺ Reintentar',
       copied: '✅ ¡Copiado!', cacheCleared: '🧹 Caché limpiado',
-      toastAll: '✅ Traducido', toastApply: '✅ Interfaz actualizada',
+      toastApply: '✅ Interfaz actualizada',
       toastSave: '💾 Guardado — recargando…', toastSurprise: '🎲 Idioma:',
       toastPirateOn: '🏴‍☠️ ¡Arrr! ¡Modo Pirata!', toastPirateOff: '🏴‍☠️ Modo desactivado',
       toastYodaOn: '🧙 Modo Yoda activado, hmm.', toastYodaOff: '🧙 Modo Yoda desactivado.',
       toastAutoScrollOn: '✅ Traducción automática al desplazar activada', toastAutoScrollOff: '⭕ Traducción automática al desplazar desactivada',
-      shortcutHint: 'F2 = panel · Ctrl+Shift+T = todo',
-      btnCancel: '⛔ Cancelar', toastCancelled: '⛔ Traducción cancelada',
-      secHotkeys: 'Atajos', hotkeyPanel: 'Abrir panel', hotkeyAll: 'Traducir todo',
+      shortcutHint: 'F2 = panel',
+      secHotkeys: 'Atajos', hotkeyPanel: 'Abrir panel',
       hotkeyPress: 'Presiona una tecla…', hotkeyReset: '↺ Restablecer',
       secColors: 'Colores del tema', colorAcc: 'Acento', colorTxt: 'Texto', colorBg: 'Fondo', colorOk: 'Éxito',
       btnResetColors: '↺ Restablecer colores',
@@ -399,7 +388,6 @@
     pl: {
       title: 'Tłumacz Reddit', ver: 'v1.0.0',
       tabSettings: '⚙️ Ustawienia', tabHistory: '📖 Historia', tabExtras: '✨ Extras',
-      translateAll: 'PRZETŁUMACZ WSZYSTKO',
       secUiLang: 'Język interfejsu', applyUi: '✨ ZASTOSUJ INTERFEJS',
       secTargetLang: 'Język docelowy', saveLang: '💾 ZAPISZ JĘZYK',
       secEngine: 'Silnik', secTone: 'Styl', secTheme: 'Motyw',
@@ -420,14 +408,13 @@
       searchLang: 'Szukaj języka…',
       btnOrig: '↩ Oryginał', btnCopy: '📋 Kopiuj', btnSpeak: '🔊', btnRetry: '↺ Ponów',
       copied: '✅ Skopiowano!', cacheCleared: '🧹 Cache wyczyszczony',
-      toastAll: '✅ Przetłumaczono', toastApply: '✅ Interfejs zaktualizowany',
+      toastApply: '✅ Interfejs zaktualizowany',
       toastSave: '💾 Zapisano — przeładowanie…', toastSurprise: '🎲 Język:',
       toastPirateOn: '🏴‍☠️ Arrr! Tryb Pirata!', toastPirateOff: '🏴‍☠️ Tryb wyłączony',
       toastYodaOn: '🧙 Tryb Yody włączony, hmm.', toastYodaOff: '🧙 Tryb wyłączony.',
       toastAutoScrollOn: '✅ Automatyczne tłumaczenie podczas przewijania włączone', toastAutoScrollOff: '⭕ Automatyczne tłumaczenie podczas przewijania wyłączone',
-      shortcutHint: 'F2 = panel · Ctrl+Shift+T = wszystko',
-      btnCancel: '⛔ Anuluj', toastCancelled: '⛔ Tłumaczenie anulowane',
-      secHotkeys: 'Skróty klawiszowe', hotkeyPanel: 'Otwórz panel', hotkeyAll: 'Przetłumacz wszystko',
+      shortcutHint: 'F2 = panel',
+      secHotkeys: 'Skróty klawiszowe', hotkeyPanel: 'Otwórz panel',
       hotkeyPress: 'Naciśnij klawisz…', hotkeyReset: '↺ Resetuj',
       secColors: 'Kolory motywu', colorAcc: 'Akcent', colorTxt: 'Tekst', colorBg: 'Tło', colorOk: 'Sukces',
       btnResetColors: '↺ Resetuj kolory',
@@ -435,7 +422,6 @@
     tr: {
       title: 'Reddit Çevirmeni', ver: 'v1.0.0',
       tabSettings: '⚙️ Ayarlar', tabHistory: '📖 Geçmiş', tabExtras: '✨ Ekstra',
-      translateAll: 'HEPSİNİ ÇEVİR',
       secUiLang: 'Arayüz dili', applyUi: '✨ ARAYÜZÜ UYGULA',
       secTargetLang: 'Hedef dil', saveLang: '💾 DİLİ KAYDET',
       secEngine: 'Motor', secTone: 'Stil', secTheme: 'Tema',
@@ -456,14 +442,13 @@
       searchLang: 'Dil ara…',
       btnOrig: '↩ Orijinal', btnCopy: '📋 Kopyala', btnSpeak: '🔊', btnRetry: '↺ Tekrar',
       copied: '✅ Kopyalandı!', cacheCleared: '🧹 Önbellek temizlendi',
-      toastAll: '✅ Çevrildi', toastApply: '✅ Arayüz güncellendi',
+      toastApply: '✅ Arayüz güncellendi',
       toastSave: '💾 Kaydedildi — yenileniyor…', toastSurprise: '🎲 Dil:',
       toastPirateOn: '🏴‍☠️ Arrr! Korsan modu!', toastPirateOff: '🏴‍☠️ Mod kapatıldı',
       toastYodaOn: '🧙 Yoda modu açık, hmm.', toastYodaOff: '🧙 Yoda modu kapalı.',
       toastAutoScrollOn: '✅ Kaydırırken otomatik çeviri etkin', toastAutoScrollOff: '⭕ Kaydırırken otomatik çeviri devre dışı',
-      shortcutHint: 'F2 = panel · Ctrl+Shift+T = hepsi',
-      btnCancel: '⛔ İptal', toastCancelled: '⛔ Çeviri iptal edildi',
-      secHotkeys: 'Kısayollar', hotkeyPanel: 'Paneli aç', hotkeyAll: 'Hepsini çevir',
+      shortcutHint: 'F2 = panel',
+      secHotkeys: 'Kısayollar', hotkeyPanel: 'Paneli aç',
       hotkeyPress: 'Bir tuşa basın…', hotkeyReset: '↺ Sıfırla',
       secColors: 'Tema renkleri', colorAcc: 'Vurgu', colorTxt: 'Metin', colorBg: 'Arka plan', colorOk: 'Başarı',
       btnResetColors: '↺ Renkleri sıfırla',
@@ -471,13 +456,14 @@
     zh: {
       title: 'Reddit翻译器', ver: 'v1.0.0',
       tabSettings: '⚙️ 设置', tabHistory: '📖 历史', tabExtras: '✨ 更多',
-      translateAll: '翻译全部',
       secUiLang: '界面语言', applyUi: '✨ 应用界面',
       secTargetLang: '目标语言', saveLang: '💾 保存语言',
       secEngine: '引擎', secTone: '风格', secTheme: '主题',
       engGoogle: 'Google', engMymemory: 'MyMemory', engDeepL: 'DeepL',
       secDeepLApi: 'DeepL API 密钥', saveDeepLApi: '🔑 保存 DeepL 密钥',
       btnTestDeepL: '🧪 测试 DeepL',
+      btnToggleSecretsShow: '👁',
+      btnToggleSecretsHide: '🙈',
       deeplApiPlaceholder: '粘贴一个或多个 DeepL API 密钥，使用英文逗号分隔',
       deeplApiHelp: '同时支持 Pro 和 Free 密钥。以 :fx 结尾的密钥会自动使用 api-free.deepl.com。',
       toastDeepLKeysSaved: '🔑 DeepL 密钥已保存',
@@ -502,14 +488,13 @@
       searchLang: '搜索语言…',
       btnOrig: '↩ 原文', btnCopy: '📋 复制', btnSpeak: '🔊', btnRetry: '↺ 重试',
       copied: '✅ 已复制！', cacheCleared: '🧹 缓存已清除',
-      toastAll: '✅ 已翻译', toastApply: '✅ 界面已更新',
+      toastApply: '✅ 界面已更新',
       toastSave: '💾 已保存 — 重新加载…', toastSurprise: '🎲 语言:',
       toastPirateOn: '🏴‍☠️ Arrr! 海盗模式！', toastPirateOff: '🏴‍☠️ 模式关闭',
       toastYodaOn: '🧙 尤达模式已开启，嗯。', toastYodaOff: '🧙 尤达模式已关闭。',
       toastAutoScrollOn: '✅ 滚动时自动翻译已启用', toastAutoScrollOff: '⭕ 滚动时自动翻译已禁用',
-      shortcutHint: 'F2 = 面板 · Ctrl+Shift+T = 全部',
-      btnCancel: '⛔ 取消', toastCancelled: '⛔ 翻译已取消',
-      secHotkeys: '快捷键', hotkeyPanel: '打开面板', hotkeyAll: '翻译全部',
+      shortcutHint: 'F2 = 面板',
+      secHotkeys: '快捷键', hotkeyPanel: '打开面板',
       hotkeyPress: '按下一个键…', hotkeyReset: '↺ 重置',
       secColors: '主题颜色', colorAcc: '强调色', colorTxt: '文字', colorBg: '背景', colorOk: '成功',
       btnResetColors: '↺ 重置颜色',
@@ -526,7 +511,6 @@
     ja: {
       title: 'Reddit翻訳', ver: 'v1.0.0',
       tabSettings: '⚙️ 設定', tabHistory: '📖 履歴', tabExtras: '✨ その他',
-      translateAll: 'すべて翻訳',
       secUiLang: 'UI言語', applyUi: '✨ UIを適用',
       secTargetLang: '翻訳先言語', saveLang: '💾 言語を保存',
       secEngine: 'エンジン', secTone: 'スタイル', secTheme: 'テーマ',
@@ -547,14 +531,13 @@
       searchLang: '言語を検索…',
       btnOrig: '↩ 元テキスト', btnCopy: '📋 コピー', btnSpeak: '🔊', btnRetry: '↺ やり直し',
       copied: '✅ コピーしました！', cacheCleared: '🧹 キャッシュ削除済み',
-      toastAll: '✅ 翻訳済み', toastApply: '✅ UIを更新しました',
+      toastApply: '✅ UIを更新しました',
       toastSave: '💾 保存しました — 再読込中…', toastSurprise: '🎲 言語:',
       toastPirateOn: '🏴‍☠️ Arrr! 海賊モード！', toastPirateOff: '🏴‍☠️ モードオフ',
       toastYodaOn: '🧙 ヨーダモードオン、ふむ。', toastYodaOff: '🧙 ヨーダモードオフ。',
       toastAutoScrollOn: '✅ スクロール時に自動翻訳が有効', toastAutoScrollOff: '⭕ スクロール時に自動翻訳が無効',
-      shortcutHint: 'F2 = パネル · Ctrl+Shift+T = すべて',
-      btnCancel: '⛔ キャンセル', toastCancelled: '⛔ 翻訳をキャンセルしました',
-      secHotkeys: 'ショートカット', hotkeyPanel: 'パネルを開く', hotkeyAll: 'すべて翻訳',
+      shortcutHint: 'F2 = パネル',
+      secHotkeys: 'ショートカット', hotkeyPanel: 'パネルを開く',
       hotkeyPress: 'キーを押してください…', hotkeyReset: '↺ リセット',
       secColors: 'テーマカラー', colorAcc: 'アクセント', colorTxt: 'テキスト', colorBg: '背景', colorOk: '成功',
       btnResetColors: '↺ 色をリセット',
@@ -610,10 +593,10 @@
   // § ТЕМЫ
   // ═══════════════════════════════════════════════════════════════════════════
   const THEMES = {
-    dark: { bg: 'rgba(10,10,14,.96)', surf: 'rgba(24,24,32,.9)', brd: 'rgba(255,255,255,.06)', txt: '#e0e0ec', mut: 'rgba(255,255,255,.28)', acc: '#ff4500', glow: 'rgba(255,69,0,.36)', dim: 'rgba(255,69,0,.11)', ok: '#60d394', okd: 'rgba(96,211,148,.11)' },
-    light: { bg: 'rgba(246,246,250,.97)', surf: 'rgba(255,255,255,.93)', brd: 'rgba(0,0,0,.07)', txt: '#17171e', mut: 'rgba(0,0,0,.36)', acc: '#ff4500', glow: 'rgba(255,69,0,.2)', dim: 'rgba(255,69,0,.09)', ok: '#1a9e5a', okd: 'rgba(26,158,90,.09)' },
-    cyberpunk: { bg: 'rgba(3,0,16,.97)', surf: 'rgba(10,3,32,.93)', brd: 'rgba(0,255,255,.11)', txt: '#ddf4ff', mut: 'rgba(0,255,255,.36)', acc: '#00ffff', glow: 'rgba(0,255,255,.44)', dim: 'rgba(0,255,255,.09)', ok: '#ff00aa', okd: 'rgba(255,0,170,.1)' },
-    dracula: { bg: 'rgba(14,14,26,.97)', surf: 'rgba(26,26,46,.91)', brd: 'rgba(139,92,246,.16)', txt: '#f8f8f2', mut: 'rgba(189,147,249,.5)', acc: '#bd93f9', glow: 'rgba(189,147,249,.42)', dim: 'rgba(189,147,249,.1)', ok: '#50fa7b', okd: 'rgba(80,250,123,.1)' },
+    dark: { bg: 'rgba(10,10,14,.96)', surf: 'rgba(24,24,32,.9)', brd: 'rgba(255,255,255,.06)', txt: '#e0e0ec', mut: 'rgba(255,255,255,.28)', acc: '#ff4500', glow: 'rgba(255,69,0,.36)', dim: 'rgba(255,69,0,.11)', ok: '#60d394', okd: 'rgba(96,211,148,.11)', biBg: 'rgba(20,22,30,.96)', biTxt: '#fff3ed', biBrd: 'rgba(255,69,0,.42)', btnBg: 'var(--rtp-dim)', btnTxt: '#ff6a2b', btnBrd: 'rgba(255,69,0,.24)', btnDoneBg: 'rgba(96,211,148,.11)', btnDoneTxt: '#60d394', btnDoneBrd: 'rgba(96,211,148,.26)' },
+    light: { bg: 'rgba(246,246,250,.97)', surf: 'rgba(255,255,255,.93)', brd: 'rgba(0,0,0,.07)', txt: '#17171e', mut: 'rgba(0,0,0,.36)', acc: '#ff4500', glow: 'rgba(255,69,0,.2)', dim: 'rgba(255,69,0,.09)', ok: '#1a9e5a', okd: 'rgba(26,158,90,.09)', biBg: 'rgba(255,245,240,.95)', biTxt: '#17171e', biBrd: 'rgba(255,69,0,.28)', btnBg: 'rgba(255,241,234,.96)', btnTxt: '#c63a00', btnBrd: 'rgba(255,69,0,.26)', btnDoneBg: 'rgba(226,247,236,.98)', btnDoneTxt: '#157347', btnDoneBrd: 'rgba(26,158,90,.28)' },
+    cyberpunk: { bg: 'rgba(3,0,16,.97)', surf: 'rgba(10,3,32,.93)', brd: 'rgba(0,255,255,.11)', txt: '#ddf4ff', mut: 'rgba(0,255,255,.36)', acc: '#00ffff', glow: 'rgba(0,255,255,.44)', dim: 'rgba(0,255,255,.09)', ok: '#ff00aa', okd: 'rgba(255,0,170,.1)', biBg: 'rgba(4,18,34,.97)', biTxt: '#e9feff', biBrd: 'rgba(0,255,255,.5)', btnBg: 'rgba(0,255,255,.09)', btnTxt: '#66ffff', btnBrd: 'rgba(0,255,255,.24)', btnDoneBg: 'rgba(255,0,170,.12)', btnDoneTxt: '#ff6ecf', btnDoneBrd: 'rgba(255,0,170,.3)' },
+    dracula: { bg: 'rgba(14,14,26,.97)', surf: 'rgba(26,26,46,.91)', brd: 'rgba(139,92,246,.16)', txt: '#f8f8f2', mut: 'rgba(189,147,249,.5)', acc: '#bd93f9', glow: 'rgba(189,147,249,.42)', dim: 'rgba(189,147,249,.1)', ok: '#50fa7b', okd: 'rgba(80,250,123,.1)', biBg: 'rgba(33,34,54,.97)', biTxt: '#f8f8f2', biBrd: 'rgba(189,147,249,.52)', btnBg: 'rgba(189,147,249,.12)', btnTxt: '#d5b6ff', btnBrd: 'rgba(189,147,249,.26)', btnDoneBg: 'rgba(80,250,123,.12)', btnDoneTxt: '#50fa7b', btnDoneBrd: 'rgba(80,250,123,.28)' },
   };
 
   function applyTheme(t) {
@@ -653,6 +636,9 @@
         --rtp-brd:rgba(255,255,255,.06); --rtp-txt:#e0e0ec; --rtp-mut:rgba(255,255,255,.28);
         --rtp-acc:#ff4500; --rtp-glow:rgba(255,69,0,.36); --rtp-dim:rgba(255,69,0,.11);
         --rtp-ok:#60d394; --rtp-okd:rgba(96,211,148,.11);
+        --rtp-biBg:rgba(20,22,30,.96); --rtp-biTxt:#fff3ed; --rtp-biBrd:rgba(255,69,0,.42);
+        --rtp-btnBg:rgba(255,69,0,.11); --rtp-btnTxt:#ff6a2b; --rtp-btnBrd:rgba(255,69,0,.24);
+        --rtp-btnDoneBg:rgba(96,211,148,.11); --rtp-btnDoneTxt:#60d394; --rtp-btnDoneBrd:rgba(96,211,148,.26);
         --f:'Outfit',sans-serif; --fm:'JetBrains Mono',monospace; --r:15px;
     }
 
@@ -661,13 +647,13 @@
         display:inline-flex; align-items:center; gap:5px;
         margin:3px 6px; padding:3px 11px;
         font-family:var(--f); font-size:10.5px; font-weight:600; letter-spacing:.04em;
-        color:var(--rtp-acc); background:var(--rtp-dim);
-        border:1px solid rgba(255,69,0,.24); border-radius:20px;
+        color:var(--rtp-btnTxt); background:var(--rtp-btnBg);
+        border:1px solid var(--rtp-btnBrd); border-radius:20px;
         cursor:pointer; vertical-align:middle; white-space:nowrap;
         transition:all .22s cubic-bezier(.34,1.56,.64,1); opacity:.6;
     }
     .rtp-btn:hover { opacity:1; transform:translateY(-1px) scale(1.05); box-shadow:0 4px 14px var(--rtp-glow); }
-    .rtp-btn.done  { color:var(--rtp-ok); background:var(--rtp-okd); border-color:rgba(96,211,148,.26); opacity:1; }
+    .rtp-btn.done  { color:var(--rtp-btnDoneTxt); background:var(--rtp-btnDoneBg); border-color:var(--rtp-btnDoneBrd); opacity:1; }
     .rtp-btn.busy  { opacity:.4; pointer-events:none; }
 
     /* Спиннер */
@@ -686,8 +672,11 @@
     }
     .rtp-bi {
         position:relative; z-index:20;
-        margin:4px 0; padding:8px 13px; background:var(--rtp-dim); border-left:2.5px solid var(--rtp-acc);
-        border-radius:0 9px 9px 0; font-size:13px; line-height:1.55; color:var(--rtp-txt); font-family:var(--f);
+        margin:6px 0 8px; padding:10px 14px; background:linear-gradient(180deg, var(--rtp-biBg), var(--rtp-surf));
+        border:1px solid var(--rtp-biBrd); border-left:3px solid var(--rtp-acc);
+        border-radius:0 11px 11px 0; font-size:13px; line-height:1.65; color:var(--rtp-biTxt); font-family:var(--f);
+        box-shadow:0 8px 24px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.03);
+        text-shadow:0 1px 0 rgba(0,0,0,.28);
         white-space:pre-wrap; overflow-wrap:anywhere; word-break:break-word; max-height:none; overflow:visible;
     }
 
@@ -697,49 +686,18 @@
     .rtp-t:hover { color:var(--rtp-txt); background:var(--rtp-surf); }
 
     /* ─ FAB ─ */
-    #rtp-fab {
-        position:fixed; bottom:28px; right:28px; z-index:9998;
-        display:flex; align-items:center; gap:0;
-        background:var(--rtp-acc); color:#fff; border:none;
-        border-radius:28px; height:52px; padding:0 22px;
-        font-family:var(--f); font-size:13px; font-weight:800; letter-spacing:.07em;
-        cursor:pointer; overflow:hidden;
-        box-shadow:0 8px 28px var(--rtp-glow), 0 2px 8px rgba(0,0,0,.3);
-        transition:all .28s cubic-bezier(.34,1.56,.64,1);
-    }
-    #rtp-fab::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(255,255,255,.15),transparent 60%); }
-    #rtp-fab:hover { transform:translateY(-3px) scale(1.03); box-shadow:0 14px 38px var(--rtp-glow); }
-    #rtp-fab .badge { margin-left:10px; background:rgba(255,255,255,.22); border-radius:10px; padding:1px 8px; font-size:11px; }
-    #rtp-cancel {
-        position:fixed; bottom:28px; right:calc(28px + 52px + 10px); z-index:9998;
-        display:none; align-items:center;
-        background:rgba(40,40,50,.92); color:#ff6b6b; border:1.5px solid rgba(255,107,107,.35);
-        border-radius:28px; height:52px; padding:0 18px;
-        font-family:var(--f); font-size:13px; font-weight:700; letter-spacing:.05em;
-        cursor:pointer; overflow:hidden;
-        box-shadow:0 8px 24px rgba(255,80,80,.2);
-        transition:all .22s cubic-bezier(.34,1.56,.64,1);
-        backdrop-filter:blur(10px);
-    }
-    #rtp-cancel.visible { display:flex; }
-    #rtp-cancel:hover { transform:translateY(-3px) scale(1.03); background:rgba(255,80,80,.18); box-shadow:0 12px 32px rgba(255,80,80,.3); }
-
     #rtp-view-toggle {
-        position:fixed; bottom:90px; right:28px; z-index:9998;
+        position:fixed; bottom:28px; right:28px; z-index:9998;
         display:flex; align-items:center; justify-content:center;
         min-width:160px; height:42px; padding:0 16px;
-        background:rgba(24,24,32,.92); color:var(--rtp-txt); border:1px solid var(--rtp-brd);
+        background:rgba(24,24,32,.92); color:#fff; border:1px solid var(--rtp-brd);
         border-radius:22px; font-family:var(--f); font-size:12px; font-weight:700; letter-spacing:.05em;
         cursor:pointer; box-shadow:0 8px 24px rgba(0,0,0,.28);
         backdrop-filter:blur(10px);
         transition:all .22s cubic-bezier(.34,1.56,.64,1);
     }
     #rtp-view-toggle:hover { transform:translateY(-3px) scale(1.02); border-color:var(--rtp-acc); box-shadow:0 12px 30px var(--rtp-glow); }
-    #rtp-view-toggle.originals { color:var(--rtp-acc); background:var(--rtp-dim); border-color:rgba(255,69,0,.24); }
-
-    /* Прогресс */
-    #rtp-prog { position:fixed; top:0; left:0; right:0; height:3px; z-index:10009; }
-    #rtp-prog-fill { height:100%; width:0%; background:linear-gradient(90deg,var(--rtp-acc),#ff8a50); box-shadow:0 0 10px var(--rtp-glow); transition:width .22s ease; }
+    #rtp-view-toggle.originals { color:#000; background:var(--rtp-dim); border-color:rgba(255,69,0,.24); text-shadow:0 1px 0 rgba(0,0,0,.22); }
 
     /* ─ Горячие клавиши ─ */
     .hk-row { display:flex; align-items:center; justify-content:space-between; gap:8px; margin:5px 0; }
@@ -824,7 +782,15 @@
         transition:border-color .18s;
     }
     .lang-sel:focus { border-color:var(--rtp-acc); }
-    .lang-sel option { background:#16161e; }
+    .lang-sel option {
+        background:var(--rtp-surf);
+        color:var(--rtp-txt);
+    }
+    .lang-sel option:checked,
+    .lang-sel option:hover {
+        background:var(--rtp-dim);
+        color:var(--rtp-txt);
+    }
 
     .api-box {
         width:100%; min-height:84px; resize:vertical; box-sizing:border-box;
@@ -832,8 +798,21 @@
         padding:10px 12px; border-radius:9px; font-family:var(--fm); font-size:11.5px; line-height:1.45;
         outline:none; transition:border-color .18s;
     }
+    .api-head {
+        display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:6px;
+    }
+    .api-head .lbl { margin-bottom:0; }
+    .api-wrap { position:relative; }
     .api-box:focus { border-color:var(--rtp-acc); }
     .api-box::placeholder { color:var(--rtp-mut); }
+    .api-box.masked { -webkit-text-security:disc; }
+    .api-eye {
+        width:32px; height:32px; display:flex; align-items:center; justify-content:center;
+        border:1px solid var(--rtp-brd); border-radius:8px; background:var(--rtp-surf);
+        color:var(--rtp-mut); cursor:pointer; transition:all .16s;
+        flex-shrink:0;
+    }
+    .api-eye:hover { color:var(--rtp-txt); border-color:var(--rtp-acc); }
     .api-help { margin-top:6px; font-size:10.5px; line-height:1.45; color:var(--rtp-mut); }
 
     .num-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:7px; }
@@ -902,7 +881,6 @@
 
     /* Cyberpunk overrides */
     [data-rtp-theme=cyberpunk] #rtp-panel { box-shadow:0 0 40px rgba(0,255,255,.1),0 32px 80px rgba(0,0,0,.85); }
-    [data-rtp-theme=cyberpunk] #rtp-fab { background:#00ffff; color:#000; box-shadow:0 0 28px rgba(0,255,255,.55); }
     `);
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -964,8 +942,10 @@
   // ═══════════════════════════════════════════════════════════════════════════
   let reqGen = 0; // поколение очереди — сброс при отмене
   let recentRequestTimes = [];
-  let activeRequests = 0;
-  let pendingRequests = [];
+  let activeTasks = 0;
+  let pendingTasks = [];
+  let activeNetworkRequests = 0;
+  let pendingNetworkRequests = [];
   const AUTO_TRANSLATE_VIEWPORT_MARGIN = 140;
   const AUTO_TRANSLATE_SETTLE_MS = 50;
 
@@ -1009,12 +989,12 @@
     }
   }
 
-  function pumpQueue() {
+  function pumpNetworkQueue() {
     const limit = getMaxConcurrentRequests();
     const isCurrentTask = (task) => task.gen === reqGen;
-    while (activeRequests < limit && pendingRequests.length) {
-      const task = pendingRequests.shift();
-      activeRequests++;
+    while (activeNetworkRequests < limit && pendingNetworkRequests.length) {
+      const task = pendingNetworkRequests.shift();
+      activeNetworkRequests++;
 
       (async () => {
         try {
@@ -1028,7 +1008,36 @@
         } catch {
           task.resolve(null);
         } finally {
-          activeRequests = Math.max(0, activeRequests - 1);
+          activeNetworkRequests = Math.max(0, activeNetworkRequests - 1);
+          pumpNetworkQueue();
+        }
+      })();
+    }
+  }
+
+  function runLimitedRequest(fn) {
+    return new Promise(resolve => {
+      pendingNetworkRequests.push({ fn, resolve, gen: reqGen });
+      pumpNetworkQueue();
+    });
+  }
+
+  function pumpQueue() {
+    const limit = getMaxConcurrentRequests();
+    const isCurrentTask = (task) => task.gen === reqGen;
+    while (activeTasks < limit && pendingTasks.length) {
+      const task = pendingTasks.shift();
+      activeTasks++;
+
+      (async () => {
+        try {
+          if (!isCurrentTask(task)) return task.resolve(null);
+          const result = await task.fn();
+          task.resolve(isCurrentTask(task) ? result : null);
+        } catch {
+          task.resolve(null);
+        } finally {
+          activeTasks = Math.max(0, activeTasks - 1);
           pumpQueue();
         }
       })();
@@ -1037,16 +1046,9 @@
 
   function enqueue(fn) {
     return new Promise(resolve => {
-      pendingRequests.push({ fn, resolve, gen: reqGen });
+      pendingTasks.push({ fn, resolve, gen: reqGen });
       pumpQueue();
     });
-  }
-
-  function cancelQueue() {
-    reqGen++;
-    recentRequestTimes = [];
-    pendingRequests.forEach(task => task.resolve(null));
-    pendingRequests = [];
   }
 
   function toneHint() {
@@ -1178,13 +1180,13 @@
 
   async function requestDeepLUsage(apiKey) {
     const endpoint = getDeepLEndpoint(apiKey);
-    return gmRequest({
+    return runLimitedRequest(() => gmRequest({
       url: `${endpoint}/v2/usage`,
       headers: {
         Authorization: `DeepL-Auth-Key ${apiKey}`,
       },
       parse: r => parseJsonSafe(r.responseText),
-    });
+    }));
   }
 
   async function testDeepLApi(raw = cfg.deeplApiKeys) {
@@ -1258,10 +1260,10 @@
     try {
       const sample = buildRequestChunks(text)[0] || text;
       const q = toneHint() + sample;
-      const result = await gmRequest({
+      const result = await runLimitedRequest(() => gmRequest({
         url: `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=${encodeURIComponent(q)}`,
         parse: r => parseJsonSafe(r.responseText, []),
-      });
+      }));
       return result.data?.[2] || null;
     } catch {
       return null;
@@ -1375,7 +1377,7 @@
         const apiKey = keys[idx];
         const endpoint = getDeepLEndpoint(apiKey);
 
-        const result = await gmRequest({
+        const result = await runLimitedRequest(() => gmRequest({
           method: 'POST',
           url: `${endpoint}/v2/translate`,
           headers: {
@@ -1387,7 +1389,7 @@
             target_lang: targetLang,
           }),
           parse: r => parseJsonSafe(r.responseText),
-        });
+        }));
         const translated = result.ok ? result.data?.translations?.[0]?.text || null : null;
 
         if (translated) {
@@ -1406,20 +1408,20 @@
   const ENGINE_TRANSLATORS = {
     google: async (chunk) => {
       const q = toneHint() + chunk;
-      const response = await gmRequest({
+      const response = await runLimitedRequest(() => gmRequest({
         url: `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${cfg.targetLang}&dt=t&q=${encodeURIComponent(q)}`,
         parse: r => parseJsonSafe(r.responseText, []),
         fallback: [],
-      });
+      }));
       return response.data?.[0]?.map(i => i[0]).join('') || chunk;
     },
     mymemory: async (chunk) => {
       const q = toneHint() + chunk;
-      const response = await gmRequest({
+      const response = await runLimitedRequest(() => gmRequest({
         url: `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=auto|${cfg.targetLang}`,
         parse: r => parseJsonSafe(r.responseText),
         fallback: { responseData: { translatedText: chunk } },
-      });
+      }));
       return response.data?.responseData?.translatedText || chunk;
     },
     deepl: doTranslateDeepL,
@@ -1433,9 +1435,15 @@
 
     try {
       const translateWithEngine = ENGINE_TRANSLATORS[cfg.engine] || ENGINE_TRANSLATORS.google;
-      result = cfg.engine === 'deepl'
-        ? await translateWithEngine(text)
-        : (await Promise.all(buildRequestChunks(text).map(chunk => translateWithEngine(chunk)))).join('\n\n');
+      if (cfg.engine === 'deepl') {
+        result = await translateWithEngine(text);
+      } else {
+        const translatedChunks = [];
+        for (const chunk of buildRequestChunks(text)) {
+          translatedChunks.push(await translateWithEngine(chunk));
+        }
+        result = translatedChunks.join('\n\n');
+      }
     } catch { }
 
     if (pirateMode) result = pirateify(result);
@@ -1516,11 +1524,6 @@
     clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove('on'), ms);
   }
 
-  function setProgress(p) {
-    const el = document.getElementById('rtp-prog-fill');
-    if (el) el.style.width = p + '%';
-  }
-
   function mkToggle(checked, onChange) {
     const wrap = document.createElement('label'); wrap.className = 'tog';
     const inp = document.createElement('input'); inp.type = 'checkbox'; inp.checked = !!checked;
@@ -1539,7 +1542,6 @@
   }
 
   let translationDisplayMode = 'translated';
-  let bulkRunId = 0;
 
   function syncControlVisibility() {
     document.querySelectorAll('.rtp-ctrl').forEach(host => {
@@ -1552,11 +1554,11 @@
       tb.style.display = btnsHidden ? 'none' : '';
     });
     document.querySelectorAll('.rtp-bi').forEach(bi => {
-      bi.style.display = btnsHidden ? 'none' : '';
+      bi.style.display = translationDisplayMode === 'original' ? '' : 'none';
     });
 
-    if (!btnsHidden) {
-      document.querySelectorAll('.rtp-btn.done').forEach(btn => applyDisplayModeToButton(btn, btn._targetEl));
+    if (!btnsHidden || cfg.bilingualMode) {
+      document.querySelectorAll('.rtp-btn.done').forEach(btn => renderTranslatedState(btn, btn._targetEl));
     }
   }
 
@@ -1596,26 +1598,48 @@
     delete el.dataset.rtpOrigStyle;
   }
 
-  function applyDisplayModeToButton(btn, el, mode = translationDisplayMode) {
+  function ensureBilingualBlock(btn, el, translated) {
+    if (!btn || !el || !translated) return null;
+    if (!btn._bi || !btn._bi.isConnected) {
+      const bi = document.createElement('div');
+      bi.className = 'rtp-bi';
+      bi.innerText = translated;
+      btn._bi = bi;
+      (btn._ctrlHost || el).after(bi);
+    } else if (btn._bi.innerText !== translated) {
+      btn._bi.innerText = translated;
+    }
+    return btn._bi;
+  }
+
+  function renderTranslatedState(btn, el, mode = translationDisplayMode) {
     if (!btn || !el || btn.dataset.st !== 'done') return;
     const orig = el.dataset.orig || '';
     const translated = btn.dataset.translation || '';
     if (!translated) return;
 
     if (cfg.bilingualMode) {
-      el.innerText = orig;
-      setTranslatedContentLayout(el, false);
-      if (btn._bi) btn._bi.style.display = mode === 'translated' && !btnsHidden ? '' : 'none';
+      const showOriginalWithBilingual = mode === 'original';
+      const bi = ensureBilingualBlock(btn, el, translated);
+      el.innerText = showOriginalWithBilingual ? orig : translated;
+      setTranslatedContentLayout(el, !showOriginalWithBilingual);
+      if (bi) bi.style.display = showOriginalWithBilingual ? '' : 'none';
       return;
     }
+
+    if (btn._bi) btn._bi.style.display = 'none';
 
     el.innerText = mode === 'translated' ? translated : orig;
     setTranslatedContentLayout(el, mode === 'translated');
   }
 
+  function applyDisplayModeToButton(btn, el, mode = translationDisplayMode) {
+    renderTranslatedState(btn, el, mode);
+  }
+
   function applyDisplayModeToAll(mode) {
     translationDisplayMode = mode;
-    document.querySelectorAll('.rtp-btn.done').forEach(btn => applyDisplayModeToButton(btn, btn._targetEl, mode));
+    document.querySelectorAll('.rtp-btn.done').forEach(btn => renderTranslatedState(btn, btn._targetEl, mode));
     updateViewToggleButton();
   }
 
@@ -1645,17 +1669,15 @@
     btn.dataset.translation = text;
 
     if (cfg.bilingualMode) {
-      const bi = document.createElement('div');
-      bi.className = 'rtp-bi rtp-fi';
-      bi.innerText = text;
-      btn._bi = bi;
-      (btn._ctrlHost || el).after(bi);
-      if (btnsHidden || translationDisplayMode === 'original') bi.style.display = 'none';
+      const bi = ensureBilingualBlock(btn, el, text);
+      if (bi) bi.classList.add('rtp-fi');
+      renderTranslatedState(btn, el);
+      if (bi) setTimeout(() => bi.classList.remove('rtp-fi'), 450);
       return;
     }
 
     el.classList.add('rtp-fi');
-    applyDisplayModeToButton(btn, el);
+    renderTranslatedState(btn, el);
     setTimeout(() => el.classList.remove('rtp-fi'), 450);
   }
 
@@ -1841,18 +1863,8 @@
   // ═══════════════════════════════════════════════════════════════════════════
   // § FAB
   // ═══════════════════════════════════════════════════════════════════════════
-  function createFAB() {
-    if (document.getElementById('rtp-fab')) return;
-
-    // Прогресс-бар
-    const prog = document.createElement('div'); prog.id = 'rtp-prog';
-    prog.innerHTML = '<div id="rtp-prog-fill"></div>';
-    document.body.appendChild(prog);
-
-    // Кнопка отмены
-    const cancelBtn = document.createElement('button'); cancelBtn.id = 'rtp-cancel';
-    cancelBtn.textContent = S('btnCancel');
-    document.body.appendChild(cancelBtn);
+  function createViewToggle() {
+    if (document.getElementById('rtp-view-toggle')) return;
 
     const viewToggleBtn = document.createElement('button');
     viewToggleBtn.id = 'rtp-view-toggle';
@@ -1863,84 +1875,6 @@
     };
     document.body.appendChild(viewToggleBtn);
     updateViewToggleButton();
-
-    const fab = document.createElement('button'); fab.id = 'rtp-fab';
-    fab.innerHTML = `🌍 ${S('translateAll')} <span class="badge" id="fab-n">0</span>`;
-
-    let busy = false;
-    let cancelled = false;
-    let activeRunId = 0;
-
-    cancelBtn.onclick = () => {
-      if (!busy) return;
-      cancelled = true;
-      cancelQueue();
-    };
-
-    fab.onclick = async () => {
-      if (busy) return;
-      const btns = [...document.querySelectorAll('.rtp-btn')].filter(b => b.dataset.st !== 'done');
-      if (!btns.length) { toast('✅ ' + S('toastAll')); return; }
-
-      const runId = ++bulkRunId;
-      activeRunId = runId;
-      busy = true; cancelled = false;
-      fab.style.opacity = '.6';
-      cancelBtn.classList.add('visible');
-      setProgress(0);
-
-      const pendingSet = new Set(btns);
-      const doneSet = new Set();
-      const updateBulkProgress = () => {
-        if (activeRunId !== runId) return;
-        const total = btns.length || 1;
-        const completed = doneSet.size;
-        setProgress(Math.min(100, completed / total * 100));
-      };
-
-      const watchers = btns.map(btn => new Promise(resolve => {
-        let settled = false;
-        const finish = () => {
-          if (settled) return;
-          settled = true;
-          pendingSet.delete(btn);
-          doneSet.add(btn);
-          updateBulkProgress();
-          resolve();
-        };
-
-        const poll = () => {
-          if (activeRunId !== runId || !pendingSet.has(btn)) return resolve();
-          if (btn.dataset.st === 'done' || !btn.classList.contains('busy')) return finish();
-          setTimeout(poll, 80);
-        };
-
-        setTimeout(poll, 80);
-      }));
-
-      const CHUNK = Math.max(2, getMaxConcurrentRequests() * 2);
-      for (let i = 0; i < btns.length; i += CHUNK) {
-        if (cancelled) break;
-        btns.slice(i, i + CHUNK).forEach(b => b.click());
-        await new Promise(r => setTimeout(r, Math.max(120, cfg.requestDelay + 80)));
-      }
-
-      await Promise.all(watchers);
-      if (activeRunId === runId) {
-        setProgress(cancelled ? 0 : 100);
-        if (!cancelled) setTimeout(() => {
-          if (activeRunId === runId) setProgress(0);
-        }, 1000);
-      }
-      cancelBtn.classList.remove('visible');
-      busy = false; fab.style.opacity = '1';
-      activeRunId = 0;
-      toast(cancelled ? S('toastCancelled') : `${S('toastAll')}: ${doneSet.size}`);
-    };
-
-    document.body.appendChild(fab);
-    if (createFAB._badgeTimer) clearInterval(createFAB._badgeTimer);
-    createFAB._badgeTimer = setInterval(() => { const n = document.getElementById('fab-n'); if (n) n.textContent = document.querySelectorAll('.rtp-btn').length; }, 1500);
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -1983,6 +1917,25 @@
   function setupDeepLControls(panel) {
     const box = panel.querySelector('#deepl-api-keys');
     const testBtn = panel.querySelector('#btn-test-deepl');
+    const toggleBtn = panel.querySelector('#btn-toggle-deepl-visibility');
+    let secretsVisible = false;
+
+    function syncSecretVisibility() {
+      if (!box || !toggleBtn) return;
+      box.classList.toggle('masked', !secretsVisible);
+      const label = S(secretsVisible ? 'btnToggleSecretsHide' : 'btnToggleSecretsShow');
+      toggleBtn.textContent = label;
+      toggleBtn.title = label;
+      toggleBtn.setAttribute('aria-label', label);
+    }
+
+    syncSecretVisibility();
+    if (toggleBtn) {
+      toggleBtn.onclick = () => {
+        secretsVisible = !secretsVisible;
+        syncSecretVisibility();
+      };
+    }
 
     panel.querySelector('#btn-save-deepl').onclick = () => {
       const normalized = parseDeepLKeys(box.value).join(', ');
@@ -2036,7 +1989,13 @@
     panel.querySelectorAll('.tog-row').forEach((row, i) => {
       const key = toggleKeys[i];
       if (!key) return;
-      row.appendChild(mkToggle(cfg[key], v => save(key, v)));
+      row.appendChild(mkToggle(cfg[key], v => {
+        save(key, v);
+        if (key === 'bilingualMode') {
+          document.querySelectorAll('.rtp-btn.done').forEach(btn => renderTranslatedState(btn, btn._targetEl));
+          syncControlVisibility();
+        }
+      }));
     });
   }
 
@@ -2115,7 +2074,6 @@
 
   function setupPanelHotkeys(panel) {
     setupHotkeyCapturer(panel, 'hk-panel', 'hk-panel-r', 'hotkeyPanel', 'F2');
-    setupHotkeyCapturer(panel, 'hk-all', 'hk-all-r', 'hotkeyAll', 'Ctrl+Shift+T');
   }
 
   function setupPanelColorPickers(panel) {
@@ -2176,7 +2134,7 @@
       panel.style.top = '11%';
       panel.style.left = 'calc(50% - 186px)';
       GM_setValue(PREFIX + 'panelX', null);
-      GM_setValue('panelY', null);
+      GM_setValue(PREFIX + 'panelY', null);
     };
 
     panel.querySelector('#btn-ccache').onclick = () => {
@@ -2205,7 +2163,7 @@
             Object.entries(src).forEach(([k, v]) => {
               if (k in DEF) {
                 cfg[k] = v;
-                GM_setValue(k, v);
+                GM_setValue(PREFIX + k, v);
               }
             });
             location.reload();
@@ -2250,16 +2208,6 @@
       hideBtn.classList.toggle('active', btnsHidden);
     };
 
-    const autoScrollBtn = panel.querySelector('#btn-auto-scroll');
-    autoScrollBtn.classList.toggle('active', cfg.autoTranslateOnScroll);
-    autoScrollBtn.onclick = () => {
-      const newState = !cfg.autoTranslateOnScroll;
-      save('autoTranslateOnScroll', newState);
-      cfg.autoTranslateOnScroll = newState;
-      autoScrollBtn.textContent = (newState ? '✅ ' : '') + S('togAutoTranslateOnScroll');
-      autoScrollBtn.classList.toggle('active', newState);
-      toast(newState ? S('toastAutoScrollOn') : S('toastAutoScrollOff'));
-    };
   }
 
   function setupPanelTabs(panel) {
@@ -2286,7 +2234,7 @@
       };
       const cleanup = () => {
         GM_setValue(PREFIX + 'panelX', panel.style.left);
-        GM_setValue('panelY', panel.style.top);
+        GM_setValue(PREFIX + 'panelY', panel.style.top);
         document.removeEventListener('mousemove', mm);
         document.removeEventListener('mouseup', cleanup);
       };
@@ -2310,7 +2258,7 @@
                 <div class="logo-ic">🌐</div>
                 <div>
                     <div class="logo-nm">${S('title')}</div>
-                    <div class="logo-vr">${S('ver')} · ${cfg.hotkeyPanel} · ${cfg.hotkeyAll}</div>
+                    <div class="logo-vr">${S('ver')} · ${cfg.hotkeyPanel}</div>
                 </div>
             </div>
             <button id="rtp-close">✕</button>
@@ -2363,8 +2311,13 @@
             </div>
 
             <div>
-                <span class="lbl">${S('secDeepLApi')}</span>
-                <textarea class="api-box" id="deepl-api-keys" placeholder="${S('deeplApiPlaceholder')}">${escapeHtml(cfg.deeplApiKeys || '')}</textarea>
+                <div class="api-head">
+                    <span class="lbl">${S('secDeepLApi')}</span>
+                    <button type="button" class="api-eye" id="btn-toggle-deepl-visibility" title="${S('btnToggleSecretsShow')}">${S('btnToggleSecretsShow')}</button>
+                </div>
+                <div class="api-wrap">
+                    <textarea class="api-box masked" id="deepl-api-keys" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="${S('deeplApiPlaceholder')}">${escapeHtml(cfg.deeplApiKeys || '')}</textarea>
+                </div>
                 <div class="api-help">${S('deeplApiHelp')}</div>
                 <div class="g2" style="margin-top:8px;">
                     <button class="btn-p ghost" id="btn-save-deepl" style="height:40px;font-size:11px;">${S('saveDeepLApi')}</button>
@@ -2425,9 +2378,6 @@
                 <div class="btn-s" id="btn-yoda">${S('btnYoda')}</div>
                 <div class="btn-s" id="btn-hide">${btnsHidden ? S('btnShow') : S('btnHide')}</div>
             </div>
-            <div class="g2">
-                <div class="btn-s" id="btn-auto-scroll">${cfg.autoTranslateOnScroll ? '✅ ' : ''}${S('togAutoTranslateOnScroll')}</div>
-            </div>
             <div class="div"></div>
             <div>
                 <span class="lbl">${S('sliderDelay')}</span>
@@ -2462,11 +2412,6 @@
                     <span class="hk-lbl">${S('hotkeyPanel')}</span>
                     <button class="hk-btn" id="hk-panel">${cfg.hotkeyPanel}</button>
                     <button class="hk-reset" id="hk-panel-r">${S('hotkeyReset')}</button>
-                </div>
-                <div class="hk-row">
-                    <span class="hk-lbl">${S('hotkeyAll')}</span>
-                    <button class="hk-btn" id="hk-all">${cfg.hotkeyAll}</button>
-                    <button class="hk-reset" id="hk-all-r">${S('hotkeyReset')}</button>
                 </div>
             </div>
             <div class="div"></div>
@@ -2529,7 +2474,7 @@
   // § ЗАПУСК
   // ═══════════════════════════════════════════════════════════════════════════
   applyTheme(cfg.theme);
-  createFAB();
+  createViewToggle();
   injectButtons();
 
   function matchesHotkey(e, combo) {
@@ -2549,7 +2494,6 @@
 
   window.addEventListener('keydown', e => {
     if (matchesHotkey(e, cfg.hotkeyPanel)) { e.preventDefault(); buildPanel(); }
-    if (matchesHotkey(e, cfg.hotkeyAll)) { e.preventDefault(); document.getElementById('rtp-fab')?.click(); }
   });
 
 })();

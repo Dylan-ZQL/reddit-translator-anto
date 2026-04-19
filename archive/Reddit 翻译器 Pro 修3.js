@@ -1,40 +1,38 @@
 // ==UserScript==
-// @name        🌐Reddit 翻译器 Pro Auto
-// @name:en     🌐Reddit Translator Pro Auto
-// @name:ru     🌐Reddit Переводчик Pro Auto
-// @name:uk     🌐Reddit Перекладач Pro Auto
-// @name:de     🌐Reddit Übersetzer Pro Auto
-// @name:fr     🌐Reddit Traducteur Pro Auto
-// @name:es     🌐Reddit Traductor Pro Auto
-// @name:it     🌐Reddit Traduttore Pro Auto
-// @name:pl     🌐Reddit Tłumacz Pro Auto
-// @name:tr     🌐Reddit Çevirmeni Pro Auto
-// @name:vi     🌐Reddit Biên Dịch Viên Pro Auto
-// @name:ko     🌐Reddit 번역기 Pro Auto
-// @name:ja     🌐Reddit 翻訳者 Pro Auto
-// @name:zh-CN  🌐Reddit 翻译器 Pro Auto
-// @name:zh-HK  🌐Reddit 翻譯器 Pro Auto
-// @name:zh-TW  🌐Reddit 翻譯器 Pro Auto
-// @namespace    https://github.com/Dylan-ZQL
-// @homepageURL  https://github.com/Dylan-ZQL/reddit-translator-anto
-// @supportURL   https://github.com/Dylan-ZQL/reddit-translator-anto/issues
-// @version      1.0.8
-// @description      🏷️业余 Reddit 翻译器 — glassmorphism、100+ 语言、TTS、Google、MyMemory、DeepL、历史记录、转换器、彩蛋、IntersectionObserver
-// @description:zh-CN   🏷️业余Reddit翻译器 — glassmorphism、100多种语言、TTS、Google、MyMemory、DeepL、历史记录、转换器、彩蛋、IntersectionObserver
-// @description:zh-HK   🏷️業餘Reddit翻譯器 — glassmorphism、100多種語言、TTS、Google、MyMemory、DeepL、歷史記錄、轉換器、彩蛋、IntersectionObserver
-// @description:zh-TW   🏷️業餘Reddit翻譯器 — glassmorphism、100多種語言、TTS、Google、MyMemory、DeepL、歷史記錄、轉換器、彩蛋、IntersectionObserver
-// @description:ru      🏷️Любительский переводчик Reddit — glassmorphism, 100+ языков, TTS, Google, MyMemory, DeepL, история, конвертеры, пасхалки, IntersectionObserver
-// @description:uk      🏷️Любительський перекладач Reddit — glassmorphism, 100+ мов, TTS, Google, MyMemory, DeepL, історія, конвертери, пасхалки, IntersectionObserver
-// @description:en      🏷️Amateur Reddit translator — glassmorphism, 100+ languages, TTS, Google, MyMemory, DeepL, history, converters, easter eggs, IntersectionObserver
-// @description:de      🏷️Amateur-Reddit-Übersetzer — Glassmorphism, 100+ Sprachen, TTS, Google, MyMemory, DeepL, Verlauf, Konverter, Ostereier, IntersectionObserver
-// @description:it      🏷️Traduttore Reddit amatoriale — glassmorphism, 100+ lingue, TTS, Google, MyMemory, DeepL, cronologia, convertitori, easter egg, IntersectionObserver
-// @description:fr      🏷️Traducteur Reddit amateur — glassmorphism, 100+ langues, TTS, Google, MyMemory, DeepL, historique, convertisseurs, easter eggs, IntersectionObserver
-// @description:es      🏷️Traductor Reddit amateur — glassmorphism, 100+ idiomas, TTS, Google, MyMemory, DeepL, historial, convertidores, easter eggs, IntersectionObserver
-// @description:ko      🏷️아마추어 Reddit 번역기 — glassmorphism、100+ 언어、TTS、Google、MyMemory、DeepL、히스토리、변환기、이스터 에그、IntersectionObserver
-// @description:pl      🏷️Amatorski tłumacz Reddit — glassmorphism, 100+ języków, TTS, Google, MyMemory, DeepL, historia, konwertery, easter eggi, IntersectionObserver
-// @description:tr      🏷️Amatör Reddit çevirmeni — glassmorphism, 100+ dil, TTS, Google, MyMemory, DeepL, geçmiş, dönüştürücüler, sürprizler, IntersectionObserver
-// @description:vi      🏷️Trình dịch Reddit nghiệp dư — glassmorphism, 100+ ngôn ngữ, TTS, Google, MyMemory, DeepL, lịch sử, bộ chuyển đổi, easter egg, IntersectionObserver
-// @description:ja      🏷️アマチュアReddit翻訳者 — glassmorphism、100以上の言語、TTS、Google、MyMemory、DeepL、履歴、コンバーター、イースターエッグ、IntersectionObserver
+// @name        🌐Reddit Translator Pro
+// @name:ru     🌐Reddit Переводчик Pro
+// @name:uk     🌐Reddit Перекладач Pro
+// @name:de     🌐Reddit Übersetzer Pro
+// @name:fr     🌐Reddit Traducteur Pro
+// @name:es     🌐Reddit Traductor Pro
+// @name:it     🌐Reddit Traduttore Pro
+// @name:pl     🌐Reddit Tłumacz Pro
+// @name:tr     🌐Reddit Çevirmeni Pro
+// @name:vi     🌐Reddit Biên Dịch Viên Pro
+// @name:ko     🌐Reddit 번역기 Pro
+// @name:ja     🌐Reddit 翻訳者 Pro
+// @name:zh-CN  🌐Reddit 翻译器 Pro
+// @name:zh-HK  🌐Reddit 翻譯器 Pro
+// @name:zh-TW  🌐Reddit 翻譯器 Pro
+// @namespace    https://github.com/ebayybe
+// @homepageURL  https://github.com/ebayybe/reddit-translator
+// @supportURL   https://github.com/ebayybe/reddit-translator/issues
+// @version      1.0.3
+// @description:ru      🏷️Любительский переводчик Reddit — glassmorphism, 100+ языков, TTS, история, конвертеры, пасхалки, IntersectionObserver
+// @description:uk      🏷️Любительський перекладач Reddit — glassmorphism, 100+ мов, TTS, історія, конвертери, пасхалки, IntersectionObserver
+// @description:en      🏷️Amateur Reddit translator — glassmorphism, 100+ languages, TTS, history, converters, easter eggs, IntersectionObserver
+// @description:de      🏷️Amateur-Reddit-Übersetzer — Glassmorphism, 100+ Sprachen, TTS, Verlauf, Konverter, Ostereier, IntersectionObserver
+// @description:it      🏷️Traduttore Reddit amatoriale — glassmorphism, 100+ lingue, TTS, cronologia, convertitori, easter egg, IntersectionObserver
+// @description:fr      🏷️Traducteur Reddit amateur — glassmorphism, 100+ langues, TTS, historique, convertisseurs, easter eggs, IntersectionObserver
+// @description:es      🏷️Traductor Reddit amateur — glassmorphism, 100+ idiomas, TTS, historial, convertidores, easter eggs, IntersectionObserver
+// @description:ko      🏷️아마추어 Reddit 번역기 — glassmorphism, 100+ 언어, TTS, 히스토리, 변환기, 이스터 에그, IntersectionObserver
+// @description:pl      🏷️Amatorski tłumacz Reddit — glassmorphism, 100+ języków, TTS, historia, konwertery, easter eggi, IntersectionObserver
+// @description:tr      🏷️Amatör Reddit çevirmeni — glassmorphism, 100+ dil, TTS, geçmiş, dönüştürücüler, sürprizler, IntersectionObserver
+// @description:vi      🏷️Trình dịch Reddit nghiệp dư — glassmorphism, 100+ ngôn ngữ, TTS, lịch sử, bộ chuyển đổi, easter egg, IntersectionObserver
+// @description:ja      🏷️アマチュアReddit翻訳者 — glassmorphism、100以上の言語、TTS、履歴、コンバーター、イースターエッグ、IntersectionObserver
+// @description:zh-CN   🏷️业余Reddit翻译器 — glassmorphism，100多种语言，TTS，历史记录，转换器，彩蛋，IntersectionObserver
+// @description:zh-HK   🏷️業餘Reddit翻譯器 — glassmorphism，100多種語言，TTS，歷史記錄，轉換器，彩蛋，IntersectionObserver
+// @description:zh-TW   🏷️業餘Reddit翻譯器 — glassmorphism，100多種語言，TTS，歷史記錄，轉換器，彩蛋，IntersectionObserver
 // @icon         data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cmVjdCB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgcng9IjI4IiBmaWxsPSIjZmY0NTAwIi8+CiAgPHRleHQgeD0iNjQiIHk9IjkwIiBmb250LXNpemU9IjcyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUkgRW1vamksQXBwbGUgQ29sb3IgRW1vamksc2Fucy1zZXJpZiI+8J+MkDwvdGV4dD4KPC9zdmc+
 // @author       Dylan-ZQL
 // @license      MIT
@@ -47,15 +45,15 @@
 // @connect      api.mymemory.translated.net
 // @connect      api.deepl.com
 // @connect      api-free.deepl.com
-// @downloadURL https://greasyfork.org/scripts/574557-reddit-translator-pro-auto/code/reddit-translator-pro-auto.user.js
-// @updateURL https://greasyfork.org/scripts/574557-reddit-translator-pro-auto/code/reddit-translator-pro-auto.meta.js
+// @downloadURL https://update.greasyfork.org/scripts/569819/%F0%9F%8C%90Reddit%20Translator%20Pro.user.js
+// @updateURL https://update.greasyfork.org/scripts/569819/%F0%9F%8C%90Reddit%20Translator%20Pro.meta.js
 // ==/UserScript==
 
 (function () {
   'use strict';
 
   // Unique prefix for this script to avoid conflicts with other scripts
-  const PREFIX = '_x8_';
+  const PREFIX = '_x3_';
 
   // ═══════════════════════════════════════════════════════════════════════════
   // § КОНФИГУРАЦИЯ
@@ -65,23 +63,20 @@
     uiLang: 'zh',
     engine: 'google',
     tone: 'normal',
-    theme: 'light',
-    bilingualMode: true,
+    theme: 'dark',
+    bilingualMode: false,
     ttsEnabled: true,
     autoConvert: true,
     autoScroll: false,
     incognito: false,
-    requestDelay: 50,
+    requestDelay: 120,
     totalChars: 0,
     totalCount: 0,
     hotkeyPanel: 'F2',
+    hotkeyAll: 'Ctrl+Shift+T',
     customColors: null,
-    autoTranslateOnScroll: true,
+    autoTranslateOnScroll: false,
     deeplApiKeys: '',
-    maxRequestsPerSecond: 20,
-    maxTextLengthPerRequest: 1800,
-    maxParagraphsPerRequest: 6,
-    maxConcurrentRequests: 5,
   };
 
   // Загружаем конфиг
@@ -163,6 +158,7 @@
     ru: {
       title: 'Reddit Переводчик', ver: 'v1.0.0',
       tabSettings: '⚙️ Настройки', tabHistory: '📖 История', tabExtras: '✨ Дополнения',
+      translateAll: 'ПЕРЕВЕСТИ ВСЁ',
       secUiLang: 'Язык интерфейса', applyUi: '✨ ПРИМЕНИТЬ ИНТЕРФЕЙС',
       secTargetLang: 'Язык перевода', saveLang: '💾 СОХРАНИТЬ ЯЗЫК',
       secEngine: 'Движок', secTone: 'Стиль перевода', secTheme: 'Тема',
@@ -183,13 +179,14 @@
       searchLang: 'Поиск языка…',
       btnOrig: '↩ Оригинал', btnCopy: '📋 Копировать', btnSpeak: '🔊', btnRetry: '↺ Ещё раз',
       copied: '✅ Скопировано!', cacheCleared: '🧹 Кэш очищен',
-      toastApply: '✅ Интерфейс обновлён',
+      toastAll: '✅ Переведено', toastApply: '✅ Интерфейс обновлён',
       toastSave: '💾 Сохранено — перезагрузка…', toastSurprise: '🎲 Язык:',
       toastPirateOn: '🏴‍☠️ Arrr! Пиратский режим!', toastPirateOff: '🏴‍☠️ Режим выключен',
       toastYodaOn: '🧙 Включён режим, хммм.', toastYodaOff: '🧙 Выключен он.',
       toastAutoScrollOn: '✅ Автоперевод при прокрутке включён', toastAutoScrollOff: '⭕ Автоперевод при прокрутке выключен',
-      shortcutHint: 'F2 = панель',
-      secHotkeys: 'Горячие клавиши', hotkeyPanel: 'Открыть панель',
+      shortcutHint: 'F2 = панель · Ctrl+Shift+T = всё',
+      btnCancel: '⛔ Отмена', toastCancelled: '⛔ Перевод отменён',
+      secHotkeys: 'Горячие клавиши', hotkeyPanel: 'Открыть панель', hotkeyAll: 'Перевести всё',
       hotkeyPress: 'Нажмите клавишу…', hotkeyReset: '↺ Сброс',
       secColors: 'Цвета темы', colorAcc: 'Акцент', colorTxt: 'Текст', colorBg: 'Фон', colorOk: 'Успех',
       btnResetColors: '↺ Сброс цветов',
@@ -197,6 +194,7 @@
     uk: {
       title: 'Reddit Перекладач', ver: 'v1.0.0',
       tabSettings: '⚙️ Налаштування', tabHistory: '📖 Історія', tabExtras: '✨ Додатково',
+      translateAll: 'ПЕРЕКЛАСТИ ВСЕ',
       secUiLang: 'Мова інтерфейсу', applyUi: '✨ ЗАСТОСУВАТИ ІНТЕРФЕЙС',
       secTargetLang: 'Мова перекладу', saveLang: '💾 ЗБЕРЕГТИ МОВУ',
       secEngine: 'Рушій', secTone: 'Стиль', secTheme: 'Тема',
@@ -217,13 +215,14 @@
       searchLang: 'Пошук мови…',
       btnOrig: '↩ Оригінал', btnCopy: '📋 Копіювати', btnSpeak: '🔊', btnRetry: '↺ Ще раз',
       copied: '✅ Скопійовано!', cacheCleared: '🧹 Кеш очищено',
-      toastApply: '✅ Інтерфейс оновлено',
+      toastAll: '✅ Перекладено', toastApply: '✅ Інтерфейс оновлено',
       toastSave: '💾 Збережено — перезавантаження…', toastSurprise: '🎲 Мова:',
       toastPirateOn: '🏴‍☠️ Arrr! Піратський режим!', toastPirateOff: '🏴‍☠️ Вимкнено',
       toastYodaOn: '🧙 Увімкнено режим, хммм.', toastYodaOff: '🧙 Вимкнено.',
       toastAutoScrollOn: '✅ Автопереклад при прокручуванні увімкнено', toastAutoScrollOff: '⭕ Автопереклад при прокручуванні вимкнено',
-      shortcutHint: 'F2 = панель',
-      secHotkeys: 'Гарячі клавіші', hotkeyPanel: 'Відкрити панель',
+      shortcutHint: 'F2 = панель · Ctrl+Shift+T = все',
+      btnCancel: '⛔ Скасувати', toastCancelled: '⛔ Переклад скасовано',
+      secHotkeys: 'Гарячі клавіші', hotkeyPanel: 'Відкрити панель', hotkeyAll: 'Перекласти все',
       hotkeyPress: 'Натисніть клавішу…', hotkeyReset: '↺ Скинути',
       secColors: 'Кольори теми', colorAcc: 'Акцент', colorTxt: 'Текст', colorBg: 'Фон', colorOk: 'Успіх',
       btnResetColors: '↺ Скинути кольори',
@@ -231,14 +230,13 @@
     en: {
       title: 'Reddit Translator', ver: 'v1.0.0',
       tabSettings: '⚙️ Settings', tabHistory: '📖 History', tabExtras: '✨ Extras',
+      translateAll: 'TRANSLATE ALL',
       secUiLang: 'UI Language', applyUi: '✨ APPLY INTERFACE',
       secTargetLang: 'Target language', saveLang: '💾 SAVE LANGUAGE',
       secEngine: 'Engine', secTone: 'Translation tone', secTheme: 'Theme',
       engGoogle: 'Google', engMymemory: 'MyMemory', engDeepL: 'DeepL',
       secDeepLApi: 'DeepL API keys', saveDeepLApi: '🔑 SAVE DEEPL KEYS',
       btnTestDeepL: '🧪 TEST DEEPL',
-      btnToggleSecretsShow: '👁',
-      btnToggleSecretsHide: '🙈',
       deeplApiPlaceholder: 'Paste one or more DeepL API keys, separated by commas',
       deeplApiHelp: 'Supports both Pro and Free keys. Keys ending with :fx use api-free.deepl.com automatically.',
       toastDeepLKeysSaved: '🔑 DeepL keys saved',
@@ -263,29 +261,22 @@
       searchLang: 'Search language…',
       btnOrig: '↩ Original', btnCopy: '📋 Copy', btnSpeak: '🔊', btnRetry: '↺ Retry',
       copied: '✅ Copied!', cacheCleared: '🧹 Cache cleared',
-      toastApply: '✅ Interface updated',
+      toastAll: '✅ Translated', toastApply: '✅ Interface updated',
       toastSave: '💾 Saved — reloading…', toastSurprise: '🎲 Language:',
       toastPirateOn: '🏴‍☠️ Arrr! Pirate mode on!', toastPirateOff: '🏴‍☠️ Pirate mode off',
       toastYodaOn: '🧙 Yoda mode on, hmm.', toastYodaOff: '🧙 Yoda mode off.',
       toastAutoScrollOn: '✅ Auto-translate on scroll enabled', toastAutoScrollOff: '⭕ Auto-translate on scroll disabled',
-      shortcutHint: 'F2 = panel',
-      secHotkeys: 'Hotkeys', hotkeyPanel: 'Open panel',
+      shortcutHint: 'F2 = panel · Ctrl+Shift+T = all',
+      btnCancel: '⛔ Cancel', toastCancelled: '⛔ Translation cancelled',
+      secHotkeys: 'Hotkeys', hotkeyPanel: 'Open panel', hotkeyAll: 'Translate all',
       hotkeyPress: 'Press a key…', hotkeyReset: '↺ Reset',
       secColors: 'Theme colors', colorAcc: 'Accent', colorTxt: 'Text', colorBg: 'Background', colorOk: 'Success',
       btnResetColors: '↺ Reset colors',
-      secRequestLimits: 'Request limits',
-      maxConcurrentRequests: 'Max concurrent requests',
-      maxRequestsPerSecond: 'Max requests / sec',
-      maxTextLengthPerRequest: 'Max chars / request',
-      maxParagraphsPerRequest: 'Max paragraphs / request',
-      btnShowOriginals: '📄 SHOW ORIGINAL',
-      btnShowTranslations: '🌐 SHOW TRANSLATION',
-      toastShowingOriginals: '📄 Showing original text',
-      toastShowingTranslations: '🌐 Showing translated text',
     },
     de: {
       title: 'Reddit Übersetzer', ver: 'v1.0.0',
       tabSettings: '⚙️ Einstellungen', tabHistory: '📖 Verlauf', tabExtras: '✨ Extras',
+      translateAll: 'ALLES ÜBERSETZEN',
       secUiLang: 'UI-Sprache', applyUi: '✨ INTERFACE ANWENDEN',
       secTargetLang: 'Zielsprache', saveLang: '💾 SPRACHE SPEICHERN',
       secEngine: 'Motor', secTone: 'Übersetzungsstil', secTheme: 'Thema',
@@ -306,13 +297,14 @@
       searchLang: 'Sprache suchen…',
       btnOrig: '↩ Original', btnCopy: '📋 Kopieren', btnSpeak: '🔊', btnRetry: '↺ Nochmal',
       copied: '✅ Kopiert!', cacheCleared: '🧹 Cache geleert',
-      toastApply: '✅ Interface aktualisiert',
+      toastAll: '✅ Übersetzt', toastApply: '✅ Interface aktualisiert',
       toastSave: '💾 Gespeichert — neu laden…', toastSurprise: '🎲 Sprache:',
       toastPirateOn: '🏴‍☠️ Arrr! Piraten-Modus!', toastPirateOff: '🏴‍☠️ Modus aus',
       toastYodaOn: '🧙 Yoda-Modus an, hmm.', toastYodaOff: '🧙 Modus aus.',
       toastAutoScrollOn: '✅ Automatisches Übersetzen beim Scrollen aktiviert', toastAutoScrollOff: '⭕ Automatisches Übersetzen beim Scrollen deaktiviert',
-      shortcutHint: 'F2 = Panel',
-      secHotkeys: 'Tastenkürzel', hotkeyPanel: 'Panel öffnen',
+      shortcutHint: 'F2 = Panel · Ctrl+Shift+T = alles',
+      btnCancel: '⛔ Abbrechen', toastCancelled: '⛔ Übersetzung abgebrochen',
+      secHotkeys: 'Tastenkürzel', hotkeyPanel: 'Panel öffnen', hotkeyAll: 'Alles übersetzen',
       hotkeyPress: 'Taste drücken…', hotkeyReset: '↺ Zurücksetzen',
       secColors: 'Themenfarben', colorAcc: 'Akzent', colorTxt: 'Text', colorBg: 'Hintergrund', colorOk: 'Erfolg',
       btnResetColors: '↺ Farben zurücksetzen',
@@ -320,6 +312,7 @@
     fr: {
       title: 'Traducteur Reddit', ver: 'v1.0.0',
       tabSettings: '⚙️ Paramètres', tabHistory: '📖 Historique', tabExtras: '✨ Extras',
+      translateAll: 'TOUT TRADUIRE',
       secUiLang: 'Langue UI', applyUi: '✨ APPLIQUER INTERFACE',
       secTargetLang: 'Langue cible', saveLang: '💾 ENREGISTRER',
       secEngine: 'Moteur', secTone: 'Style', secTheme: 'Thème',
@@ -340,13 +333,14 @@
       searchLang: 'Chercher langue…',
       btnOrig: '↩ Original', btnCopy: '📋 Copier', btnSpeak: '🔊', btnRetry: '↺ Réessayer',
       copied: '✅ Copié!', cacheCleared: '🧹 Cache vidé',
-      toastApply: '✅ Interface mise à jour',
+      toastAll: '✅ Traduit', toastApply: '✅ Interface mise à jour',
       toastSave: '💾 Sauvegardé — rechargement…', toastSurprise: '🎲 Langue:',
       toastPirateOn: '🏴‍☠️ Arrr! Mode Pirate!', toastPirateOff: '🏴‍☠️ Mode désactivé',
       toastYodaOn: '🧙 Mode Yoda activé, hmm.', toastYodaOff: '🧙 Mode Yoda désactivé.',
       toastAutoScrollOn: '✅ Traduction automatique au défilement activée', toastAutoScrollOff: '⭕ Traduction automatique au défilement désactivée',
-      shortcutHint: 'F2 = panneau',
-      secHotkeys: 'Raccourcis', hotkeyPanel: 'Ouvrir panneau',
+      shortcutHint: 'F2 = panneau · Ctrl+Shift+T = tout',
+      btnCancel: '⛔ Annuler', toastCancelled: '⛔ Traduction annulée',
+      secHotkeys: 'Raccourcis', hotkeyPanel: 'Ouvrir panneau', hotkeyAll: 'Tout traduire',
       hotkeyPress: 'Appuyez sur une touche…', hotkeyReset: '↺ Réinitialiser',
       secColors: 'Couleurs du thème', colorAcc: 'Accent', colorTxt: 'Texte', colorBg: 'Fond', colorOk: 'Succès',
       btnResetColors: '↺ Réinitialiser couleurs',
@@ -354,6 +348,7 @@
     es: {
       title: 'Traductor Reddit', ver: 'v1.0.0',
       tabSettings: '⚙️ Config', tabHistory: '📖 Historial', tabExtras: '✨ Extras',
+      translateAll: 'TRADUCIR TODO',
       secUiLang: 'Idioma UI', applyUi: '✨ APLICAR INTERFAZ',
       secTargetLang: 'Idioma destino', saveLang: '💾 GUARDAR IDIOMA',
       secEngine: 'Motor', secTone: 'Estilo', secTheme: 'Tema',
@@ -374,13 +369,14 @@
       searchLang: 'Buscar idioma…',
       btnOrig: '↩ Original', btnCopy: '📋 Copiar', btnSpeak: '🔊', btnRetry: '↺ Reintentar',
       copied: '✅ ¡Copiado!', cacheCleared: '🧹 Caché limpiado',
-      toastApply: '✅ Interfaz actualizada',
+      toastAll: '✅ Traducido', toastApply: '✅ Interfaz actualizada',
       toastSave: '💾 Guardado — recargando…', toastSurprise: '🎲 Idioma:',
       toastPirateOn: '🏴‍☠️ ¡Arrr! ¡Modo Pirata!', toastPirateOff: '🏴‍☠️ Modo desactivado',
       toastYodaOn: '🧙 Modo Yoda activado, hmm.', toastYodaOff: '🧙 Modo Yoda desactivado.',
       toastAutoScrollOn: '✅ Traducción automática al desplazar activada', toastAutoScrollOff: '⭕ Traducción automática al desplazar desactivada',
-      shortcutHint: 'F2 = panel',
-      secHotkeys: 'Atajos', hotkeyPanel: 'Abrir panel',
+      shortcutHint: 'F2 = panel · Ctrl+Shift+T = todo',
+      btnCancel: '⛔ Cancelar', toastCancelled: '⛔ Traducción cancelada',
+      secHotkeys: 'Atajos', hotkeyPanel: 'Abrir panel', hotkeyAll: 'Traducir todo',
       hotkeyPress: 'Presiona una tecla…', hotkeyReset: '↺ Restablecer',
       secColors: 'Colores del tema', colorAcc: 'Acento', colorTxt: 'Texto', colorBg: 'Fondo', colorOk: 'Éxito',
       btnResetColors: '↺ Restablecer colores',
@@ -388,6 +384,7 @@
     pl: {
       title: 'Tłumacz Reddit', ver: 'v1.0.0',
       tabSettings: '⚙️ Ustawienia', tabHistory: '📖 Historia', tabExtras: '✨ Extras',
+      translateAll: 'PRZETŁUMACZ WSZYSTKO',
       secUiLang: 'Język interfejsu', applyUi: '✨ ZASTOSUJ INTERFEJS',
       secTargetLang: 'Język docelowy', saveLang: '💾 ZAPISZ JĘZYK',
       secEngine: 'Silnik', secTone: 'Styl', secTheme: 'Motyw',
@@ -408,13 +405,14 @@
       searchLang: 'Szukaj języka…',
       btnOrig: '↩ Oryginał', btnCopy: '📋 Kopiuj', btnSpeak: '🔊', btnRetry: '↺ Ponów',
       copied: '✅ Skopiowano!', cacheCleared: '🧹 Cache wyczyszczony',
-      toastApply: '✅ Interfejs zaktualizowany',
+      toastAll: '✅ Przetłumaczono', toastApply: '✅ Interfejs zaktualizowany',
       toastSave: '💾 Zapisano — przeładowanie…', toastSurprise: '🎲 Język:',
       toastPirateOn: '🏴‍☠️ Arrr! Tryb Pirata!', toastPirateOff: '🏴‍☠️ Tryb wyłączony',
       toastYodaOn: '🧙 Tryb Yody włączony, hmm.', toastYodaOff: '🧙 Tryb wyłączony.',
       toastAutoScrollOn: '✅ Automatyczne tłumaczenie podczas przewijania włączone', toastAutoScrollOff: '⭕ Automatyczne tłumaczenie podczas przewijania wyłączone',
-      shortcutHint: 'F2 = panel',
-      secHotkeys: 'Skróty klawiszowe', hotkeyPanel: 'Otwórz panel',
+      shortcutHint: 'F2 = panel · Ctrl+Shift+T = wszystko',
+      btnCancel: '⛔ Anuluj', toastCancelled: '⛔ Tłumaczenie anulowane',
+      secHotkeys: 'Skróty klawiszowe', hotkeyPanel: 'Otwórz panel', hotkeyAll: 'Przetłumacz wszystko',
       hotkeyPress: 'Naciśnij klawisz…', hotkeyReset: '↺ Resetuj',
       secColors: 'Kolory motywu', colorAcc: 'Akcent', colorTxt: 'Tekst', colorBg: 'Tło', colorOk: 'Sukces',
       btnResetColors: '↺ Resetuj kolory',
@@ -422,6 +420,7 @@
     tr: {
       title: 'Reddit Çevirmeni', ver: 'v1.0.0',
       tabSettings: '⚙️ Ayarlar', tabHistory: '📖 Geçmiş', tabExtras: '✨ Ekstra',
+      translateAll: 'HEPSİNİ ÇEVİR',
       secUiLang: 'Arayüz dili', applyUi: '✨ ARAYÜZÜ UYGULA',
       secTargetLang: 'Hedef dil', saveLang: '💾 DİLİ KAYDET',
       secEngine: 'Motor', secTone: 'Stil', secTheme: 'Tema',
@@ -442,13 +441,14 @@
       searchLang: 'Dil ara…',
       btnOrig: '↩ Orijinal', btnCopy: '📋 Kopyala', btnSpeak: '🔊', btnRetry: '↺ Tekrar',
       copied: '✅ Kopyalandı!', cacheCleared: '🧹 Önbellek temizlendi',
-      toastApply: '✅ Arayüz güncellendi',
+      toastAll: '✅ Çevrildi', toastApply: '✅ Arayüz güncellendi',
       toastSave: '💾 Kaydedildi — yenileniyor…', toastSurprise: '🎲 Dil:',
       toastPirateOn: '🏴‍☠️ Arrr! Korsan modu!', toastPirateOff: '🏴‍☠️ Mod kapatıldı',
       toastYodaOn: '🧙 Yoda modu açık, hmm.', toastYodaOff: '🧙 Yoda modu kapalı.',
       toastAutoScrollOn: '✅ Kaydırırken otomatik çeviri etkin', toastAutoScrollOff: '⭕ Kaydırırken otomatik çeviri devre dışı',
-      shortcutHint: 'F2 = panel',
-      secHotkeys: 'Kısayollar', hotkeyPanel: 'Paneli aç',
+      shortcutHint: 'F2 = panel · Ctrl+Shift+T = hepsi',
+      btnCancel: '⛔ İptal', toastCancelled: '⛔ Çeviri iptal edildi',
+      secHotkeys: 'Kısayollar', hotkeyPanel: 'Paneli aç', hotkeyAll: 'Hepsini çevir',
       hotkeyPress: 'Bir tuşa basın…', hotkeyReset: '↺ Sıfırla',
       secColors: 'Tema renkleri', colorAcc: 'Vurgu', colorTxt: 'Metin', colorBg: 'Arka plan', colorOk: 'Başarı',
       btnResetColors: '↺ Renkleri sıfırla',
@@ -456,14 +456,13 @@
     zh: {
       title: 'Reddit翻译器', ver: 'v1.0.0',
       tabSettings: '⚙️ 设置', tabHistory: '📖 历史', tabExtras: '✨ 更多',
+      translateAll: '翻译全部',
       secUiLang: '界面语言', applyUi: '✨ 应用界面',
       secTargetLang: '目标语言', saveLang: '💾 保存语言',
       secEngine: '引擎', secTone: '风格', secTheme: '主题',
       engGoogle: 'Google', engMymemory: 'MyMemory', engDeepL: 'DeepL',
       secDeepLApi: 'DeepL API 密钥', saveDeepLApi: '🔑 保存 DeepL 密钥',
       btnTestDeepL: '🧪 测试 DeepL',
-      btnToggleSecretsShow: '👁',
-      btnToggleSecretsHide: '🙈',
       deeplApiPlaceholder: '粘贴一个或多个 DeepL API 密钥，使用英文逗号分隔',
       deeplApiHelp: '同时支持 Pro 和 Free 密钥。以 :fx 结尾的密钥会自动使用 api-free.deepl.com。',
       toastDeepLKeysSaved: '🔑 DeepL 密钥已保存',
@@ -488,29 +487,22 @@
       searchLang: '搜索语言…',
       btnOrig: '↩ 原文', btnCopy: '📋 复制', btnSpeak: '🔊', btnRetry: '↺ 重试',
       copied: '✅ 已复制！', cacheCleared: '🧹 缓存已清除',
-      toastApply: '✅ 界面已更新',
+      toastAll: '✅ 已翻译', toastApply: '✅ 界面已更新',
       toastSave: '💾 已保存 — 重新加载…', toastSurprise: '🎲 语言:',
       toastPirateOn: '🏴‍☠️ Arrr! 海盗模式！', toastPirateOff: '🏴‍☠️ 模式关闭',
       toastYodaOn: '🧙 尤达模式已开启，嗯。', toastYodaOff: '🧙 尤达模式已关闭。',
       toastAutoScrollOn: '✅ 滚动时自动翻译已启用', toastAutoScrollOff: '⭕ 滚动时自动翻译已禁用',
-      shortcutHint: 'F2 = 面板',
-      secHotkeys: '快捷键', hotkeyPanel: '打开面板',
+      shortcutHint: 'F2 = 面板 · Ctrl+Shift+T = 全部',
+      btnCancel: '⛔ 取消', toastCancelled: '⛔ 翻译已取消',
+      secHotkeys: '快捷键', hotkeyPanel: '打开面板', hotkeyAll: '翻译全部',
       hotkeyPress: '按下一个键…', hotkeyReset: '↺ 重置',
       secColors: '主题颜色', colorAcc: '强调色', colorTxt: '文字', colorBg: '背景', colorOk: '成功',
       btnResetColors: '↺ 重置颜色',
-      secRequestLimits: '请求限制',
-      maxConcurrentRequests: '最大并发请求数',
-      maxRequestsPerSecond: '每秒最大请求数',
-      maxTextLengthPerRequest: '每次请求最大文本长度',
-      maxParagraphsPerRequest: '每次请求最大段落数',
-      btnShowOriginals: '📄 显示原文',
-      btnShowTranslations: '🌐 显示译文',
-      toastShowingOriginals: '📄 当前显示原文',
-      toastShowingTranslations: '🌐 当前显示译文',
     },
     ja: {
       title: 'Reddit翻訳', ver: 'v1.0.0',
       tabSettings: '⚙️ 設定', tabHistory: '📖 履歴', tabExtras: '✨ その他',
+      translateAll: 'すべて翻訳',
       secUiLang: 'UI言語', applyUi: '✨ UIを適用',
       secTargetLang: '翻訳先言語', saveLang: '💾 言語を保存',
       secEngine: 'エンジン', secTone: 'スタイル', secTheme: 'テーマ',
@@ -531,13 +523,14 @@
       searchLang: '言語を検索…',
       btnOrig: '↩ 元テキスト', btnCopy: '📋 コピー', btnSpeak: '🔊', btnRetry: '↺ やり直し',
       copied: '✅ コピーしました！', cacheCleared: '🧹 キャッシュ削除済み',
-      toastApply: '✅ UIを更新しました',
+      toastAll: '✅ 翻訳済み', toastApply: '✅ UIを更新しました',
       toastSave: '💾 保存しました — 再読込中…', toastSurprise: '🎲 言語:',
       toastPirateOn: '🏴‍☠️ Arrr! 海賊モード！', toastPirateOff: '🏴‍☠️ モードオフ',
       toastYodaOn: '🧙 ヨーダモードオン、ふむ。', toastYodaOff: '🧙 ヨーダモードオフ。',
       toastAutoScrollOn: '✅ スクロール時に自動翻訳が有効', toastAutoScrollOff: '⭕ スクロール時に自動翻訳が無効',
-      shortcutHint: 'F2 = パネル',
-      secHotkeys: 'ショートカット', hotkeyPanel: 'パネルを開く',
+      shortcutHint: 'F2 = パネル · Ctrl+Shift+T = すべて',
+      btnCancel: '⛔ キャンセル', toastCancelled: '⛔ 翻訳をキャンセルしました',
+      secHotkeys: 'ショートカット', hotkeyPanel: 'パネルを開く', hotkeyAll: 'すべて翻訳',
       hotkeyPress: 'キーを押してください…', hotkeyReset: '↺ リセット',
       secColors: 'テーマカラー', colorAcc: 'アクセント', colorTxt: 'テキスト', colorBg: '背景', colorOk: '成功',
       btnResetColors: '↺ 色をリセット',
@@ -593,10 +586,10 @@
   // § ТЕМЫ
   // ═══════════════════════════════════════════════════════════════════════════
   const THEMES = {
-    dark: { bg: 'rgba(10,10,14,.96)', surf: 'rgba(24,24,32,.9)', brd: 'rgba(255,255,255,.06)', txt: '#e0e0ec', mut: 'rgba(255,255,255,.28)', acc: '#ff4500', glow: 'rgba(255,69,0,.36)', dim: 'rgba(255,69,0,.11)', ok: '#60d394', okd: 'rgba(96,211,148,.11)', biBg: 'rgba(20,22,30,.96)', biTxt: '#fff3ed', biBrd: 'rgba(255,69,0,.42)', btnBg: 'var(--rtp-dim)', btnTxt: '#ff6a2b', btnBrd: 'rgba(255,69,0,.24)', btnDoneBg: 'rgba(96,211,148,.11)', btnDoneTxt: '#60d394', btnDoneBrd: 'rgba(96,211,148,.26)' },
-    light: { bg: 'rgba(246,246,250,.97)', surf: 'rgba(255,255,255,.93)', brd: 'rgba(0,0,0,.07)', txt: '#17171e', mut: 'rgba(0,0,0,.36)', acc: '#ff4500', glow: 'rgba(255,69,0,.2)', dim: 'rgba(255,69,0,.09)', ok: '#1a9e5a', okd: 'rgba(26,158,90,.09)', biBg: 'rgba(255,245,240,.95)', biTxt: '#17171e', biBrd: 'rgba(255,69,0,.28)', btnBg: 'rgba(255,241,234,.96)', btnTxt: '#c63a00', btnBrd: 'rgba(255,69,0,.26)', btnDoneBg: 'rgba(226,247,236,.98)', btnDoneTxt: '#157347', btnDoneBrd: 'rgba(26,158,90,.28)' },
-    cyberpunk: { bg: 'rgba(3,0,16,.97)', surf: 'rgba(10,3,32,.93)', brd: 'rgba(0,255,255,.11)', txt: '#ddf4ff', mut: 'rgba(0,255,255,.36)', acc: '#00ffff', glow: 'rgba(0,255,255,.44)', dim: 'rgba(0,255,255,.09)', ok: '#ff00aa', okd: 'rgba(255,0,170,.1)', biBg: 'rgba(4,18,34,.97)', biTxt: '#e9feff', biBrd: 'rgba(0,255,255,.5)', btnBg: 'rgba(0,255,255,.09)', btnTxt: '#66ffff', btnBrd: 'rgba(0,255,255,.24)', btnDoneBg: 'rgba(255,0,170,.12)', btnDoneTxt: '#ff6ecf', btnDoneBrd: 'rgba(255,0,170,.3)' },
-    dracula: { bg: 'rgba(14,14,26,.97)', surf: 'rgba(26,26,46,.91)', brd: 'rgba(139,92,246,.16)', txt: '#f8f8f2', mut: 'rgba(189,147,249,.5)', acc: '#bd93f9', glow: 'rgba(189,147,249,.42)', dim: 'rgba(189,147,249,.1)', ok: '#50fa7b', okd: 'rgba(80,250,123,.1)', biBg: 'rgba(33,34,54,.97)', biTxt: '#f8f8f2', biBrd: 'rgba(189,147,249,.52)', btnBg: 'rgba(189,147,249,.12)', btnTxt: '#d5b6ff', btnBrd: 'rgba(189,147,249,.26)', btnDoneBg: 'rgba(80,250,123,.12)', btnDoneTxt: '#50fa7b', btnDoneBrd: 'rgba(80,250,123,.28)' },
+    dark: { bg: 'rgba(10,10,14,.96)', surf: 'rgba(24,24,32,.9)', brd: 'rgba(255,255,255,.06)', txt: '#e0e0ec', mut: 'rgba(255,255,255,.28)', acc: '#ff4500', glow: 'rgba(255,69,0,.36)', dim: 'rgba(255,69,0,.11)', ok: '#60d394', okd: 'rgba(96,211,148,.11)' },
+    light: { bg: 'rgba(246,246,250,.97)', surf: 'rgba(255,255,255,.93)', brd: 'rgba(0,0,0,.07)', txt: '#17171e', mut: 'rgba(0,0,0,.36)', acc: '#ff4500', glow: 'rgba(255,69,0,.2)', dim: 'rgba(255,69,0,.09)', ok: '#1a9e5a', okd: 'rgba(26,158,90,.09)' },
+    cyberpunk: { bg: 'rgba(3,0,16,.97)', surf: 'rgba(10,3,32,.93)', brd: 'rgba(0,255,255,.11)', txt: '#ddf4ff', mut: 'rgba(0,255,255,.36)', acc: '#00ffff', glow: 'rgba(0,255,255,.44)', dim: 'rgba(0,255,255,.09)', ok: '#ff00aa', okd: 'rgba(255,0,170,.1)' },
+    dracula: { bg: 'rgba(14,14,26,.97)', surf: 'rgba(26,26,46,.91)', brd: 'rgba(139,92,246,.16)', txt: '#f8f8f2', mut: 'rgba(189,147,249,.5)', acc: '#bd93f9', glow: 'rgba(189,147,249,.42)', dim: 'rgba(189,147,249,.1)', ok: '#50fa7b', okd: 'rgba(80,250,123,.1)' },
   };
 
   function applyTheme(t) {
@@ -636,9 +629,6 @@
         --rtp-brd:rgba(255,255,255,.06); --rtp-txt:#e0e0ec; --rtp-mut:rgba(255,255,255,.28);
         --rtp-acc:#ff4500; --rtp-glow:rgba(255,69,0,.36); --rtp-dim:rgba(255,69,0,.11);
         --rtp-ok:#60d394; --rtp-okd:rgba(96,211,148,.11);
-        --rtp-biBg:rgba(20,22,30,.96); --rtp-biTxt:#fff3ed; --rtp-biBrd:rgba(255,69,0,.42);
-        --rtp-btnBg:rgba(255,69,0,.11); --rtp-btnTxt:#ff6a2b; --rtp-btnBrd:rgba(255,69,0,.24);
-        --rtp-btnDoneBg:rgba(96,211,148,.11); --rtp-btnDoneTxt:#60d394; --rtp-btnDoneBrd:rgba(96,211,148,.26);
         --f:'Outfit',sans-serif; --fm:'JetBrains Mono',monospace; --r:15px;
     }
 
@@ -647,13 +637,13 @@
         display:inline-flex; align-items:center; gap:5px;
         margin:3px 6px; padding:3px 11px;
         font-family:var(--f); font-size:10.5px; font-weight:600; letter-spacing:.04em;
-        color:var(--rtp-btnTxt); background:var(--rtp-btnBg);
-        border:1px solid var(--rtp-btnBrd); border-radius:20px;
+        color:var(--rtp-acc); background:var(--rtp-dim);
+        border:1px solid rgba(255,69,0,.24); border-radius:20px;
         cursor:pointer; vertical-align:middle; white-space:nowrap;
         transition:all .22s cubic-bezier(.34,1.56,.64,1); opacity:.6;
     }
     .rtp-btn:hover { opacity:1; transform:translateY(-1px) scale(1.05); box-shadow:0 4px 14px var(--rtp-glow); }
-    .rtp-btn.done  { color:var(--rtp-btnDoneTxt); background:var(--rtp-btnDoneBg); border-color:var(--rtp-btnDoneBrd); opacity:1; }
+    .rtp-btn.done  { color:var(--rtp-ok); background:var(--rtp-okd); border-color:rgba(96,211,148,.26); opacity:1; }
     .rtp-btn.busy  { opacity:.4; pointer-events:none; }
 
     /* Спиннер */
@@ -665,39 +655,44 @@
     @keyframes fi { from{opacity:0;transform:translateY(3px)} to{opacity:1;transform:none} }
 
     /* Двуязычный блок */
-    .rtp-ctrl {
-        position:relative; z-index:20; display:flex; align-items:center; gap:6px; flex-wrap:wrap;
-        width:fit-content; max-width:100%; margin:4px 0;
-        pointer-events:auto;
-    }
-    .rtp-bi {
-        position:relative; z-index:20;
-        margin:6px 0 8px; padding:10px 14px; background:linear-gradient(180deg, var(--rtp-biBg), var(--rtp-surf));
-        border:1px solid var(--rtp-biBrd); border-left:3px solid var(--rtp-acc);
-        border-radius:0 11px 11px 0; font-size:13px; line-height:1.65; color:var(--rtp-biTxt); font-family:var(--f);
-        box-shadow:0 8px 24px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.03);
-        text-shadow:0 1px 0 rgba(0,0,0,.28);
-        white-space:pre-wrap; overflow-wrap:anywhere; word-break:break-word; max-height:none; overflow:visible;
-    }
+    .rtp-bi { margin:4px 0; padding:8px 13px; background:var(--rtp-dim); border-left:2.5px solid var(--rtp-acc); border-radius:0 9px 9px 0; font-size:13px; line-height:1.55; color:var(--rtp-txt); font-family:var(--f); }
 
     /* Тулбар */
-    .rtp-tb { position:relative; z-index:21; display:inline-flex; gap:3px; margin:0; }
+    .rtp-tb { display:inline-flex; gap:3px; margin:2px 6px; }
     .rtp-t  { display:inline-flex; align-items:center; padding:2px 8px; font-family:var(--f); font-size:9.5px; font-weight:600; letter-spacing:.04em; color:var(--rtp-mut); border:1px solid var(--rtp-brd); border-radius:12px; cursor:pointer; transition:all .16s; background:transparent; }
     .rtp-t:hover { color:var(--rtp-txt); background:var(--rtp-surf); }
 
     /* ─ FAB ─ */
-    #rtp-view-toggle {
+    #rtp-fab {
         position:fixed; bottom:28px; right:28px; z-index:9998;
-        display:flex; align-items:center; justify-content:center;
-        min-width:160px; height:42px; padding:0 16px;
-        background:rgba(24,24,32,.92); color:#fff; border:1px solid var(--rtp-brd);
-        border-radius:22px; font-family:var(--f); font-size:12px; font-weight:700; letter-spacing:.05em;
-        cursor:pointer; box-shadow:0 8px 24px rgba(0,0,0,.28);
-        backdrop-filter:blur(10px);
-        transition:all .22s cubic-bezier(.34,1.56,.64,1);
+        display:flex; align-items:center; gap:0;
+        background:var(--rtp-acc); color:#fff; border:none;
+        border-radius:28px; height:52px; padding:0 22px;
+        font-family:var(--f); font-size:13px; font-weight:800; letter-spacing:.07em;
+        cursor:pointer; overflow:hidden;
+        box-shadow:0 8px 28px var(--rtp-glow), 0 2px 8px rgba(0,0,0,.3);
+        transition:all .28s cubic-bezier(.34,1.56,.64,1);
     }
-    #rtp-view-toggle:hover { transform:translateY(-3px) scale(1.02); border-color:var(--rtp-acc); box-shadow:0 12px 30px var(--rtp-glow); }
-    #rtp-view-toggle.originals { color:#000; background:var(--rtp-dim); border-color:rgba(255,69,0,.24); text-shadow:0 1px 0 rgba(0,0,0,.22); }
+    #rtp-fab::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(255,255,255,.15),transparent 60%); }
+    #rtp-fab:hover { transform:translateY(-3px) scale(1.03); box-shadow:0 14px 38px var(--rtp-glow); }
+    #rtp-fab .badge { margin-left:10px; background:rgba(255,255,255,.22); border-radius:10px; padding:1px 8px; font-size:11px; }
+    #rtp-cancel {
+        position:fixed; bottom:28px; right:calc(28px + 52px + 10px); z-index:9998;
+        display:none; align-items:center;
+        background:rgba(40,40,50,.92); color:#ff6b6b; border:1.5px solid rgba(255,107,107,.35);
+        border-radius:28px; height:52px; padding:0 18px;
+        font-family:var(--f); font-size:13px; font-weight:700; letter-spacing:.05em;
+        cursor:pointer; overflow:hidden;
+        box-shadow:0 8px 24px rgba(255,80,80,.2);
+        transition:all .22s cubic-bezier(.34,1.56,.64,1);
+        backdrop-filter:blur(10px);
+    }
+    #rtp-cancel.visible { display:flex; }
+    #rtp-cancel:hover { transform:translateY(-3px) scale(1.03); background:rgba(255,80,80,.18); box-shadow:0 12px 32px rgba(255,80,80,.3); }
+
+    /* Прогресс */
+    #rtp-prog { position:fixed; top:0; left:0; right:0; height:3px; z-index:10009; }
+    #rtp-prog-fill { height:100%; width:0%; background:linear-gradient(90deg,var(--rtp-acc),#ff8a50); box-shadow:0 0 10px var(--rtp-glow); transition:width .22s ease; }
 
     /* ─ Горячие клавиши ─ */
     .hk-row { display:flex; align-items:center; justify-content:space-between; gap:8px; margin:5px 0; }
@@ -782,15 +777,7 @@
         transition:border-color .18s;
     }
     .lang-sel:focus { border-color:var(--rtp-acc); }
-    .lang-sel option {
-        background:var(--rtp-surf);
-        color:var(--rtp-txt);
-    }
-    .lang-sel option:checked,
-    .lang-sel option:hover {
-        background:var(--rtp-dim);
-        color:var(--rtp-txt);
-    }
+    .lang-sel option { background:#16161e; }
 
     .api-box {
         width:100%; min-height:84px; resize:vertical; box-sizing:border-box;
@@ -798,41 +785,9 @@
         padding:10px 12px; border-radius:9px; font-family:var(--fm); font-size:11.5px; line-height:1.45;
         outline:none; transition:border-color .18s;
     }
-    .api-head {
-        display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:6px;
-    }
-    .api-head .lbl { margin-bottom:0; }
-    .api-wrap { position:relative; }
     .api-box:focus { border-color:var(--rtp-acc); }
     .api-box::placeholder { color:var(--rtp-mut); }
-    .api-box.masked { -webkit-text-security:disc; }
-    .api-eye {
-        width:32px; height:32px; display:flex; align-items:center; justify-content:center;
-        border:1px solid var(--rtp-brd); border-radius:8px; background:var(--rtp-surf);
-        color:var(--rtp-mut); cursor:pointer; transition:all .16s;
-        flex-shrink:0;
-    }
-    .api-eye:hover { color:var(--rtp-txt); border-color:var(--rtp-acc); }
     .api-help { margin-top:6px; font-size:10.5px; line-height:1.45; color:var(--rtp-mut); }
-
-    .num-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:7px; }
-    .num-card {
-        padding:8px 10px; background:var(--rtp-surf); border:1px solid var(--rtp-brd);
-        border-radius:10px;
-    }
-    @media (max-width: 430px) {
-        .num-grid { grid-template-columns:1fr; }
-    }
-    .num-lbl {
-        display:block; margin-bottom:6px; font-size:10px; line-height:1.35;
-        color:var(--rtp-mut);
-    }
-    .num-inp {
-        width:100%; box-sizing:border-box; background:transparent; border:1px solid var(--rtp-brd);
-        color:var(--rtp-txt); padding:7px 9px; border-radius:8px; font-family:var(--fm); font-size:12px;
-        outline:none;
-    }
-    .num-inp:focus { border-color:var(--rtp-acc); }
 
     /* Пилюли */
     .pills { display:flex; gap:3px; background:var(--rtp-surf); border:1px solid var(--rtp-brd); border-radius:10px; padding:3px; }
@@ -881,6 +836,7 @@
 
     /* Cyberpunk overrides */
     [data-rtp-theme=cyberpunk] #rtp-panel { box-shadow:0 0 40px rgba(0,255,255,.1),0 32px 80px rgba(0,0,0,.85); }
+    [data-rtp-theme=cyberpunk] #rtp-fab { background:#00ffff; color:#000; box-shadow:0 0 28px rgba(0,255,255,.55); }
     `);
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -940,115 +896,21 @@
   // ═══════════════════════════════════════════════════════════════════════════
   // § ПЕРЕВОД
   // ═══════════════════════════════════════════════════════════════════════════
+  let reqQ = Promise.resolve();
   let reqGen = 0; // поколение очереди — сброс при отмене
-  let recentRequestTimes = [];
-  let activeTasks = 0;
-  let pendingTasks = [];
-  let activeNetworkRequests = 0;
-  let pendingNetworkRequests = [];
-  const AUTO_TRANSLATE_VIEWPORT_MARGIN = 140;
-  const AUTO_TRANSLATE_SETTLE_MS = 50;
-
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  function getPositiveInt(value, fallback, min = 1, max = Number.MAX_SAFE_INTEGER) {
-    const n = Math.floor(Number(value));
-    if (!Number.isFinite(n)) return fallback;
-    return Math.min(max, Math.max(min, n));
-  }
-
-  function getMaxRequestsPerSecond() {
-    return getPositiveInt(cfg.maxRequestsPerSecond, DEF.maxRequestsPerSecond, 1, 50);
-  }
-
-  function getMaxConcurrentRequests() {
-    return getPositiveInt(cfg.maxConcurrentRequests, DEF.maxConcurrentRequests, 1, 20);
-  }
-
-  function getMaxTextLengthPerRequest() {
-    return getPositiveInt(cfg.maxTextLengthPerRequest, DEF.maxTextLengthPerRequest, 100, 20000);
-  }
-
-  function getMaxParagraphsPerRequest() {
-    return getPositiveInt(cfg.maxParagraphsPerRequest, DEF.maxParagraphsPerRequest, 1, 100);
-  }
-
-  async function waitForRateSlot() {
-    const limit = getMaxRequestsPerSecond();
-    while (true) {
-      const now = Date.now();
-      recentRequestTimes = recentRequestTimes.filter(ts => now - ts < 1000);
-      if (recentRequestTimes.length < limit) {
-        recentRequestTimes.push(now);
-        return;
-      }
-      const oldest = recentRequestTimes[0] || now;
-      await sleep(Math.max(20, 1000 - (now - oldest)));
-    }
-  }
-
-  function pumpNetworkQueue() {
-    const limit = getMaxConcurrentRequests();
-    const isCurrentTask = (task) => task.gen === reqGen;
-    while (activeNetworkRequests < limit && pendingNetworkRequests.length) {
-      const task = pendingNetworkRequests.shift();
-      activeNetworkRequests++;
-
-      (async () => {
-        try {
-          if (!isCurrentTask(task)) return task.resolve(null);
-          await sleep(cfg.requestDelay);
-          if (!isCurrentTask(task)) return task.resolve(null);
-          await waitForRateSlot();
-          if (!isCurrentTask(task)) return task.resolve(null);
-          const result = await task.fn();
-          task.resolve(isCurrentTask(task) ? result : null);
-        } catch {
-          task.resolve(null);
-        } finally {
-          activeNetworkRequests = Math.max(0, activeNetworkRequests - 1);
-          pumpNetworkQueue();
-        }
-      })();
-    }
-  }
-
-  function runLimitedRequest(fn) {
-    return new Promise(resolve => {
-      pendingNetworkRequests.push({ fn, resolve, gen: reqGen });
-      pumpNetworkQueue();
-    });
-  }
-
-  function pumpQueue() {
-    const limit = getMaxConcurrentRequests();
-    const isCurrentTask = (task) => task.gen === reqGen;
-    while (activeTasks < limit && pendingTasks.length) {
-      const task = pendingTasks.shift();
-      activeTasks++;
-
-      (async () => {
-        try {
-          if (!isCurrentTask(task)) return task.resolve(null);
-          const result = await task.fn();
-          task.resolve(isCurrentTask(task) ? result : null);
-        } catch {
-          task.resolve(null);
-        } finally {
-          activeTasks = Math.max(0, activeTasks - 1);
-          pumpQueue();
-        }
-      })();
-    }
-  }
 
   function enqueue(fn) {
-    return new Promise(resolve => {
-      pendingTasks.push({ fn, resolve, gen: reqGen });
-      pumpQueue();
-    });
+    const gen = reqGen;
+    reqQ = reqQ
+      .then(() => new Promise(r => setTimeout(r, cfg.requestDelay)))
+      .then(() => gen === reqGen ? fn() : null)
+      .catch(() => { });
+    return reqQ;
+  }
+
+  function cancelQueue() {
+    reqGen++;
+    reqQ = Promise.resolve(); // сбрасываем цепочку
   }
 
   function toneHint() {
@@ -1109,66 +971,6 @@
     return apiKey.endsWith(':fx') ? 'https://api-free.deepl.com' : 'https://api.deepl.com';
   }
 
-  function splitLongText(text, maxChars) {
-    const chunks = [];
-    let remaining = String(text || '').trim();
-
-    while (remaining.length > maxChars) {
-      let cut = remaining.lastIndexOf('. ', maxChars);
-      if (cut < maxChars * 0.5) cut = remaining.lastIndexOf('! ', maxChars);
-      if (cut < maxChars * 0.5) cut = remaining.lastIndexOf('? ', maxChars);
-      if (cut < maxChars * 0.5) cut = remaining.lastIndexOf('。', maxChars);
-      if (cut < maxChars * 0.5) cut = remaining.lastIndexOf('，', maxChars);
-      if (cut < maxChars * 0.5) cut = remaining.lastIndexOf(',', maxChars);
-      if (cut < maxChars * 0.5) cut = remaining.lastIndexOf(' ', maxChars);
-      if (cut < maxChars * 0.5) cut = maxChars;
-      const part = remaining.slice(0, cut + (cut === maxChars ? 0 : 1)).trim();
-      if (part) chunks.push(part);
-      remaining = remaining.slice(cut + (cut === maxChars ? 0 : 1)).trim();
-    }
-
-    if (remaining) chunks.push(remaining);
-    return chunks.length ? chunks : [''];
-  }
-
-  function buildRequestChunks(text) {
-    const source = String(text || '').trim();
-    if (!source) return [''];
-
-    const maxChars = getMaxTextLengthPerRequest();
-    const maxParagraphs = getMaxParagraphsPerRequest();
-    const paragraphs = source
-      .split(/\n\s*\n+|\r?\n/)
-      .map(p => p.trim())
-      .filter(Boolean);
-
-    const normalizedParagraphs = (paragraphs.length ? paragraphs : [source]).flatMap(p =>
-      p.length > maxChars ? splitLongText(p, maxChars) : [p]
-    );
-
-    const chunks = [];
-    let current = [];
-    let currentLen = 0;
-
-    normalizedParagraphs.forEach(paragraph => {
-      const nextLen = currentLen + paragraph.length + (current.length ? 2 : 0);
-      const exceedsChars = nextLen > maxChars;
-      const exceedsParagraphs = current.length >= maxParagraphs;
-
-      if (current.length && (exceedsChars || exceedsParagraphs)) {
-        chunks.push(current.join('\n\n'));
-        current = [];
-        currentLen = 0;
-      }
-
-      current.push(paragraph);
-      currentLen += paragraph.length + (current.length > 1 ? 2 : 0);
-    });
-
-    if (current.length) chunks.push(current.join('\n\n'));
-    return chunks.length ? chunks : [source];
-  }
-
   function maskDeepLKey(apiKey) {
     const raw = String(apiKey || '');
     const isFree = raw.endsWith(':fx');
@@ -1180,13 +982,13 @@
 
   async function requestDeepLUsage(apiKey) {
     const endpoint = getDeepLEndpoint(apiKey);
-    return runLimitedRequest(() => gmRequest({
+    return gmRequest({
       url: `${endpoint}/v2/usage`,
       headers: {
         Authorization: `DeepL-Auth-Key ${apiKey}`,
       },
       parse: r => parseJsonSafe(r.responseText),
-    }));
+    });
   }
 
   async function testDeepLApi(raw = cfg.deeplApiKeys) {
@@ -1258,12 +1060,11 @@
   // 检测文本语言
   async function detectLanguage(text) {
     try {
-      const sample = buildRequestChunks(text)[0] || text;
-      const q = toneHint() + sample;
-      const result = await runLimitedRequest(() => gmRequest({
+      const q = toneHint() + text;
+      const result = await gmRequest({
         url: `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=${encodeURIComponent(q)}`,
         parse: r => parseJsonSafe(r.responseText, []),
-      }));
+      });
       return result.data?.[2] || null;
     } catch {
       return null;
@@ -1280,59 +1081,6 @@
 
   function getElementSourceText(el) {
     return expandSlang((el?.dataset?.orig || el?.innerText || '').trim());
-  }
-
-  function isElementInAutoTranslateViewport(el) {
-    if (!el || !el.isConnected) return false;
-    const rect = el.getBoundingClientRect();
-    return rect.bottom >= -AUTO_TRANSLATE_VIEWPORT_MARGIN &&
-      rect.top <= window.innerHeight + AUTO_TRANSLATE_VIEWPORT_MARGIN &&
-      rect.right >= 0 &&
-      rect.left <= window.innerWidth;
-  }
-
-  function canAutoTranslateButton(btn) {
-    const el = btn?._targetEl;
-    return !!btn &&
-      !!el &&
-      btn.dataset.st === 'orig' &&
-      !btn.dataset.skip &&
-      !btn.classList.contains('busy') &&
-      isElementInAutoTranslateViewport(el);
-  }
-
-  function markButtonBusy(btn) {
-    if (!btn || btn.dataset.st !== 'orig') return;
-    btn.innerHTML = '<span class="sp"></span>';
-    btn.classList.add('busy');
-  }
-
-  function restoreIdleButton(btn) {
-    if (!btn || btn.dataset.st === 'done') return;
-    btn.classList.remove('busy');
-    btn.innerHTML = `🌐 ${cfg.targetLang.toUpperCase()}`;
-  }
-
-  const autoTranslateTimers = new WeakMap();
-
-  function clearAutoTranslateTimer(btn) {
-    const timer = autoTranslateTimers.get(btn);
-    if (timer) {
-      clearTimeout(timer);
-      autoTranslateTimers.delete(btn);
-    }
-  }
-
-  function scheduleAutoTranslate(btn) {
-    if (!cfg.autoTranslateOnScroll || !canAutoTranslateButton(btn)) return;
-    clearAutoTranslateTimer(btn);
-    const timer = setTimeout(() => {
-      autoTranslateTimers.delete(btn);
-      if (!canAutoTranslateButton(btn)) return;
-      btn.dataset.autoMode = 'scroll';
-      btn.click();
-    }, AUTO_TRANSLATE_SETTLE_MS);
-    autoTranslateTimers.set(btn, timer);
   }
 
   async function getDetectedLang(el, text) {
@@ -1364,85 +1112,62 @@
       return text;
     }
 
-    const chunks = buildRequestChunks(text);
+    const q = toneHint() + text;
     const start = deeplKeyCursor % keys.length;
 
-    const translatedChunks = [];
-    for (const chunk of chunks) {
-      const q = toneHint() + chunk;
-      let translatedChunk = null;
+    for (let offset = 0; offset < keys.length; offset++) {
+      const idx = (start + offset) % keys.length;
+      const apiKey = keys[idx];
+      const endpoint = getDeepLEndpoint(apiKey);
 
-      for (let offset = 0; offset < keys.length; offset++) {
-        const idx = (start + offset) % keys.length;
-        const apiKey = keys[idx];
-        const endpoint = getDeepLEndpoint(apiKey);
+      const result = await gmRequest({
+        method: 'POST',
+        url: `${endpoint}/v2/translate`,
+        headers: {
+          Authorization: `DeepL-Auth-Key ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        data: JSON.stringify({
+          text: [q],
+          target_lang: targetLang,
+        }),
+        parse: r => parseJsonSafe(r.responseText),
+      });
+      const translated = result.ok ? result.data?.translations?.[0]?.text || null : null;
 
-        const result = await runLimitedRequest(() => gmRequest({
-          method: 'POST',
-          url: `${endpoint}/v2/translate`,
-          headers: {
-            Authorization: `DeepL-Auth-Key ${apiKey}`,
-            'Content-Type': 'application/json',
-          },
-          data: JSON.stringify({
-            text: [q],
-            target_lang: targetLang,
-          }),
-          parse: r => parseJsonSafe(r.responseText),
-        }));
-        const translated = result.ok ? result.data?.translations?.[0]?.text || null : null;
-
-        if (translated) {
-          deeplKeyCursor = idx + 1;
-          translatedChunk = translated;
-          break;
-        }
+      if (translated) {
+        deeplKeyCursor = idx + 1;
+        return translated;
       }
-
-      translatedChunks.push(translatedChunk || chunk);
     }
 
-    return translatedChunks.join('\n\n');
+    return text;
   }
-
-  const ENGINE_TRANSLATORS = {
-    google: async (chunk) => {
-      const q = toneHint() + chunk;
-      const response = await runLimitedRequest(() => gmRequest({
-        url: `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${cfg.targetLang}&dt=t&q=${encodeURIComponent(q)}`,
-        parse: r => parseJsonSafe(r.responseText, []),
-        fallback: [],
-      }));
-      return response.data?.[0]?.map(i => i[0]).join('') || chunk;
-    },
-    mymemory: async (chunk) => {
-      const q = toneHint() + chunk;
-      const response = await runLimitedRequest(() => gmRequest({
-        url: `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=auto|${cfg.targetLang}`,
-        parse: r => parseJsonSafe(r.responseText),
-        fallback: { responseData: { translatedText: chunk } },
-      }));
-      return response.data?.responseData?.translatedText || chunk;
-    },
-    deepl: doTranslateDeepL,
-  };
 
   async function doTranslate(text) {
     const key = getTranslationCacheKey(text);
     if (cache[key]) { cache[key].ts = Date.now(); return cache[key].val; }
 
     let result = text;
+    const q = toneHint() + text;
 
     try {
-      const translateWithEngine = ENGINE_TRANSLATORS[cfg.engine] || ENGINE_TRANSLATORS.google;
       if (cfg.engine === 'deepl') {
-        result = await translateWithEngine(text);
+        result = await doTranslateDeepL(text);
+      } else if (cfg.engine === 'mymemory') {
+        const response = await gmRequest({
+          url: `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=auto|${cfg.targetLang}`,
+          parse: r => parseJsonSafe(r.responseText),
+          fallback: { responseData: { translatedText: text } },
+        });
+        result = response.data?.responseData?.translatedText || text;
       } else {
-        const translatedChunks = [];
-        for (const chunk of buildRequestChunks(text)) {
-          translatedChunks.push(await translateWithEngine(chunk));
-        }
-        result = translatedChunks.join('\n\n');
+        const response = await gmRequest({
+          url: `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${cfg.targetLang}&dt=t&q=${encodeURIComponent(q)}`,
+          parse: r => parseJsonSafe(r.responseText, []),
+          fallback: [],
+        });
+        result = response.data?.[0]?.map(i => i[0]).join('') || text;
       }
     } catch { }
 
@@ -1457,60 +1182,11 @@
   // ═══════════════════════════════════════════════════════════════════════════
   // § TTS
   // ═══════════════════════════════════════════════════════════════════════════
-  let activeSpeechUtterance = null;
-  let activeSpeechText = '';
-  let activeSpeechButton = null;
-
-  function setSpeakButtonActive(btn, active) {
-    if (!btn) return;
-    btn.classList.toggle('active', !!active);
-  }
-
-  function clearActiveSpeechState() {
-    setSpeakButtonActive(activeSpeechButton, false);
-    activeSpeechUtterance = null;
-    activeSpeechText = '';
-    activeSpeechButton = null;
-  }
-
-  function stopSpeaking() {
-    if (!window.speechSynthesis) return;
-    speechSynthesis.cancel();
-    clearActiveSpeechState();
-  }
-
-  function speak(text, btn) {
+  function speak(text) {
     if (!cfg.ttsEnabled || !window.speechSynthesis) return;
-
-    const nextText = String(text || '').trim();
-    if (!nextText) return;
-
-    const isBusy = speechSynthesis.speaking || speechSynthesis.pending;
-    const isSameTarget = isBusy && activeSpeechText === nextText && activeSpeechButton === btn;
-
-    if (isSameTarget) {
-      stopSpeaking();
-      return;
-    }
-
-    stopSpeaking();
-
-    const u = new SpeechSynthesisUtterance(nextText);
-    u.lang = cfg.targetLang;
-    u.rate = 0.95;
-
-    activeSpeechUtterance = u;
-    activeSpeechText = nextText;
-    activeSpeechButton = btn || null;
-    setSpeakButtonActive(activeSpeechButton, true);
-
-    u.onend = () => {
-      if (activeSpeechUtterance === u) clearActiveSpeechState();
-    };
-    u.onerror = () => {
-      if (activeSpeechUtterance === u) clearActiveSpeechState();
-    };
-
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text.slice(0, 500));
+    u.lang = cfg.targetLang; u.rate = 0.95;
     speechSynthesis.speak(u);
   }
 
@@ -1522,6 +1198,11 @@
     if (!el) { el = document.createElement('div'); el.id = 'rtp-toast'; document.body.appendChild(el); }
     el.textContent = msg; el.classList.add('on');
     clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove('on'), ms);
+  }
+
+  function setProgress(p) {
+    const el = document.getElementById('rtp-prog-fill');
+    if (el) el.style.width = p + '%';
   }
 
   function mkToggle(checked, onChange) {
@@ -1541,124 +1222,14 @@
     for (const [id, v] of Object.entries(map)) { const el = document.getElementById(id); if (el) el.textContent = v; }
   }
 
-  let translationDisplayMode = 'translated';
-
-  function syncControlVisibility() {
-    document.querySelectorAll('.rtp-ctrl').forEach(host => {
-      host.style.display = btnsHidden ? 'none' : 'flex';
-    });
-    document.querySelectorAll('.rtp-btn').forEach(btn => {
-      btn.style.display = btnsHidden ? 'none' : '';
-    });
-    document.querySelectorAll('.rtp-tb').forEach(tb => {
-      tb.style.display = btnsHidden ? 'none' : '';
-    });
-    document.querySelectorAll('.rtp-bi').forEach(bi => {
-      bi.style.display = translationDisplayMode === 'original' ? '' : 'none';
-    });
-
-    if (!btnsHidden || cfg.bilingualMode) {
-      document.querySelectorAll('.rtp-btn.done').forEach(btn => renderTranslatedState(btn, btn._targetEl));
-    }
-  }
-
-  function getViewToggleLabel() {
-    return translationDisplayMode === 'translated' ? S('btnShowOriginals') : S('btnShowTranslations');
-  }
-
-  function updateViewToggleButton() {
-    const btn = document.getElementById('rtp-view-toggle');
-    if (!btn) return;
-    btn.textContent = getViewToggleLabel();
-    btn.classList.toggle('originals', translationDisplayMode === 'original');
-  }
-
-  function setTranslatedContentLayout(el, translated) {
-    if (!el) return;
-
-    if (translated) {
-      if (el.dataset.rtpOrigStyle == null) {
-        el.dataset.rtpOrigStyle = el.getAttribute('style') || '';
-      }
-      el.style.setProperty('white-space', 'pre-wrap', 'important');
-      el.style.setProperty('overflow-wrap', 'anywhere', 'important');
-      el.style.setProperty('word-break', 'break-word', 'important');
-      el.style.setProperty('max-height', 'none', 'important');
-      el.style.setProperty('height', 'auto', 'important');
-      el.style.setProperty('overflow', 'visible', 'important');
-      el.style.setProperty('-webkit-line-clamp', 'unset', 'important');
-      el.style.setProperty('line-clamp', 'unset', 'important');
-      return;
-    }
-
-    if (el.dataset.rtpOrigStyle == null) return;
-    const originalStyle = el.dataset.rtpOrigStyle;
-    if (originalStyle) el.setAttribute('style', originalStyle);
-    else el.removeAttribute('style');
-    delete el.dataset.rtpOrigStyle;
-  }
-
-  function ensureBilingualBlock(btn, el, translated) {
-    if (!btn || !el || !translated) return null;
-    if (!btn._bi || !btn._bi.isConnected) {
-      const bi = document.createElement('div');
-      bi.className = 'rtp-bi';
-      bi.innerText = translated;
-      btn._bi = bi;
-      (btn._ctrlHost || el).after(bi);
-    } else if (btn._bi.innerText !== translated) {
-      btn._bi.innerText = translated;
-    }
-    return btn._bi;
-  }
-
-  function renderTranslatedState(btn, el, mode = translationDisplayMode) {
-    if (!btn || !el || btn.dataset.st !== 'done') return;
-    const orig = el.dataset.orig || '';
-    const translated = btn.dataset.translation || '';
-    if (!translated) return;
-
-    if (cfg.bilingualMode) {
-      const showOriginalWithBilingual = mode === 'original';
-      const bi = ensureBilingualBlock(btn, el, translated);
-      el.innerText = showOriginalWithBilingual ? orig : translated;
-      setTranslatedContentLayout(el, !showOriginalWithBilingual);
-      if (bi) bi.style.display = showOriginalWithBilingual ? '' : 'none';
-      return;
-    }
-
-    if (btn._bi) btn._bi.style.display = 'none';
-
-    el.innerText = mode === 'translated' ? translated : orig;
-    setTranslatedContentLayout(el, mode === 'translated');
-  }
-
-  function applyDisplayModeToButton(btn, el, mode = translationDisplayMode) {
-    renderTranslatedState(btn, el, mode);
-  }
-
-  function applyDisplayModeToAll(mode) {
-    translationDisplayMode = mode;
-    document.querySelectorAll('.rtp-btn.done').forEach(btn => renderTranslatedState(btn, btn._targetEl, mode));
-    updateViewToggleButton();
-  }
-
   function resetTranslationView(btn, el) {
-    if (btn._bi) {
-      btn._bi.remove();
-      btn._bi = null;
-    }
-    setTranslatedContentLayout(el, false);
-    if (el.dataset.orig) el.innerText = el.dataset.orig;
-    if (btn._tb) {
-      btn._tb.remove();
-      btn._tb = null;
-    }
+    if (btn._bi) { btn._bi.remove(); btn._bi = null; }
+    else if (el.dataset.orig) { el.innerText = el.dataset.orig; }
+    if (btn._tb) { btn._tb.remove(); btn._tb = null; }
     btn.innerHTML = `🌐 ${cfg.targetLang.toUpperCase()}`;
     btn.classList.remove('done', 'busy');
     btn.dataset.st = 'orig';
     btn.dataset.skip = '';
-    btn.dataset.translation = '';
   }
 
   function renderTranslationResult(btn, el, text) {
@@ -1666,33 +1237,20 @@
     btn.classList.add('done');
     btn.innerHTML = `✓ ${S('btnOrig')}`;
     btn.dataset.st = 'done';
-    btn.dataset.translation = text;
 
     if (cfg.bilingualMode) {
-      const bi = ensureBilingualBlock(btn, el, text);
-      if (bi) bi.classList.add('rtp-fi');
-      renderTranslatedState(btn, el);
-      if (bi) setTimeout(() => bi.classList.remove('rtp-fi'), 450);
+      const bi = document.createElement('div');
+      bi.className = 'rtp-bi rtp-fi';
+      bi.innerText = text;
+      btn._bi = bi;
+      el.after(bi);
+      if (btnsHidden) bi.style.display = 'none';
       return;
     }
 
     el.classList.add('rtp-fi');
-    renderTranslatedState(btn, el);
+    el.innerText = text;
     setTimeout(() => el.classList.remove('rtp-fi'), 450);
-  }
-
-  function finalizeTranslation(btn, el, src, res) {
-    renderTranslationResult(btn, el, res);
-    if (cfg.autoScroll && !cfg.autoTranslateOnScroll) {
-      btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-    buildTranslationToolbar(btn, el, src, res);
-
-    cfg.totalCount++;
-    cfg.totalChars += (el.dataset.orig || '').length;
-    flushStats();
-    pushHistory(el.dataset.orig, res, cfg.targetLang);
-    updateStats();
   }
 
   function buildTranslationToolbar(btn, el, src, res) {
@@ -1711,7 +1269,7 @@
     };
 
     addAction(S('btnCopy'), () => navigator.clipboard.writeText(res).then(() => toast(S('copied'))));
-    addAction(S('btnSpeak'), () => speak(res, tb.lastChild));
+    addAction(S('btnSpeak'), () => speak(res));
     addAction(S('btnRetry'), async () => {
       delete cache[getTranslationCacheKey(src)];
       flushCache();
@@ -1723,7 +1281,7 @@
     });
 
     btn._tb = tb;
-    (btn._ctrlHost || btn).append(tb);
+    btn.after(tb);
     if (btnsHidden) tb.style.display = 'none';
   }
 
@@ -1763,27 +1321,19 @@
     el.dataset.rtpDone = '1'; el.classList.add('rtp-done');
     el.dataset.rtpLang = ''; // 用于缓存检测到的语言
 
-    const ctrlHost = document.createElement('div');
-    ctrlHost.className = 'rtp-ctrl';
-
     const btn = document.createElement('button');
     btn.className = 'rtp-btn';
     btn.innerHTML = `🌐 ${cfg.targetLang.toUpperCase()}`;
     btn.dataset.st = 'orig';
     btn.dataset.skip = ''; // 初始化跳过标记为空
-    btn.dataset.translation = '';
-    btn._targetEl = el;
-    btn._ctrlHost = ctrlHost;
-    el._rtpBtn = btn;
 
     btn.onclick = async (e) => {
       e.preventDefault(); e.stopPropagation();
-      const scrollDriven = btn.dataset.autoMode === 'scroll';
-      btn.dataset.autoMode = '';
-      clearAutoTranslateTimer(btn);
 
-      if (btn.dataset.st === 'done') return resetTranslationView(btn, el);
-      if (btn.classList.contains('busy')) return;
+      if (btn.dataset.st === 'done') {
+        resetTranslationView(btn, el);
+        return;
+      }
 
       if (!el.dataset.orig) el.dataset.orig = el.innerText.trim();
       const src = getElementSourceText(el);
@@ -1792,22 +1342,40 @@
         btn.dataset.skip = '1';
         return;
       }
-      if (scrollDriven && !isElementInAutoTranslateViewport(el)) return;
+      btn.innerHTML = '<span class="sp"></span>';
+      btn.classList.add('busy');
 
-      markButtonBusy(btn);
       const res = await enqueue(() => doTranslate(src));
-      if (res == null) return restoreIdleButton(btn);
-      finalizeTranslation(btn, el, src, res);
+      renderTranslationResult(btn, el, res);
+
+      if (cfg.autoScroll && !cfg.autoTranslateOnScroll) btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      buildTranslationToolbar(btn, el, src, res);
+
+      cfg.totalCount++;
+      cfg.totalChars += (el.dataset.orig || '').length;
+      flushStats();
+      pushHistory(el.dataset.orig, res, cfg.targetLang);
+      updateStats();
     };
 
-    ctrlHost.append(btn);
-    el.after(ctrlHost);
-    if (btnsHidden) ctrlHost.style.display = 'none';
-    autoTranslateObserver.observe(el);
+    el.after(btn);
+    if (btnsHidden) btn.style.display = 'none';
 
     // 如果启用滚动时自动翻译，自动触发翻译
-    if (autoStart && cfg.autoTranslateOnScroll) {
-      requestAnimationFrame(() => scheduleAutoTranslate(btn));
+    if (cfg.autoTranslateOnScroll && autoStart) {
+      requestAnimationFrame(async () => {
+        if (btn && btn.dataset.st === 'orig' && !btn.dataset.skip) {
+          const src = getElementSourceText(el);
+          if (src.length >= 5) {
+            const detectedLang = await getDetectedLang(el, src);
+            if (shouldSkipDetectedLang(detectedLang)) {
+              btn.dataset.skip = '1';
+              return;
+            }
+          }
+          btn.click();
+        }
+      });
     }
   }
 
@@ -1816,15 +1384,6 @@
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { attachBtn(e.target, { autoStart: true }); ioQueue.delete(e.target); io.unobserve(e.target); } });
   }, { rootMargin: '200px' });
-
-  const autoTranslateObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const btn = entry.target._rtpBtn;
-      if (!btn) return;
-      if (entry.isIntersecting) scheduleAutoTranslate(btn);
-      else clearAutoTranslateTimer(btn);
-    });
-  }, { rootMargin: `${AUTO_TRANSLATE_VIEWPORT_MARGIN}px 0px ${AUTO_TRANSLATE_VIEWPORT_MARGIN}px 0px` });
 
   function injectButtons() {
     document.querySelectorAll(SELS).forEach(el => {
@@ -1838,9 +1397,8 @@
         rect.right >= -200
       );
       if (inViewport) {
-        // 视口内元素也需要遵循自动翻译配置：
-        // 否则首屏内容和动态加载后直接落在视口里的内容只会显示按钮，不会自动翻译。
-        attachBtn(el, { autoStart: cfg.autoTranslateOnScroll });
+        // 如果在视口内，先只附加按钮，避免页面初始加载时整页闪动
+        attachBtn(el, { autoStart: false });
         // 如果之前在队列中，移除并取消观察
         if (ioQueue.has(el)) {
           ioQueue.delete(el);
@@ -1863,18 +1421,58 @@
   // ═══════════════════════════════════════════════════════════════════════════
   // § FAB
   // ═══════════════════════════════════════════════════════════════════════════
-  function createViewToggle() {
-    if (document.getElementById('rtp-view-toggle')) return;
+  function createFAB() {
+    if (document.getElementById('rtp-fab')) return;
 
-    const viewToggleBtn = document.createElement('button');
-    viewToggleBtn.id = 'rtp-view-toggle';
-    viewToggleBtn.onclick = () => {
-      const nextMode = translationDisplayMode === 'translated' ? 'original' : 'translated';
-      applyDisplayModeToAll(nextMode);
-      toast(S(nextMode === 'original' ? 'toastShowingOriginals' : 'toastShowingTranslations'));
+    // Прогресс-бар
+    const prog = document.createElement('div'); prog.id = 'rtp-prog';
+    prog.innerHTML = '<div id="rtp-prog-fill"></div>';
+    document.body.appendChild(prog);
+
+    // Кнопка отмены
+    const cancelBtn = document.createElement('button'); cancelBtn.id = 'rtp-cancel';
+    cancelBtn.textContent = S('btnCancel');
+    document.body.appendChild(cancelBtn);
+
+    const fab = document.createElement('button'); fab.id = 'rtp-fab';
+    fab.innerHTML = `🌍 ${S('translateAll')} <span class="badge" id="fab-n">0</span>`;
+
+    let busy = false;
+    let cancelled = false;
+
+    cancelBtn.onclick = () => {
+      if (!busy) return;
+      cancelled = true;
+      cancelQueue();
     };
-    document.body.appendChild(viewToggleBtn);
-    updateViewToggleButton();
+
+    fab.onclick = async () => {
+      if (busy) return;
+      const btns = [...document.querySelectorAll('.rtp-btn')].filter(b => b.dataset.st !== 'done');
+      if (!btns.length) { toast('✅ ' + S('toastAll')); return; }
+
+      busy = true; cancelled = false;
+      fab.style.opacity = '.6';
+      cancelBtn.classList.add('visible');
+
+      const CHUNK = 6;
+      for (let i = 0; i < btns.length; i += CHUNK) {
+        if (cancelled) break;
+        btns.slice(i, i + CHUNK).forEach(b => b.click());
+        setProgress((i + CHUNK) / btns.length * 100);
+        await new Promise(r => setTimeout(r, cfg.requestDelay * 3 + 250));
+      }
+
+      setProgress(cancelled ? 0 : 100);
+      if (!cancelled) setTimeout(() => setProgress(0), 1000);
+      cancelBtn.classList.remove('visible');
+      busy = false; fab.style.opacity = '1';
+      toast(cancelled ? S('toastCancelled') : `${S('toastAll')}: ${btns.length}`);
+    };
+
+    document.body.appendChild(fab);
+    if (createFAB._badgeTimer) clearInterval(createFAB._badgeTimer);
+    createFAB._badgeTimer = setInterval(() => { const n = document.getElementById('fab-n'); if (n) n.textContent = document.querySelectorAll('.rtp-btn').length; }, 1500);
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -1882,367 +1480,6 @@
   // ═══════════════════════════════════════════════════════════════════════════
   let activeTab = 'settings';
   let btnsHidden = true;
-
-  function setupPanelLanguageControls(panel) {
-    const uiSel = panel.querySelector('#ui-sel');
-    const uiSearch = panel.querySelector('#ui-s');
-    const uiOpts = UI_SUPPORTED.map(c => ({ c, n: langName(c, c) })).sort((a, b) => a.n.localeCompare(b.n));
-    const renderUi = (q = '') => {
-      const f = q.toLowerCase();
-      uiSel.innerHTML = uiOpts
-        .filter(({ c, n }) => !f || n.toLowerCase().includes(f) || c.includes(f))
-        .map(({ c, n }) => `<option value="${c}" ${c === cfg.uiLang ? 'selected' : ''}>${n} (${c.toUpperCase()})</option>`)
-        .join('');
-    };
-
-    renderUi();
-    uiSearch.addEventListener('input', () => renderUi(uiSearch.value));
-    buildLangSelect(panel.querySelector('#tg-sel'), panel.querySelector('#tg-s'), ALL_LANGS, cfg.targetLang);
-
-    panel.querySelector('#btn-apply-ui').onclick = () => {
-      save('uiLang', uiSel.value);
-      updateViewToggleButton();
-      panel.remove();
-      toast(S('toastApply'));
-      setTimeout(buildPanel, 180);
-    };
-
-    panel.querySelector('#btn-save-lang').onclick = () => {
-      save('targetLang', panel.querySelector('#tg-sel').value);
-      toast(S('toastSave'));
-      setTimeout(() => location.reload(), 900);
-    };
-  }
-
-  function setupDeepLControls(panel) {
-    const box = panel.querySelector('#deepl-api-keys');
-    const testBtn = panel.querySelector('#btn-test-deepl');
-    const toggleBtn = panel.querySelector('#btn-toggle-deepl-visibility');
-    let secretsVisible = false;
-
-    function syncSecretVisibility() {
-      if (!box || !toggleBtn) return;
-      box.classList.toggle('masked', !secretsVisible);
-      const label = S(secretsVisible ? 'btnToggleSecretsHide' : 'btnToggleSecretsShow');
-      toggleBtn.textContent = label;
-      toggleBtn.title = label;
-      toggleBtn.setAttribute('aria-label', label);
-    }
-
-    syncSecretVisibility();
-    if (toggleBtn) {
-      toggleBtn.onclick = () => {
-        secretsVisible = !secretsVisible;
-        syncSecretVisibility();
-      };
-    }
-
-    panel.querySelector('#btn-save-deepl').onclick = () => {
-      const normalized = parseDeepLKeys(box.value).join(', ');
-      save('deeplApiKeys', normalized);
-      box.value = normalized;
-      toast(S('toastDeepLKeysSaved'));
-    };
-
-    testBtn.onclick = async () => {
-      const originalLabel = S('btnTestDeepL');
-      const normalized = parseDeepLKeys(box.value).join(', ');
-      box.value = normalized;
-
-      if (!normalized) return toast(S('toastDeepLKeysMissing'));
-
-      testBtn.disabled = true;
-      testBtn.textContent = S('toastDeepLTesting');
-
-      const result = await testDeepLApi(normalized);
-
-      testBtn.disabled = false;
-      testBtn.textContent = originalLabel;
-
-      if (result.ok) {
-        const used = Number(result.data?.character_count || 0).toLocaleString();
-        const limitRaw = Number(result.data?.character_limit || 0);
-        const limit = limitRaw > 0 ? limitRaw.toLocaleString() : '∞';
-        return toast(`${S('toastDeepLOk')} · ${maskDeepLKey(result.apiKey)} · ${used}/${limit}`);
-      }
-      if (result.reason === 'missing_keys') return toast(S('toastDeepLKeysMissing'));
-
-      const statusText = result?.status ? `HTTP ${result.status}` : 'NETWORK';
-      toast(`${S('toastDeepLFail')} · ${maskDeepLKey(result?.apiKey)} · ${statusText}`, 4200);
-    };
-  }
-
-  function setupPanelPills(panel) {
-    setExclusivePills(panel, 'data-eng', (engine) => {
-      save('engine', engine);
-      if (engine === 'deepl' && !parseDeepLKeys().length) toast(S('toastDeepLKeysMissing'));
-    });
-    setExclusivePills(panel, 'data-tone', (tone) => save('tone', tone));
-    setExclusivePills(panel, 'data-th', (theme) => {
-      save('theme', theme);
-      applyTheme(theme);
-    });
-  }
-
-  function setupPanelToggles(panel) {
-    const toggleKeys = ['bilingualMode', 'ttsEnabled', 'autoConvert', 'autoScroll', 'incognito', 'autoTranslateOnScroll'];
-    panel.querySelectorAll('.tog-row').forEach((row, i) => {
-      const key = toggleKeys[i];
-      if (!key) return;
-      row.appendChild(mkToggle(cfg[key], v => {
-        save(key, v);
-        if (key === 'bilingualMode') {
-          document.querySelectorAll('.rtp-btn.done').forEach(btn => renderTranslatedState(btn, btn._targetEl));
-          syncControlVisibility();
-        }
-      }));
-    });
-  }
-
-  function setupRequestLimitControls(panel) {
-    const sl = panel.querySelector('#sl-delay');
-    sl.oninput = () => {
-      save('requestDelay', +sl.value);
-      panel.querySelector('#sl-val').textContent = sl.value + ' мс';
-    };
-
-    [
-      ['#limit-concurrency', 'maxConcurrentRequests', DEF.maxConcurrentRequests, 1, 20],
-      ['#limit-rps', 'maxRequestsPerSecond', DEF.maxRequestsPerSecond, 1, 50],
-      ['#limit-chars', 'maxTextLengthPerRequest', DEF.maxTextLengthPerRequest, 100, 20000],
-      ['#limit-paragraphs', 'maxParagraphsPerRequest', DEF.maxParagraphsPerRequest, 1, 100],
-    ].forEach(([selector, key, fallback, min, max]) => {
-      const input = panel.querySelector(selector);
-      if (!input) return;
-      const sync = () => {
-        const value = getPositiveInt(input.value, fallback, min, max);
-        input.value = value;
-        save(key, value);
-      };
-      input.addEventListener('change', sync);
-      input.addEventListener('blur', sync);
-    });
-  }
-
-  function setupHotkeyCapturer(panel, btnId, resetId, cfgKey, defaultVal) {
-    const btn = panel.querySelector(`#${btnId}`);
-    const rst = panel.querySelector(`#${resetId}`);
-    if (!btn || !rst) return;
-
-    let capturing = false;
-    let captureHandler = null;
-    const stopCapture = () => {
-      if (captureHandler) document.removeEventListener('keydown', captureHandler, true);
-      captureHandler = null;
-      capturing = false;
-      btn.classList.remove('capturing');
-    };
-
-    btn.onclick = () => {
-      if (capturing) return;
-      capturing = true;
-      btn.textContent = S('hotkeyPress');
-      btn.classList.add('capturing');
-
-      captureHandler = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        if (['Control', 'Alt', 'Shift', 'Meta'].includes(e.key)) return;
-
-        const parts = [];
-        if (e.ctrlKey) parts.push('Ctrl');
-        if (e.altKey) parts.push('Alt');
-        if (e.shiftKey) parts.push('Shift');
-        if (e.metaKey) parts.push('Meta');
-        parts.push(e.key.length === 1 ? e.key.toUpperCase() : e.key);
-
-        const combo = parts.join('+');
-        save(cfgKey, combo);
-        btn.textContent = combo;
-        stopCapture();
-      };
-
-      document.addEventListener('keydown', captureHandler, true);
-    };
-
-    rst.onclick = () => {
-      stopCapture();
-      save(cfgKey, defaultVal);
-      btn.textContent = defaultVal;
-    };
-  }
-
-  function setupPanelHotkeys(panel) {
-    setupHotkeyCapturer(panel, 'hk-panel', 'hk-panel-r', 'hotkeyPanel', 'F2');
-  }
-
-  function setupPanelColorPickers(panel) {
-    const base = THEMES[cfg.theme] || THEMES.dark;
-    const merged = Object.assign({}, base, getCustomColors());
-    const colorInputs = [
-      { id: 'clr-acc', key: 'acc' },
-      { id: 'clr-txt', key: 'txt' },
-      { id: 'clr-bg', key: 'bg' },
-      { id: 'clr-ok', key: 'ok' },
-    ];
-
-    colorInputs.forEach(({ id, key }) => {
-      const inp = panel.querySelector(`#${id}`);
-      if (!inp) return;
-      inp.value = colorToHex(merged[key] || '#888888');
-      inp.oninput = () => {
-        const newCC = getCustomColors();
-        newCC[key] = inp.value;
-
-        if (key === 'bg') {
-          const r = parseInt(inp.value.slice(1, 3), 16);
-          const g = parseInt(inp.value.slice(3, 5), 16);
-          const b = parseInt(inp.value.slice(5, 7), 16);
-          newCC.surf = `rgba(${r},${g},${b},.85)`;
-        }
-        if (key === 'acc') {
-          const r = parseInt(inp.value.slice(1, 3), 16);
-          const g = parseInt(inp.value.slice(3, 5), 16);
-          const b = parseInt(inp.value.slice(5, 7), 16);
-          newCC.glow = `rgba(${r},${g},${b},.38)`;
-          newCC.dim = `rgba(${r},${g},${b},.11)`;
-        }
-        if (key === 'ok') {
-          const r = parseInt(inp.value.slice(1, 3), 16);
-          const g = parseInt(inp.value.slice(3, 5), 16);
-          const b = parseInt(inp.value.slice(5, 7), 16);
-          newCC.okd = `rgba(${r},${g},${b},.11)`;
-        }
-
-        save('customColors', JSON.stringify(newCC));
-        applyTheme(cfg.theme);
-      };
-    });
-
-    panel.querySelector('#btn-reset-clr').onclick = () => {
-      save('customColors', null);
-      applyTheme(cfg.theme);
-      colorInputs.forEach(({ id, key }) => {
-        const inp = panel.querySelector(`#${id}`);
-        if (inp) inp.value = colorToHex(base[key] || '#888888');
-      });
-    };
-  }
-
-  function setupPanelMiscControls(panel) {
-    panel.querySelector('#btn-rpos').onclick = () => {
-      panel.style.top = '11%';
-      panel.style.left = 'calc(50% - 186px)';
-      GM_setValue(PREFIX + 'panelX', null);
-      GM_setValue(PREFIX + 'panelY', null);
-    };
-
-    panel.querySelector('#btn-ccache').onclick = () => {
-      cache = {};
-      flushCache();
-      toast(S('cacheCleared'));
-    };
-
-    panel.querySelector('#btn-exp').onclick = () => {
-      const a = document.createElement('a');
-      a.href = 'data:text/json,' + encodeURIComponent(JSON.stringify({ v: 8, cfg }, null, 2));
-      a.download = 'rtp-v8-settings.json';
-      a.click();
-    };
-
-    panel.querySelector('#btn-imp').onclick = () => {
-      const inp = document.createElement('input');
-      inp.type = 'file';
-      inp.accept = '.json';
-      inp.onchange = e => {
-        const fr = new FileReader();
-        fr.onload = ev => {
-          try {
-            const d = JSON.parse(ev.target.result);
-            const src = d.cfg || d;
-            Object.entries(src).forEach(([k, v]) => {
-              if (k in DEF) {
-                cfg[k] = v;
-                GM_setValue(PREFIX + k, v);
-              }
-            });
-            location.reload();
-          } catch {
-            toast('❌ Ошибка импорта');
-          }
-        };
-        fr.readAsText(e.target.files[0]);
-      };
-      inp.click();
-    };
-
-    panel.querySelector('#btn-surp').onclick = () => {
-      const r = ALL_LANGS[Math.floor(Math.random() * ALL_LANGS.length)];
-      save('targetLang', r);
-      toast(`${S('toastSurprise')} ${getLangName(r)}`);
-      setTimeout(() => location.reload(), 1100);
-    };
-
-    const pirBtn = panel.querySelector('#btn-pir');
-    pirBtn.onclick = () => {
-      pirateMode = !pirateMode;
-      pirBtn.classList.toggle('active', pirateMode);
-      toast(pirateMode ? S('toastPirateOn') : S('toastPirateOff'));
-    };
-    pirBtn.classList.toggle('active', pirateMode);
-
-    const yodBtn = panel.querySelector('#btn-yoda');
-    yodBtn.onclick = () => {
-      yodaMode = !yodaMode;
-      yodBtn.classList.toggle('active', yodaMode);
-      toast(yodaMode ? S('toastYodaOn') : S('toastYodaOff'));
-    };
-    yodBtn.classList.toggle('active', yodaMode);
-
-    const hideBtn = panel.querySelector('#btn-hide');
-    hideBtn.classList.toggle('active', btnsHidden);
-    hideBtn.onclick = () => {
-      btnsHidden = !btnsHidden;
-      syncControlVisibility();
-      hideBtn.textContent = btnsHidden ? S('btnShow') : S('btnHide');
-      hideBtn.classList.toggle('active', btnsHidden);
-    };
-
-  }
-
-  function setupPanelTabs(panel) {
-    panel.querySelectorAll('.tab').forEach(tab => tab.onclick = () => {
-      activeTab = tab.dataset.tab;
-      panel.querySelectorAll('.tab').forEach(t => t.classList.remove('on'));
-      tab.classList.add('on');
-      panel.querySelectorAll('.pane').forEach(p => p.style.display = 'none');
-      panel.querySelector(`#pane-${activeTab}`).style.display = 'flex';
-      if (activeTab === 'history') renderHistory(panel);
-      if (activeTab === 'settings') updateStats();
-    });
-  }
-
-  function setupPanelDrag(panel) {
-    const hdr = panel.querySelector('#rtp-hdr');
-    hdr.onmousedown = e => {
-      if (e.target.id === 'rtp-close') return;
-      const ox = e.clientX - panel.offsetLeft;
-      const oy = e.clientY - panel.offsetTop;
-      const mm = ev => {
-        panel.style.left = (ev.clientX - ox) + 'px';
-        panel.style.top = (ev.clientY - oy) + 'px';
-      };
-      const cleanup = () => {
-        GM_setValue(PREFIX + 'panelX', panel.style.left);
-        GM_setValue(PREFIX + 'panelY', panel.style.top);
-        document.removeEventListener('mousemove', mm);
-        document.removeEventListener('mouseup', cleanup);
-      };
-      document.addEventListener('mousemove', mm);
-      document.addEventListener('mouseup', cleanup, { once: true });
-      document.addEventListener('mouseleave', cleanup, { once: true });
-    };
-  }
 
   function buildPanel() {
     const old = document.getElementById('rtp-panel');
@@ -2258,7 +1495,7 @@
                 <div class="logo-ic">🌐</div>
                 <div>
                     <div class="logo-nm">${S('title')}</div>
-                    <div class="logo-vr">${S('ver')} · ${cfg.hotkeyPanel}</div>
+                    <div class="logo-vr">${S('ver')} · ${cfg.hotkeyPanel} · ${cfg.hotkeyAll}</div>
                 </div>
             </div>
             <button id="rtp-close">✕</button>
@@ -2311,13 +1548,8 @@
             </div>
 
             <div>
-                <div class="api-head">
-                    <span class="lbl">${S('secDeepLApi')}</span>
-                    <button type="button" class="api-eye" id="btn-toggle-deepl-visibility" title="${S('btnToggleSecretsShow')}">${S('btnToggleSecretsShow')}</button>
-                </div>
-                <div class="api-wrap">
-                    <textarea class="api-box masked" id="deepl-api-keys" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="${S('deeplApiPlaceholder')}">${escapeHtml(cfg.deeplApiKeys || '')}</textarea>
-                </div>
+                <span class="lbl">${S('secDeepLApi')}</span>
+                <textarea class="api-box" id="deepl-api-keys" placeholder="${S('deeplApiPlaceholder')}">${escapeHtml(cfg.deeplApiKeys || '')}</textarea>
                 <div class="api-help">${S('deeplApiHelp')}</div>
                 <div class="g2" style="margin-top:8px;">
                     <button class="btn-p ghost" id="btn-save-deepl" style="height:40px;font-size:11px;">${S('saveDeepLApi')}</button>
@@ -2378,32 +1610,14 @@
                 <div class="btn-s" id="btn-yoda">${S('btnYoda')}</div>
                 <div class="btn-s" id="btn-hide">${btnsHidden ? S('btnShow') : S('btnHide')}</div>
             </div>
+            <div class="g2">
+                <div class="btn-s" id="btn-auto-scroll">${cfg.autoTranslateOnScroll ? '✅ ' : ''}${S('togAutoTranslateOnScroll')}</div>
+            </div>
             <div class="div"></div>
             <div>
                 <span class="lbl">${S('sliderDelay')}</span>
                 <input type="range" class="slider" id="sl-delay" min="50" max="600" value="${cfg.requestDelay}">
                 <div class="slider-v" id="sl-val">${cfg.requestDelay} мс</div>
-            </div>
-            <div>
-                <span class="lbl">${S('secRequestLimits')}</span>
-                <div class="num-grid">
-                    <div class="num-card">
-                        <span class="num-lbl">${S('maxConcurrentRequests')}</span>
-                        <input type="number" class="num-inp" id="limit-concurrency" min="1" max="20" step="1" value="${getMaxConcurrentRequests()}">
-                    </div>
-                    <div class="num-card">
-                        <span class="num-lbl">${S('maxRequestsPerSecond')}</span>
-                        <input type="number" class="num-inp" id="limit-rps" min="1" max="50" step="1" value="${getMaxRequestsPerSecond()}">
-                    </div>
-                    <div class="num-card">
-                        <span class="num-lbl">${S('maxTextLengthPerRequest')}</span>
-                        <input type="number" class="num-inp" id="limit-chars" min="100" max="20000" step="100" value="${getMaxTextLengthPerRequest()}">
-                    </div>
-                    <div class="num-card">
-                        <span class="num-lbl">${S('maxParagraphsPerRequest')}</span>
-                        <input type="number" class="num-inp" id="limit-paragraphs" min="1" max="100" step="1" value="${getMaxParagraphsPerRequest()}">
-                    </div>
-                </div>
             </div>
             <div class="div"></div>
             <div>
@@ -2412,6 +1626,11 @@
                     <span class="hk-lbl">${S('hotkeyPanel')}</span>
                     <button class="hk-btn" id="hk-panel">${cfg.hotkeyPanel}</button>
                     <button class="hk-reset" id="hk-panel-r">${S('hotkeyReset')}</button>
+                </div>
+                <div class="hk-row">
+                    <span class="hk-lbl">${S('hotkeyAll')}</span>
+                    <button class="hk-btn" id="hk-all">${cfg.hotkeyAll}</button>
+                    <button class="hk-reset" id="hk-all-r">${S('hotkeyReset')}</button>
                 </div>
             </div>
             <div class="div"></div>
@@ -2429,17 +1648,319 @@
         `;
 
     document.body.appendChild(panel);
-    setupPanelLanguageControls(panel);
-    setupDeepLControls(panel);
-    setupPanelPills(panel);
-    setupPanelToggles(panel);
-    setupRequestLimitControls(panel);
-    setupPanelHotkeys(panel);
-    setupPanelColorPickers(panel);
-    setupPanelMiscControls(panel);
-    setupPanelTabs(panel);
+
+    // ── Языки ──────────────────────────────────────────────────────────
+    // UI lang (только поддерживаемые)
+    const uiSel = panel.querySelector('#ui-sel');
+    const uiSearch = panel.querySelector('#ui-s');
+    const uiOpts = UI_SUPPORTED.map(c => ({ c, n: langName(c, c) })).sort((a, b) => a.n.localeCompare(b.n));
+    function renderUi(q) {
+      const f = q.toLowerCase();
+      uiSel.innerHTML = uiOpts.filter(({ c, n }) => !f || n.toLowerCase().includes(f) || c.includes(f))
+        .map(({ c, n }) => `<option value="${c}" ${c === cfg.uiLang ? 'selected' : ''}>${n} (${c.toUpperCase()})</option>`).join('');
+    }
+    renderUi('');
+    uiSearch.addEventListener('input', () => renderUi(uiSearch.value));
+
+    // Target lang (все языки)
+    buildLangSelect(panel.querySelector('#tg-sel'), panel.querySelector('#tg-s'), ALL_LANGS, cfg.targetLang);
+
+    // ── КНОПКА «ПРИМЕНИТЬ ИНТЕРФЕЙС» (без перезагрузки) ──────────────
+    panel.querySelector('#btn-apply-ui').onclick = () => {
+      const newLang = uiSel.value;
+      save('uiLang', newLang);
+      panel.remove();
+      toast(S('toastApply'));
+      setTimeout(buildPanel, 180);  // перестраиваем с новым языком
+    };
+
+    // ── КНОПКА «СОХРАНИТЬ ЯЗЫК ПЕРЕВОДА» (с перезагрузкой) ───────────
+    panel.querySelector('#btn-save-lang').onclick = () => {
+      save('targetLang', panel.querySelector('#tg-sel').value);
+      toast(S('toastSave'));
+      setTimeout(() => location.reload(), 900);
+    };
+
+    panel.querySelector('#btn-save-deepl').onclick = () => {
+      const raw = panel.querySelector('#deepl-api-keys').value;
+      const normalized = parseDeepLKeys(raw).join(', ');
+      save('deeplApiKeys', normalized);
+      panel.querySelector('#deepl-api-keys').value = normalized;
+      toast(S('toastDeepLKeysSaved'));
+    };
+
+    panel.querySelector('#btn-test-deepl').onclick = async () => {
+      const btn = panel.querySelector('#btn-test-deepl');
+      const box = panel.querySelector('#deepl-api-keys');
+      const originalLabel = S('btnTestDeepL');
+      const normalized = parseDeepLKeys(box.value).join(', ');
+      box.value = normalized;
+
+      if (!normalized) {
+        toast(S('toastDeepLKeysMissing'));
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = S('toastDeepLTesting');
+
+      const result = await testDeepLApi(normalized);
+
+      btn.disabled = false;
+      btn.textContent = originalLabel;
+
+      if (result.ok) {
+        const used = Number(result.data?.character_count || 0).toLocaleString();
+        const limitRaw = Number(result.data?.character_limit || 0);
+        const limit = limitRaw > 0 ? limitRaw.toLocaleString() : '∞';
+        toast(`${S('toastDeepLOk')} · ${maskDeepLKey(result.apiKey)} · ${used}/${limit}`);
+        return;
+      }
+
+      if (result.reason === 'missing_keys') {
+        toast(S('toastDeepLKeysMissing'));
+        return;
+      }
+
+      const statusText = result?.status ? `HTTP ${result.status}` : 'NETWORK';
+      toast(`${S('toastDeepLFail')} · ${maskDeepLKey(result?.apiKey)} · ${statusText}`, 4200);
+    };
+
+    // ── Пилюли: движок ────────────────────────────────────────────────
+    setExclusivePills(panel, 'data-eng', (engine) => {
+      save('engine', engine);
+      if (engine === 'deepl' && !parseDeepLKeys().length) {
+        toast(S('toastDeepLKeysMissing'));
+      }
+    });
+
+    setExclusivePills(panel, 'data-tone', (tone) => save('tone', tone));
+
+    setExclusivePills(panel, 'data-th', (theme) => {
+      save('theme', theme);
+      applyTheme(theme);
+    });
+
+    // ── Тогглы ────────────────────────────────────────────────────────
+    const toggles = [
+      ['bilingualMode'], ['ttsEnabled'], ['autoConvert'], ['autoScroll'], ['incognito'], ['autoTranslateOnScroll'],
+    ];
+    panel.querySelectorAll('.tog-row').forEach((row, i) => {
+      if (!toggles[i]) return;
+      const [key] = toggles[i];
+      row.appendChild(mkToggle(cfg[key], v => save(key, v)));
+    });
+
+    // ── Слайдер ───────────────────────────────────────────────────────
+    const sl = panel.querySelector('#sl-delay');
+    sl.oninput = () => {
+      save('requestDelay', +sl.value);
+      panel.querySelector('#sl-val').textContent = sl.value + ' мс';
+    };
+
+    // ── Горячие клавиши ───────────────────────────────────────────────
+    function setupHotkeyCapturer(btnId, resetId, cfgKey, defaultVal) {
+      const btn = panel.querySelector(`#${btnId}`);
+      const rst = panel.querySelector(`#${resetId}`);
+      if (!btn || !rst) return;
+      let capturing = false;
+      let captureHandler = null;
+
+      btn.onclick = () => {
+        if (capturing) return;
+        capturing = true;
+        btn.textContent = S('hotkeyPress');
+        btn.classList.add('capturing');
+
+        captureHandler = (e) => {
+          e.preventDefault(); e.stopPropagation();
+          // Игнорируем одиночные модификаторы
+          if (['Control', 'Alt', 'Shift', 'Meta'].includes(e.key)) return;
+          const parts = [];
+          if (e.ctrlKey) parts.push('Ctrl');
+          if (e.altKey) parts.push('Alt');
+          if (e.shiftKey) parts.push('Shift');
+          if (e.metaKey) parts.push('Meta');
+          const k = e.key.length === 1 ? e.key.toUpperCase() : e.key;
+          parts.push(k);
+          const combo = parts.join('+');
+          save(cfgKey, combo);
+          btn.textContent = combo;
+          btn.classList.remove('capturing');
+          capturing = false;
+          document.removeEventListener('keydown', captureHandler, true);
+        };
+        document.addEventListener('keydown', captureHandler, true);
+      };
+
+      rst.onclick = () => {
+        if (captureHandler) document.removeEventListener('keydown', captureHandler, true);
+        capturing = false; btn.classList.remove('capturing');
+        save(cfgKey, defaultVal);
+        btn.textContent = defaultVal;
+      };
+    }
+    setupHotkeyCapturer('hk-panel', 'hk-panel-r', 'hotkeyPanel', 'F2');
+    setupHotkeyCapturer('hk-all', 'hk-all-r', 'hotkeyAll', 'Ctrl+Shift+T');
+
+    // ── Цвета темы ────────────────────────────────────────────────────
+    (function initColorPickers() {
+      const base = THEMES[cfg.theme] || THEMES.dark;
+      const merged = Object.assign({}, base, getCustomColors());
+
+      const map = [
+        { id: 'clr-acc', key: 'acc' },
+        { id: 'clr-txt', key: 'txt' },
+        { id: 'clr-bg', key: 'bg' },
+        { id: 'clr-ok', key: 'ok' },
+      ];
+
+      map.forEach(({ id, key }) => {
+        const inp = panel.querySelector(`#${id}`);
+        if (!inp) return;
+        inp.value = colorToHex(merged[key] || '#888888');
+        inp.oninput = () => {
+          const newCC = getCustomColors();
+          newCC[key] = inp.value;
+          // Для bg/surf — также обновляем прозрачность surf на основе bg
+          if (key === 'bg') {
+            const r = parseInt(inp.value.slice(1, 3), 16), g = parseInt(inp.value.slice(3, 5), 16), b = parseInt(inp.value.slice(5, 7), 16);
+            newCC.surf = `rgba(${r},${g},${b},.85)`;
+          }
+          // glow и dim автоматически из acc
+          if (key === 'acc') {
+            const r = parseInt(inp.value.slice(1, 3), 16), g = parseInt(inp.value.slice(3, 5), 16), b = parseInt(inp.value.slice(5, 7), 16);
+            newCC.glow = `rgba(${r},${g},${b},.38)`;
+            newCC.dim = `rgba(${r},${g},${b},.11)`;
+          }
+          // okd из ok
+          if (key === 'ok') {
+            const r = parseInt(inp.value.slice(1, 3), 16), g = parseInt(inp.value.slice(3, 5), 16), b = parseInt(inp.value.slice(5, 7), 16);
+            newCC.okd = `rgba(${r},${g},${b},.11)`;
+          }
+          save('customColors', JSON.stringify(newCC));
+          applyTheme(cfg.theme);
+        };
+      });
+
+      panel.querySelector('#btn-reset-clr').onclick = () => {
+        save('customColors', null);
+        applyTheme(cfg.theme);
+        // Сбрасываем пикеры на значения базовой темы
+        const base2 = THEMES[cfg.theme] || THEMES.dark;
+        map.forEach(({ id, key }) => {
+          const inp = panel.querySelector(`#${id}`);
+          if (inp) inp.value = colorToHex(base2[key] || '#888888');
+        });
+      };
+    })();
+
+    // ── Управление ────────────────────────────────────────────────────
+    panel.querySelector('#btn-rpos').onclick = () => {
+      panel.style.top = '11%'; panel.style.left = 'calc(50% - 186px)';
+      GM_setValue(PREFIX + 'panelX', null); GM_setValue(PREFIX + 'panelY', null);
+    };
+
+    panel.querySelector('#btn-ccache').onclick = () => {
+      cache = {}; flushCache(); toast(S('cacheCleared'));
+    };
+
+    panel.querySelector('#btn-exp').onclick = () => {
+      const a = document.createElement('a');
+      a.href = 'data:text/json,' + encodeURIComponent(JSON.stringify({ v: 8, cfg }, null, 2));
+      a.download = 'rtp-v8-settings.json'; a.click();
+    };
+
+    panel.querySelector('#btn-imp').onclick = () => {
+      const inp = document.createElement('input'); inp.type = 'file'; inp.accept = '.json';
+      inp.onchange = e => {
+        const fr = new FileReader();
+        fr.onload = ev => {
+          try {
+            const d = JSON.parse(ev.target.result);
+            const src = d.cfg || d;
+            Object.entries(src).forEach(([k, v]) => { if (k in DEF) { cfg[k] = v; GM_setValue(k, v); } });
+            location.reload();
+          } catch { toast('❌ Ошибка импорта'); }
+        };
+        fr.readAsText(e.target.files[0]);
+      };
+      inp.click();
+    };
+
+    // ── Пасхалки ──────────────────────────────────────────────────────
+    panel.querySelector('#btn-surp').onclick = () => {
+      const r = ALL_LANGS[Math.floor(Math.random() * ALL_LANGS.length)];
+      save('targetLang', r);
+      toast(`${S('toastSurprise')} ${getLangName(r)}`);
+      setTimeout(() => location.reload(), 1100);
+    };
+
+    const pirBtn = panel.querySelector('#btn-pir');
+    pirBtn.onclick = () => {
+      pirateMode = !pirateMode;
+      pirBtn.classList.toggle('active', pirateMode);
+      toast(pirateMode ? S('toastPirateOn') : S('toastPirateOff'));
+    };
+    if (pirateMode) pirBtn.classList.add('active');
+
+    const yodBtn = panel.querySelector('#btn-yoda');
+    yodBtn.onclick = () => {
+      yodaMode = !yodaMode;
+      yodBtn.classList.toggle('active', yodaMode);
+      toast(yodaMode ? S('toastYodaOn') : S('toastYodaOff'));
+    };
+    if (yodaMode) yodBtn.classList.add('active');
+
+    const hideBtn = panel.querySelector('#btn-hide');
+    if (btnsHidden) hideBtn.classList.add('active');
+    hideBtn.onclick = () => {
+      btnsHidden = !btnsHidden;
+      document.querySelectorAll('.rtp-btn,.rtp-tb,.rtp-bi').forEach(el => el.style.display = btnsHidden ? 'none' : '');
+      hideBtn.textContent = btnsHidden ? S('btnShow') : S('btnHide');
+      hideBtn.classList.toggle('active', btnsHidden);
+    };
+
+    const autoScrollBtn = panel.querySelector('#btn-auto-scroll');
+    autoScrollBtn.onclick = () => {
+      const newState = !cfg.autoTranslateOnScroll;
+      save('autoTranslateOnScroll', newState);
+      cfg.autoTranslateOnScroll = newState;
+      autoScrollBtn.textContent = (newState ? '✅ ' : '') + S('togAutoTranslateOnScroll');
+      autoScrollBtn.classList.toggle('active', newState);
+      toast(newState ? S('toastAutoScrollOn') : S('toastAutoScrollOff'));
+    };
+    autoScrollBtn.classList.toggle('active', cfg.autoTranslateOnScroll);
+
+    // ── Табы ──────────────────────────────────────────────────────────
+    panel.querySelectorAll('.tab').forEach(tab => tab.onclick = () => {
+      activeTab = tab.dataset.tab;
+      panel.querySelectorAll('.tab').forEach(t => t.classList.remove('on'));
+      tab.classList.add('on');
+      panel.querySelectorAll('.pane').forEach(p => p.style.display = 'none');
+      panel.querySelector(`#pane-${activeTab}`).style.display = 'flex';
+      if (activeTab === 'history') renderHistory(panel);
+      if (activeTab === 'settings') updateStats();
+    });
+
     renderHistory(panel);
-    setupPanelDrag(panel);
+
+    // ── Drag ──────────────────────────────────────────────────────────
+    const hdr = panel.querySelector('#rtp-hdr');
+    hdr.onmousedown = e => {
+      if (e.target.id === 'rtp-close') return;
+      const ox = e.clientX - panel.offsetLeft, oy = e.clientY - panel.offsetTop;
+      const mm = ev => { panel.style.left = (ev.clientX - ox) + 'px'; panel.style.top = (ev.clientY - oy) + 'px'; };
+      const cleanup = () => {
+        GM_setValue(PREFIX + 'panelX', panel.style.left); GM_setValue(PREFIX + 'panelY', panel.style.top);
+        document.removeEventListener('mousemove', mm);
+        document.removeEventListener('mouseup', cleanup);
+      };
+      document.addEventListener('mousemove', mm);
+      document.addEventListener('mouseup', cleanup, { once: true });
+      document.addEventListener('mouseleave', cleanup, { once: true });
+    };
+
     panel.querySelector('#rtp-close').onclick = () => panel.remove();
     updateStats();
   }
@@ -2474,7 +1995,7 @@
   // § ЗАПУСК
   // ═══════════════════════════════════════════════════════════════════════════
   applyTheme(cfg.theme);
-  createViewToggle();
+  createFAB();
   injectButtons();
 
   function matchesHotkey(e, combo) {
@@ -2494,6 +2015,7 @@
 
   window.addEventListener('keydown', e => {
     if (matchesHotkey(e, cfg.hotkeyPanel)) { e.preventDefault(); buildPanel(); }
+    if (matchesHotkey(e, cfg.hotkeyAll)) { e.preventDefault(); document.getElementById('rtp-fab')?.click(); }
   });
 
 })();
