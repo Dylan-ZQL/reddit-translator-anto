@@ -18,7 +18,9 @@
 - `reddit-translator-pro-auto.user.js`
   当前推荐安装、发布和 Greasy Fork 同步使用的正式文件。
 - `Reddit 翻译器 Pro 修新.js`
-  当前主开发文件，内容与 `reddit-translator-pro-auto.user.js` 保持同步。
+  当前主开发文件，内容与 `Reddit 翻译器 Pro 修4.js`、`reddit-translator-pro-auto.user.js` 保持同步。
+- `Reddit 翻译器 Pro 修4.js`
+  当前主线副本，版本号为 `1.0.4`，内容与 `修新` 和正式发布文件保持一致。
 - `Reddit 翻译器 Pro 修3.js`
   与 `修新` 保持相同代码，当前版本号为 `1.0.3`。
 - `Reddit 翻译器 Pro 修2.js`
@@ -128,6 +130,8 @@
   与当前主线代码同步，版本号 `1.0.2`
 - `Reddit 翻译器 Pro 修3.js`
   与当前主线代码同步，版本号 `1.0.3`
+- `Reddit 翻译器 Pro 修4.js`
+  与当前主线代码同步，版本号 `1.0.4`
 - `Reddit 翻译器 Pro 修新.js`
   当前主开发文件
 - `reddit-translator-pro-auto.user.js`
