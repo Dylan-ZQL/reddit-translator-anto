@@ -55,7 +55,7 @@
   'use strict';
 
   // Unique prefix for this script to avoid conflicts with other scripts
-  const PREFIX = '_x4c_';
+  const PREFIX = '_x5_';
 
   // ═══════════════════════════════════════════════════════════════════════════
   // § КОНФИГУРАЦИЯ
