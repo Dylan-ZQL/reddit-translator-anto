@@ -45,9 +45,16 @@
 ## 安装方式
 
 1. 在浏览器中安装 `Tampermonkey` 或 `Violentmonkey`
-2. 安装或导入 `reddit-translator-pro-auto.user.js`
+2. 任选一种安装方式：
+   通过 Greasy Fork 直接[安装](https://update.greasyfork.org/scripts/574557/%F0%9F%8C%90Reddit%20%E7%BF%BB%E8%AF%91%E5%99%A8%20Pro%20Auto.user.js)
+   安装或导入仓库中的 `reddit-translator-pro-auto.user.js`
 3. 打开 `https://www.reddit.com/`
 4. 按 `F2` 打开脚本面板并完成语言、引擎与自动翻译设置
+
+## 发布入口
+
+- Greasy Fork 页面地址：<https://greasyfork.org/scripts/574557-reddit-translator-pro-auto>
+- GitHub 仓库地址：<https://github.com/Dylan-ZQL/reddit-translator-auto>
 
 ## 使用方法
 
