@@ -1,6 +1,15 @@
 # Reddit 自动翻译
 
-这是一个用于 Reddit 页面内容翻译的用户脚本项目，当前对外发布文件为 `reddit-translator-pro-auto.user.js`。
+这是一个用于 Reddit 页面内容翻译的用户脚本项目。
+
+当前仓库只保留一套主线开发文件和一套正式发布文件：
+
+- `Reddit 翻译器 Pro 修新.js`
+- `reddit-translator-pro-auto.user.js`
+
+另保留一个历史发布文件：
+
+- `reddit-translator-v1_0_0.js`
 
 脚本适用于 `Tampermonkey`、`Violentmonkey` 等用户脚本管理器，可为 Reddit 帖子、评论和动态加载内容提供单条翻译、整页翻译、缓存、历史记录、TTS、主题切换、快捷键、自动翻译等增强能力。
 
@@ -15,24 +24,16 @@
 
 ## 当前文件说明
 
-- `reddit-translator-pro-auto.user.js`
-  当前推荐安装、发布和 Greasy Fork 同步使用的正式文件。
 - `Reddit 翻译器 Pro 修新.js`
-  当前主开发文件，内容与 `Reddit 翻译器 Pro 修4.js`、`reddit-translator-pro-auto.user.js` 保持同步。
-- `Reddit 翻译器 Pro 修4.js`
-  当前主线副本，版本号为 `1.0.4`，内容与 `修新` 和正式发布文件保持一致。
-- `Reddit 翻译器 Pro 修3.js`
-  与 `修新` 保持相同代码，当前版本号为 `1.0.3`。
-- `Reddit 翻译器 Pro 修2.js`
-  与 `修新` 保持相同代码，当前版本号为 `1.0.2`。
-- `Reddit 翻译器 Pro 修1.js`
-  与 `修新` 保持相同代码，当前版本号为 `1.0.1`。
-- `Reddit 翻译器 Pro 0.js`
-  初始基础版本分支，当前版本号为 `1.0.0`。
+  当前主开发文件，用于功能修改和调试。
+- `reddit-translator-pro-auto.user.js`
+  当前正式发布文件，用于 GitHub Raw 安装与 Greasy Fork 同步。
 - `reddit-translator-v1_0_0.js`
-  远端历史中保留的旧发布文件。
+  历史保留文件，不再作为当前主线维护目标。
+- `README.md`
+  当前仓库说明文档。
 - `更新日志.md`
-  记录主要改动和阶段性差异。
+  当前版本线和历史演进说明。
 
 ## 安装方法
 
@@ -120,26 +121,35 @@
 - 查询额度使用情况
 - 在缓存中按 Key 作用域隔离结果，避免串用
 
-## 版本关系
+## 当前版本线
 
-- `Reddit 翻译器 Pro 0.js`
-  基础版本线，版本号 `1.0.0`
-- `Reddit 翻译器 Pro 修1.js`
-  与当前主线代码同步，版本号 `1.0.1`
-- `Reddit 翻译器 Pro 修2.js`
-  与当前主线代码同步，版本号 `1.0.2`
-- `Reddit 翻译器 Pro 修3.js`
-  与当前主线代码同步，版本号 `1.0.3`
-- `Reddit 翻译器 Pro 修4.js`
-  与当前主线代码同步，版本号 `1.0.4`
-- `Reddit 翻译器 Pro 修新.js`
-  当前主开发文件
-- `reddit-translator-pro-auto.user.js`
-  当前正式发布文件，供安装和 Greasy Fork 同步使用
+- 当前开发入口：
+  `Reddit 翻译器 Pro 修新.js`
+- 当前发布入口：
+  `reddit-translator-pro-auto.user.js`
+- 当前主线版本号：
+  `1.0.4`
+- 当前主线命名：
+  `Pro Auto`
+- 当前描述元数据：
+  已补充 `Google`、`MyMemory`、`DeepL`，并按语言规范化标点
+
+## 历史说明
+
+仓库此前曾保留 `0 / 修1 / 修2 / 修3 / 修4` 等阶段性副本文件，用于记录不同阶段的修改过程。
+
+这些脚本现已移除，仓库当前不再保留多份并行副本，而是只维护：
+
+- 一个主开发文件
+- 一个正式发布文件
+- 一个历史保留文件
+
+如果需要了解先前阶段的演进方向，请查看 `更新日志.md` 和 Git 历史记录。
 
 ## 建议
 
 - 日常安装优先使用 `reddit-translator-pro-auto.user.js`
+- 日常开发优先修改 `Reddit 翻译器 Pro 修新.js`
 - GitHub 用于版本管理，Greasy Fork 用于面向用户发布
 - 如果需要为 Greasy Fork 启用脚本同步，使用上面的 GitHub Raw 链接即可
 - 如果页面出现频繁请求或误翻，可检查滚动自动翻译是否开启
