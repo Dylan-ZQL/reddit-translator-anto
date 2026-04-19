@@ -1,30 +1,60 @@
 # Reddit 自动翻译
 
-这是一个用于 Reddit 页面内容翻译的用户脚本项目，当前主版本文件为 `Reddit 翻译器 Pro 修新.js`。
+这是一个用于 Reddit 页面内容翻译的用户脚本项目，当前对外发布文件为 `reddit-translator-pro-auto.user.js`。
 
-脚本面向 Tampermonkey、Violentmonkey 等用户脚本管理器，支持在 Reddit 页面上为帖子、评论等内容添加翻译能力，并提供整页翻译、历史记录、缓存、TTS、主题切换、快捷键、自动翻译等增强功能。
+脚本适用于 `Tampermonkey`、`Violentmonkey` 等用户脚本管理器，可为 Reddit 帖子、评论和动态加载内容提供单条翻译、整页翻译、缓存、历史记录、TTS、主题切换、快捷键、自动翻译等增强能力。
+
+## 项目入口
+
+- GitHub 仓库：
+  `https://github.com/Dylan-ZQL/reddit-translator-auto`
+- Greasy Fork 发布页：
+  `https://greasyfork.org/zh-CN/scripts/574557-reddit-translator-pro-auto`
+- Greasy Fork 同步源：
+  `https://raw.githubusercontent.com/Dylan-ZQL/reddit-translator-auto/main/reddit-translator-pro-auto.user.js`
 
 ## 当前文件说明
 
+- `reddit-translator-pro-auto.user.js`
+  当前推荐安装、发布和 Greasy Fork 同步使用的正式文件。
 - `Reddit 翻译器 Pro 修新.js`
-  当前推荐使用的主脚本文件。
+  当前主开发文件，内容与 `reddit-translator-pro-auto.user.js` 保持同步。
 - `Reddit 翻译器 Pro 修3.js`
-  与 `修新` 当前内容一致，可视为同版本副本。
+  与 `修新` 保持相同代码，当前版本号为 `1.0.3`。
 - `Reddit 翻译器 Pro 修2.js`
-  较早版本，已加入 DeepL 支持。
+  与 `修新` 保持相同代码，当前版本号为 `1.0.2`。
 - `Reddit 翻译器 Pro 修1.js`
-  较早版本，默认更适合中文使用场景。
+  与 `修新` 保持相同代码，当前版本号为 `1.0.1`。
 - `Reddit 翻译器 Pro 0.js`
-  初始基础版本。
+  初始基础版本分支，当前版本号为 `1.0.0`。
+- `reddit-translator-v1_0_0.js`
+  远端历史中保留的旧发布文件。
 - `更新日志.md`
-  记录各版本之间的主要改动。
+  记录主要改动和阶段性差异。
+
+## 安装方法
+
+### 方式一：通过 Greasy Fork 安装
+
+1. 安装用户脚本管理器，例如 `Tampermonkey` 或 `Violentmonkey`
+2. 打开 Greasy Fork 页面：
+   `https://greasyfork.org/zh-CN/scripts/574557-reddit-translator-pro-auto`
+3. 点击安装并在用户脚本管理器中确认
+4. 打开 `https://www.reddit.com/` 进行测试
+
+### 方式二：通过 GitHub Raw 安装
+
+1. 安装用户脚本管理器
+2. 打开以下直链：
+   `https://raw.githubusercontent.com/Dylan-ZQL/reddit-translator-auto/main/reddit-translator-pro-auto.user.js`
+3. 由用户脚本管理器接管安装
+4. 保存并启用脚本
 
 ## 主要功能
 
 - Reddit 帖子和评论的单条翻译
-- 整页批量翻译
+- 当前页面整页批量翻译
 - 多翻译引擎支持
-  当前脚本头部声明了 `Google`、`MyMemory` 和 `DeepL`
 - 100+ 目标语言选择
 - 界面语言切换
 - 双语显示模式
@@ -36,11 +66,11 @@
 - 自动滚动相关增强
 - 滚动触发的自动翻译
 - 多主题和自定义配色
-- DeepL API Key 保存与测试
+- DeepL API Key 保存、测试和额度查询
 
 ## 默认配置特点
 
-当前主脚本默认配置更偏中文用户：
+当前主线脚本默认配置更偏中文使用场景：
 
 - 目标语言默认是 `zh`
 - 界面语言默认是 `zh`
@@ -51,26 +81,17 @@
 - 默认开启自动单位转换
 - 默认关闭滚动自动翻译
 
-## 安装方法
-
-1. 安装任一用户脚本管理器，例如：
-   `Tampermonkey` 或 `Violentmonkey`
-2. 打开主脚本文件 `Reddit 翻译器 Pro 修新.js`
-3. 将脚本内容复制到用户脚本管理器中新建脚本，或直接通过本地文件导入
-4. 保存并启用脚本
-5. 打开 `https://www.reddit.com/` 页面进行测试
-
 ## 运行前提
 
-- 浏览器需要安装用户脚本管理扩展
+- 浏览器需要安装用户脚本扩展
 - 脚本匹配站点为 `https://www.reddit.com/*`
-- 脚本会使用以下网络权限：
+- 脚本会访问以下翻译服务：
   `translate.googleapis.com`
   `api.mymemory.translated.net`
   `api.deepl.com`
   `api-free.deepl.com`
 
-如果你使用 `DeepL`，还需要在脚本面板中填写可用的 API Key。
+如果使用 `DeepL`，还需要在脚本面板中填写可用的 API Key。
 
 ## 使用方式
 
@@ -96,22 +117,25 @@
 - 查询额度使用情况
 - 在缓存中按 Key 作用域隔离结果，避免串用
 
-## 版本演进概览
+## 版本关系
 
-- `0`
-  完成基础翻译框架，已支持缓存、历史、TTS、快捷键、动态内容监听等核心功能
-- `修1`
-  默认切换为中文场景，并引入滚动自动翻译
-- `修2`
-  新增 DeepL 引擎、Key 管理和可用性测试
-- `修3` / `修新`
-  增加语言检测与跳过逻辑，减少误翻、重复翻译和首屏闪动
-
-详细差异请查看 `更新日志.md`。
+- `Reddit 翻译器 Pro 0.js`
+  基础版本线，版本号 `1.0.0`
+- `Reddit 翻译器 Pro 修1.js`
+  与当前主线代码同步，版本号 `1.0.1`
+- `Reddit 翻译器 Pro 修2.js`
+  与当前主线代码同步，版本号 `1.0.2`
+- `Reddit 翻译器 Pro 修3.js`
+  与当前主线代码同步，版本号 `1.0.3`
+- `Reddit 翻译器 Pro 修新.js`
+  当前主开发文件
+- `reddit-translator-pro-auto.user.js`
+  当前正式发布文件，供安装和 Greasy Fork 同步使用
 
 ## 建议
 
-- 日常使用建议优先使用 `Reddit 翻译器 Pro 修新.js`
-- 如果需要稳定控制自动翻译行为，保持当前默认配置即可
+- 日常安装优先使用 `reddit-translator-pro-auto.user.js`
+- GitHub 用于版本管理，Greasy Fork 用于面向用户发布
+- 如果需要为 Greasy Fork 启用脚本同步，使用上面的 GitHub Raw 链接即可
 - 如果页面出现频繁请求或误翻，可检查滚动自动翻译是否开启
 - 如果使用 DeepL 失败，先测试 API Key 和接口额度
