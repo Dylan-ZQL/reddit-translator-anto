@@ -47,8 +47,8 @@
 // @connect      api.mymemory.translated.net
 // @connect      api.deepl.com
 // @connect      api-free.deepl.com
-// @downloadURL https://greasyfork.org/scripts/574557-reddit-translator-pro-auto/code/reddit-translator-pro-auto.user.js
-// @updateURL https://greasyfork.org/scripts/574557-reddit-translator-pro-auto/code/reddit-translator-pro-auto.meta.js
+// @downloadURL https://raw.githubusercontent.com/Dylan-ZQL/reddit-translator-auto/main/reddit-translator-pro-auto.user.js
+// @updateURL https://raw.githubusercontent.com/Dylan-ZQL/reddit-translator-auto/main/reddit-translator-pro-auto.user.js
 // ==/UserScript==
 
 (function () {
